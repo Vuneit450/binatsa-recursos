@@ -6,9 +6,9 @@ Sale de los dos colores del logo (`logos/binatsa.svg`). Lo demás son derivados.
 
 | Nombre | Hex | Uso |
 |---|---|---|
-| Azul marino | `#0B1F3A` | Franjas de encabezado de zona (título blanco), texto de marca, barra o segmento más oscuro |
-| Turquesa | `#00B3B8` | Color del logo y acento decorativo. No usarlo en barras, líneas ni texto: da 2.6:1 con blanco |
-| Turquesa oscuro | `#007F84` | Barra destacada (la más alta), líneas, selección, número de las tarjetas KPI y texto sobre fondo claro. También sirve como fondo con texto blanco encima (4.8:1) |
+| Azul marino (secundario) | `#0B1F3A` | Texto de marca, segmento más oscuro de la rampa, acentos |
+| Turquesa (PRIMARIO) | `#00B3B8` | Color principal de la marca y del logo. Sobre blanco da 2.6:1: no usarlo tal cual en barras, líneas, números ni como fondo de texto blanco; para eso, su tono oscuro |
+| Turquesa oscuro (tono oscuro del primario) | `#007F84` | Franjas de encabezado de zona y de título de tarjeta (texto blanco, 4.8:1), barra destacada (la más alta), líneas, selección, número de las tarjetas KPI y texto sobre fondo claro |
 
 ## Neutros (con matiz hacia el azul marino, no gris puro)
 

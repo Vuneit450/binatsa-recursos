@@ -16,6 +16,8 @@ skills/
   dashboards-cobranza-tooltips/        descripciones emergentes
   dashboards-cobranza-cliente-limpieza/  vista del cliente y limpieza de huérfanos
   dashboards-cobranza-publicacion/     checklist, publicación y monitoreo
+clientes/
+  _plantilla/                 base para un cliente nuevo (logo + paleta)
 archivo/
   dashboards-cobranza-BINATSA-original.md   borrador original, OBSOLETO (solo historial; no usar)
 ```
@@ -34,4 +36,4 @@ Copiar `logos/Preferences-BINATSA.tps` a `Mi repositorio de Tableau/Preferencias
 
 ## Clientes
 
-La carpeta `clientes/<cliente>/` (logo y paleta de cada cliente) se crea cuando hace falta, siguiendo el formato de `logos/paleta-binatsa.md`.
+Una carpeta por cliente en `clientes/<cliente>/`, con su logo y sus recursos de marca. Se crea desde `clientes/_plantilla/`. Reglas y aviso de privacidad en `clientes/README.md`.

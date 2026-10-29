@@ -19,7 +19,7 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 - Repositorio de GitHub: Vuneit450/binatsa-recursos.
   - logos/binatsa.svg: logo vectorial (turquesa #00B3B8, azul marino #0B1F3A). Usarlo siempre; si Tableau no acepta SVG en el objeto Imagen, generar un PNG desde el SVG.
   - logos/paleta-binatsa.md y logos/Preferences-BINATSA.tps: paleta de BINATSA (derivada del logo) y su versión para cargar en Tableau.
-  - clientes/<cliente>/: logo y paleta del cliente (la carpeta aún no existe; si no hay nada del cliente, pedirlo y, con permiso del usuario, crear la carpeta y subirlo ahí, siguiendo el formato de logos/paleta-binatsa.md).
+  - clientes/<cliente>/: logo y recursos de marca de cada cliente (ver clientes/README.md y clientes/_plantilla/). Si no hay carpeta del cliente, pedir el logo y los colores y, con permiso del usuario, crearla a partir de la plantilla. El repositorio es público: subir solo el logo y los colores de marca, nunca datos internos.
   - Si el repositorio no está conectado a la sesión, leerlo desde el navegador o pedir el archivo.
 - Los archivos no se guardan en la skill; solo la ruta.
 

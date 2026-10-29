@@ -14,7 +14,7 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 - [ ] Botones de navegación funcionan; logos BINATSA y cliente visibles.
 - [ ] Información sin bordes ni fondos (todo transparente; solo los títulos pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos de los gráficos (a la izquierda).
-- [ ] Tamaño en "Rango", altura mínima 1300 px.
+- [ ] Tamaño en "Rango": alto 1300 px (mínimo y máximo) y ancho automático para pantallas muy grandes.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).
@@ -23,7 +23,7 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 ## Prueba de interacción (obligatoria)
 Todos los gráficos deben interactuar entre sí. No darlo por hecho: probarlo en el dashboard abierto en el navegador, en las dos vistas (Dirección y Operación).
 1. Hacer una lista de las hojas visibles del dashboard (gráficos, tablas y tarjetas KPI).
-2. Por cada gráfico, hacer clic en una marca y comprobar que se actualizan TODAS las demás hojas, incluidas las tarjetas KPI. Anotar cuáles no respondieron.
+2. Por cada gráfico, hacer clic en una marca y comprobar que se actualizan TODAS las demás hojas, incluidas las tarjetas KPI. En las tarjetas comprobar que el valor y los deltas siguen la selección (con un día seleccionado, el delta de 7 días se oculta). Anotar cuáles no respondieron.
 3. Limpiar la selección (clic fuera de las marcas) y comprobar que todo vuelve al estado inicial.
 4. Corregir lo que no responda (dimensión de enlace faltante, acción mal configurada) y repetir desde el paso 2.
 5. Reportar al usuario en una tabla corta: hoja, ¿filtra a las demás?, ¿responde a las demás?. No publicar con huecos sin que el usuario los apruebe.
