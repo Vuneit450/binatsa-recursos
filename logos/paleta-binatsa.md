@@ -57,4 +57,6 @@ Sobre turquesa `#00B3B8` el texto legible es azul marino `#0B1F3A` (6.4:1).
 
 ## Para Tableau
 
-`Preferences-BINATSA.tps` trae tres paletas listas para cargar: categórica, secuencial de segmentos y semáforo divergente. Copiarlo a `Mi repositorio de Tableau/Preferencias/Preferences.tps` y reiniciar Tableau Desktop.
+`Preferences-BINATSA.tps` trae tres paletas: categórica, secuencial de segmentos y semáforo divergente. Es el método clásico: copiarlo a `Mi repositorio de Tableau/Preferencias/Preferences.tps` y reiniciar Tableau Desktop. La documentación de Tableau lo presenta como el método de Desktop 2025.2 y anteriores; no está confirmado que Tableau 2026.1 lo siga leyendo, así que probarlo primero.
+
+Si no aparecen las paletas: desde Tableau 2025.3 se pueden crear dentro de Desktop (tarjeta Color de Marcas, o menú Formato del libro). Crear tres paletas con los mismos nombres y los hex de este documento (categórica, secuencial de segmentos y semáforo).

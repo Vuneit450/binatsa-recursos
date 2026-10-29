@@ -29,7 +29,7 @@ El repositorio es público a propósito, para poder leerlo desde otras cuentas. 
 
 ## Paleta en Tableau
 
-Copiar `logos/Preferences-BINATSA.tps` a `Mi repositorio de Tableau/Preferencias/Preferences.tps` y reiniciar Tableau Desktop. Detalles en `logos/paleta-binatsa.md`.
+Copiar `logos/Preferences-BINATSA.tps` a `Mi repositorio de Tableau/Preferencias/Preferences.tps` y reiniciar Tableau Desktop. Es el método de Desktop 2025.2 y anteriores; en 2026.1 puede no funcionar, y entonces se crean las paletas dentro de Tableau con los hex de `logos/paleta-binatsa.md`. Detalles ahí.
 
 ## Clientes
 
