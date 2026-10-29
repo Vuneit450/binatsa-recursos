@@ -9,6 +9,7 @@ logos/
   binatsa.svg                 logo vectorial
   paleta-binatsa.md           colores derivados del logo, con contraste y rampa de segmentos
   Preferences-BINATSA.tps     paletas para cargar en Tableau Desktop
+  cierre-video.png            tarjeta de cierre fija de los videos guía (logo + eslogan)
 skills/
   dashboards-cobranza-base/            punto de partida: preguntas, reglas y flujo (usar primero)
   dashboards-cobranza-estructura/      vistas Dirección y Operación, layout, estilo
