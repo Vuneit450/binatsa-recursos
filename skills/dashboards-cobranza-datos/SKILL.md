@@ -21,7 +21,7 @@ Pedir los datos a detalle (un registro por evento) con el número de contrato co
 | 6 | Envíos masivos | Uno por envío | Contrato, fecha y hora, canal (SMS, Email, Blaster, WhatsApp, Carteo), estatus de entrega; para WhatsApp, también los chats recibidos (contrato, fecha y hora de la respuesta y agente que atendió) |
 | 7 | Visitas | Una por visita o evento | Contrato, fecha, resultado y, si aplica, promesa y evento de recuperación de bien |
 | 8 | Headcount y calidad | Por día y por monitoreo | Personal disponible y capacidad por día; por monitoreo: agente, tipo, calificación y quejas |
-| 9 | Catálogos | Tablas de referencia | Rangos de segmento, qué resultado cuenta como conectado, contacto con titular (RPC) o promesa, canales de inbound, calendario de días hábiles y festivos, y metas |
+| 9 | Catálogos | Tablas de referencia | Rangos de segmento, qué resultado cuenta como conectado, contacto con titular (RPC) o promesa, canales de inbound, calendario de días hábiles y festivos y, si el proyecto las tiene, metas |
 No todas aplican a todos los proyectos: confirmar con el usuario cuáles cubre el cliente, pero pedir las que existan desde la primera carga.
 
 ## Indicadores que salen de esos datos
@@ -54,8 +54,7 @@ Cada regla acordada se documenta en el glosario (dashboards-cobranza-kpis) y en 
 
 ## Extracto y rendimiento (propuesto)
 - Preferir extracto con actualización programada sobre conexión en vivo para los dashboards de cliente.
-- Un dashboard con decenas de hojas se vuelve lento y difícil de mantener: como referencia, hasta unas 25 hojas visibles por dashboard.
-- Las hojas de trabajo van ocultas (ver dashboards-cobranza-cliente-limpieza); un libro con cientos de hojas ocultas pesa y se abre lento.
+- Las hojas de trabajo van ocultas (ver dashboards-cobranza-cliente-limpieza). No hay un límite de hojas por dashboard ni por libro.
 - Los cálculos de conteo único sobre llaves construidas por concatenación, repetidos en cada tarjeta, son lo más pesado: preferible marcar el cálculo a nivel de fila una vez y contar sobre esa marca.
 - Cuando algo sea lento, medir antes de cambiar: grabar el rendimiento de Tableau y atacar lo que más tarda.
 

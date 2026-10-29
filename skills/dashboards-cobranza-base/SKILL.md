@@ -32,7 +32,7 @@ Tanda 1 (bloqueantes):
 1. Logo del cliente (se usa para sacar su paleta; en el dashboard solo va el logo de BINATSA): opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
 3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo del kit". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
-4. Tarjetas KPI de Dirección y de Operación (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto.
+4. Tarjetas KPI de Dirección y de Operación, y metas (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto. Preguntar siempre si el cliente tiene metas (por asesor, por día o por segmento) y cuáles: opciones "No hay metas" o "Sí, las paso". Las metas no son estándar.
 
 Tanda 2 (antes de publicar):
 5. Segmentación de cartera del cliente (buckets/rangos de mora, nombres y días). No asumir A/B/C.

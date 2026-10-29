@@ -6,7 +6,7 @@ description: "Estructura estándar (vistas Dirección y Operación), layout, med
 # Estructura y estilo · Dashboards de Cobranza BINATSA
 
 ## Estructura estándar
-Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más (por ejemplo un tablero Daily o un detalle de gestiones). Todas llevan el título principal, el logo de BINATSA y los botones de navegación hacia las demás vistas, con el mismo formato.
+Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más (por ejemplo un detalle de gestiones o un seguimiento por asesor). Todas llevan el título principal, el logo de BINATSA y los botones de navegación hacia las demás vistas, con el mismo formato.
 
 ### Logo
 Solo el logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha, en la misma fila del título principal y pegado a la esquina superior derecha. Unos 250 px de ancho (el PNG de referencia mide 250 x 46 px; con el margen del objeto ocupa unos 268 px), alto proporcional sin deformar, y en la misma posición en todas las vistas. El logo del cliente no va en el dashboard salvo que se pida: se usa para sacar su paleta.
@@ -43,7 +43,7 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 - Pie: texto "Cómo leer" con la aclaración de fuentes.
 
 ## Vistas estándar
-Obligatorias: Dirección y Operación (arriba). Recomendada en todo proyecto: Guía de uso. Opcionales, según el proyecto: Seguimiento y Daily. Todas llevan el mismo título principal, logo y botones de navegación (hacia todas las demás vistas).
+Obligatorias: Dirección y Operación (arriba). Recomendada en todo proyecto: Guía de uso. Opcional, según el proyecto: Seguimiento. Cualquier otra vista adicional se define con el usuario. Todas llevan el mismo título principal, logo y botones de navegación (hacia todas las demás vistas).
 
 ### Guía de uso (recomendada)
 Vista de solo texto, sin gráficos, con el mismo estilo de títulos de bloque. Se abre desde el enlace "Guía de uso" del encabezado; el botón "Glosario" (si existe) lleva a esta misma vista, no hay una vista aparte. Contiene, en este orden:
@@ -54,15 +54,12 @@ Vista de solo texto, sin gráficos, con el mismo estilo de títulos de bloque. S
 5. Actualización: frecuencia real de los datos y el día del último dato.
 6. A quién avisar si algo no cuadra.
 
-### Seguimiento (opcional): ¿quién cumple la meta?
-Tarjetas de metas (las define el cliente; por ejemplo llamadas al día o casos asignados), tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI y de periodo (azul oscuro = cumple la meta) y barras. Clic en un asesor filtra todo y deja ver solo su rendimiento; otro clic regresa a todos. Las metas salen del catálogo de dashboards-cobranza-datos.
-
-### Daily (opcional)
-Corte diario del cliente. Su contenido y su tamaño se definen con el usuario (en el tablero de referencia es una vista de tamaño fijo de 2100 x 1650 px).
+### Seguimiento (opcional): ¿cómo rinde cada asesor?
+Tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI y de periodo, y barras. Clic en un asesor filtra todo y deja ver solo su rendimiento; otro clic regresa a todos. Las metas NO son estándar: preguntar al usuario si el cliente tiene metas y cuáles; solo si las hay, agregar tarjetas de metas y marcar en azul oscuro lo que las cumple.
 
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
-- Tamaño (como en los tableros de referencia): Dirección en tamaño Automático. Operación en "Rango" definido solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px; sin máximo, se estira en pantallas muy grandes y crece en alto si la ventana es más alta. Las vistas adicionales (por ejemplo un Daily) usan las medidas que se definan con el usuario.
+- Tamaño (como en los tableros de referencia): Dirección en tamaño Automático. Operación en "Rango" definido solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px; sin máximo, se estira en pantallas muy grandes y crece en alto si la ventana es más alta. Las vistas adicionales usan las medidas que se definan con el usuario.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
@@ -121,7 +118,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 ## Formato regional
 - Idioma: toda etiqueta y todo texto en español.
 - Configuración regional del libro: Español (México), como en el tablero de referencia.
-- Fechas en día/mes/año (por ejemplo 19/10/2026) y horas en formato de 24 h (propuesto). Zona horaria acordada con el cliente (ver dashboards-cobranza-datos).
+- Fechas en día/mes/año (por ejemplo 19/10/2026) y horas en formato de 24 h. Zona horaria acordada con el cliente (ver dashboards-cobranza-datos).
 - Dinero con $ y separador de miles; si el proyecto maneja más de una moneda, indicar el código en la etiqueta.
 
 ## Estados vacíos y datos parciales (propuesto)
@@ -139,7 +136,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 - Mapa geográfico: solo cuando el dato tiene zona (por ejemplo visitas).
 
 ## Dispositivos
-Los dashboards se diseñan para pantalla de escritorio (ancho mínimo de 1400 px). No se diseñan vistas para teléfono o tableta salvo que el usuario las pida.
+Los dashboards se diseñan solo para computadora (ancho mínimo de 1400 px). No se diseñan vistas para teléfono ni para tableta.
 
 ## Paleta y tipografía
 Paleta de BINATSA (y modelo de cómo documentar la de un cliente): `logos/paleta-binatsa.md`. Para cargarla en Tableau: ver la sección "Para Tableau" de ese mismo documento (el método depende de la versión).

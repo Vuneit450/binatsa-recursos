@@ -21,8 +21,6 @@ skills/
   dashboards-cobranza-video-guia/      video guía para un usuario nuevo (último paso)
 clientes/
   _plantilla/                 base para un cliente nuevo (logo + paleta)
-archivo/
-  dashboards-cobranza-BINATSA-original.md   borrador original, OBSOLETO (solo historial; no usar)
 ```
 
 ## Cómo usar los skills
