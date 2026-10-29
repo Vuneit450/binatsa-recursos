@@ -6,7 +6,10 @@ description: Estructura estándar (Dirección y Operación), layout, interactivi
 # Estructura y estilo · Dashboards de Cobranza BINATSA
 
 ## Estructura estándar
-Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más (por ejemplo un tablero Daily o un detalle de gestiones). Todas llevan el título principal, los logos de BINATSA y del cliente y los botones de navegación hacia las demás vistas, con el mismo formato.
+Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más (por ejemplo un tablero Daily o un detalle de gestiones). Todas llevan el título principal, el logo de BINATSA y los botones de navegación hacia las demás vistas, con el mismo formato.
+
+### Logo
+Solo el logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha, en la misma fila del título principal y pegado a la esquina superior derecha. Unos 250 px de ancho (el PNG de referencia mide 250 x 46 px; con el margen del objeto ocupa unos 268 px), alto proporcional sin deformar, y en la misma posición en todas las vistas. El logo del cliente no va en el dashboard salvo que se pida: se usa para sacar su paleta.
 
 ### Título principal del dashboard
 Texto de 20 pt en negrita, color blanco, sobre una franja de color de marca (en su tono oscuro, ver Contraste), con un emoji al inicio y sin borde. Arriba a la izquierda, como todo título. Es el texto más grande del dashboard: los títulos de zona (14-16 pt) quedan por debajo.
@@ -46,8 +49,14 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
 ## Interactividad
-- La mayoría de los gráficos se comunican entre sí: clic en una marca filtra los demás (acciones de filtro de dashboard; segmento, asesor, canal, hora, tipificación y zona como dimensiones de enlace; el día se maneja con un parámetro, ver Implementación). Cuáles quedan fuera depende del proyecto (por ejemplo, un gráfico con otra fuente de datos o sin dimensión en común) y se declaran en el reporte con el motivo. Los gráficos son origen y destino; las tarjetas KPI también son destino.
-- Implementación entre gráficos: una acción de filtro por cada gráfico origen, al seleccionar, con todas las demás hojas del dashboard como destino (es lo que hacen los tableros de referencia). Si una hoja no comparte la dimensión de enlace, agregarla o crear una acción para esa pareja.
+- La mayoría de los gráficos se comunican entre sí: clic en una marca filtra los demás. Cuáles quedan fuera depende del proyecto (por ejemplo, un gráfico con otra fuente de datos o sin campos en común) y se declaran en el reporte con el motivo. Las tarjetas KPI son destino, no origen.
+- Patrón de comunicación de referencia (tomado de los tableros de referencia; no es exacto, cada proyecto lo adapta):
+  - Cada gráfico o tabla es origen de una acción de filtro al seleccionar, con "todos los campos" que comparte con las demás hojas, y todas las demás hojas del dashboard como destino.
+  - Las tarjetas KPI nunca son origen; solo reciben.
+  - Orígenes típicos en Dirección: segmento, tendencia día a día, canal y promesas por día. En Operación: horas, asesores, resultados o tipificaciones, cobertura por segmento, sin gestión, gestiones por hora y visitas.
+  - Se excluye como destino la hoja que viene de otra fuente de datos (por ejemplo, una encuesta que no comparte campos con las llamadas).
+  - Clic en un segmento: además del filtro, una acción de parámetro llena el parámetro "Segmento", para que lo que depende del segmento elegido (tarjetas, métricas) se adapte.
+  - Al pasar el mouse sobre un segmento se resalta ese segmento en todas las hojas (acción de resaltar al pasar el mouse, a nivel del dashboard).
 - Implementación en las tarjetas KPI: los periodos se calculan con banderas por fila a partir de los parámetros de fecha (ver dashboards-cobranza-kpis) y cada KPI se calcula una vez por periodo con IF bandera THEN medida END. Así las tarjetas son destino normal de las acciones de filtro de segmento, asesor, canal, hora, tipificación y zona: esos filtros no tocan las fechas y el periodo previo sigue disponible, de modo que los deltas siguen la selección. La fecha es la excepción: si un clic filtrara por día, desaparecerían las filas de los demás periodos. Por eso el día NO va en una acción de filtro: un clic en un día dispara una acción de parámetro que llena "Día seleccionado" (fecha) y todo el dashboard usa [Desde efectivo] y [Hasta efectivo]. La parte del día seleccionado es un patrón propuesto: validarlo en el primer dashboard de cada cliente.
 - La verificación obligatoria está en dashboards-cobranza-publicacion (Prueba de interacción).
 - Preferir tipos de gráfico que admitan segmentador/parámetro.
@@ -84,7 +93,13 @@ Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colore
 - Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Todos los pasos deben llegar a 3:1 de contraste contra el fondo (el paso más claro no puede ser un tono pastel). Nunca más de 6 colores categóricos.
 - Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, turquesa oscuro `#007F84`) y reservar el color claro del logo para acento decorativo. Toda barra, línea o número de color debe llegar a 3:1 contra el fondo; si el color de marca no llega (el turquesa del logo da 2.6:1), usar su tono oscuro. Sin fondos ni bordes en la información (todo transparente); solo los títulos y los botones de navegación pueden llevarlos.
 
-Tipografía (una sola familia, la de Tableau o la del cliente si la tiene):
+Tipografía: familia Tableau en todos los proyectos (no usar la tipografía del cliente). Se juega con los pesos, no con otras familias:
+- Tableau Bold: título principal, número de tarjeta KPI, valores en negrita (tooltips) y botones.
+- Tableau Semibold: títulos de zona y de tarjeta, encabezados de tabla y textos destacados.
+- Tableau Medium: etiquetas de ejes y marcas.
+- Tableau Light: subtítulos.
+- Tableau Book: cuerpo de texto y tooltips.
+Tamaños:
 - Número de tarjeta KPI: 28-32 pt en negrita, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
 - Título principal del dashboard: 20 pt en negrita, blanco sobre franja.
 - Título de zona: 14-16 pt en negrita, blanco sobre franja. Subtítulo: 10-11 pt.

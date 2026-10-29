@@ -27,7 +27,7 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 Hacerlas con la herramienta de preguntas de opción múltiple si existe (en Claude Code, AskUserQuestion); si no, en texto con opciones numeradas. Cada tanda tiene máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1, 2 y 3). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
 
 Tanda 1 (bloqueantes):
-1. Logo del cliente: opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
+1. Logo del cliente (se usa para sacar su paleta; en el dashboard solo va el logo de BINATSA): opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
 3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo del kit". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
 4. Tarjetas KPI de Dirección y de Operación (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto.
