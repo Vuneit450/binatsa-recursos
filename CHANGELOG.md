@@ -10,7 +10,7 @@
 - Las metas y el límite de hojas no son parte del estándar: las metas se preguntan por proyecto y no hay límite de hojas.
 
 ## Sin publicar
-- Módulo de video: nueva sección "Composición del cuadro" (captura protagonista, franja de texto abajo, reglas de cámara y zoom, escena de arranque y prueba de cuadros a 3840 x 2160).
+- Módulo de video: nueva sección "Composición del cuadro" (marco estándar de 1664 x 976 px, simulación de monitor chico en réplicas, franja de texto abajo, cámara y zoom, barrido único en elementos anchos, regla para no repetir gráficos, escena de arranque y prueba de cuadros a 3840 x 2160).
 - Alineado con el libro de referencia más reciente: tamaño fijo de 1910 x 1300 px en todas las vistas, ícono del cliente y logo de BINATSA, botones "Ir a <Vista> →" de 164 x 36 px con color por destino, tarjetas KPI de 271 x 190 px, tooltips de cinco secciones, parámetro Periodo y formato de título "Cobranza <Cliente> · <Vista>".
 - Los deltas sin periodo previo muestran "—", no "+0.0 %".
 - La prohibición de nombres técnicos, "Excel" y sistemas internos se extiende al texto visible del dashboard, no solo al video.

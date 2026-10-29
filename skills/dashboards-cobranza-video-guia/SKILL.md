@@ -49,35 +49,50 @@ Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a 
 ## Composición del cuadro (16:9, 1920 x 1080)
 Medidas de un lienzo de 1920 x 1080 que se dibuja en 3840 x 2160 y se reduce a la mitad. Para vertical (9:16) se recalculan con el mismo principio. El tablero se mide en un lienzo propio de 960 unidades de ancho; si el motor usa otra base, escalar en proporción.
 
-Principio: la captura del tablero es la protagonista. Ocupa casi todo el cuadro para que se lea desde lejos, y el texto va en una franja angosta abajo.
+Principio: la captura del tablero es la protagonista. El marco es lo más grande posible y es el mismo en todas las escenas. El texto va en una franja delgada abajo; para ir más grande habría que poner el texto encima de la captura, y eso no se hace.
 
-### Escenas guiadas
-- Marco de la captura: a 40 px del borde izquierdo y 24 del superior, de 1840 px de ancho (96 % del cuadro), sin columna de texto al lado.
-- Alto del marco: el ancho por la proporción del recuadro de cámara (507 / 1040, es decir 0.49), unos 897 px. No pasar de unos 900 px, para que quepa la franja de texto.
-- Todas las vistas usan el mismo alto de marco. Una vista alta (por ejemplo con decenas de filas) se recorre con la cámara; no se agranda el marco.
-- Escala de la captura: ancho del marco ÷ ancho visible de la cámara.
-- Franja de texto, en una sola fila abajo: a 60 px del borde izquierdo y 948 del superior, de 1800 px de ancho. En este orden: etiqueta de capítulo (26 px), título (54 px, en una línea, sin cortes) y frase de apoyo.
-- Burbuja de estado (por ejemplo "Un asesor"): a la derecha de la franja, a 1560 px del borde izquierdo y 952 del superior, con letra de 34 px.
+### Marco estándar (idéntico en todas las escenas)
+- Posición: a 128 px del borde izquierdo y 8 del superior.
+- Tamaño: 1664 px de ancho por 976 de alto. Sale de ancho = 1.6 x 1040 y alto = 1.6 x 610, donde 610 es el alto de la cámara. Es el máximo que deja espacio para la franja inferior.
+- Se usa igual en la escena de arranque y en las vistas altas; una vista alta se recorre con la cámara, no se agranda el marco.
+
+### Simulación de monitor chico (solo en réplicas dibujadas con código)
+El contenido del tablero simula la ventana de un monitor chico de escritorio, de 1152 px de ancho en proporción 16:9, sin achicar el marco. El factor es 1550 / 1152, cerca de 1.35. Se hace así:
+- Las posiciones horizontales se dejan en porcentaje, igual que en el tablero real.
+- Las posiciones verticales, los altos de las cajas, las fuentes y los márgenes se multiplican por el factor.
+- El ancho de cada caja no se multiplica.
+Resultado: el lienzo pasa de 2.3:1 a 1.7:1, el texto sale más grande y legible y no se ve estirado. Una vista que ya es alta y estrecha no se transforma; solo se le iguala el marco.
+Con capturas reales no se transforma la imagen, porque se deformaría: se coloca tal cual dentro del marco y la cámara hace el resto. Si cambia la proporción o el factor, se recalculan los círculos y el zoom.
+
+### Franja de texto (escenas guiadas)
+- Una sola fila abajo: a 60 px del borde izquierdo y 994 del superior, de 1800 px de ancho.
+- En este orden: etiqueta de capítulo (que no se corte en dos líneas), título de 40 px en una línea sin cortes, y frase de apoyo de 28 px.
+- Burbuja de estado (por ejemplo "Un asesor"): a la derecha, a 1560 px del borde izquierdo y 996 del superior, con letra de 30 px.
 - La barra de progreso va al fondo.
 
-### Cámara (zoom por paso)
-- Ancho visible mínimo: 400 unidades del tablero. Con el marco grande da unas 4.6 veces de zoom; con 240 se veía exagerado.
-- Ancho visible = el mayor de: ancho del círculo de resalte x 1.12; alto del círculo x 1.12 x (1040 / alto del recuadro de cámara); y 400.
-- Si el elemento enfocado mide más de 340 unidades de ancho, no se abre el plano: se recorre de izquierda a derecha en 2 a 4 tramos.
-  - Cada tramo muestra 440 unidades de ancho.
-  - El siguiente avanza lo que sobra de ancho, con un traslape de cerca del 10 %.
-  - La duración del paso se reparte en partes iguales entre los tramos.
-  - El círculo de resalte, la burbuja y el cursor se muestran igual, solo en el primer tramo.
-- Los planos generales de apertura (t = 0) son panorama completo y la única vista a 960 unidades.
-- Los círculos y el zoom usan las posiciones medidas del propio tablero. Si algo se mueve en el tablero, hay que recalcularlos.
-
 ### Escena de arranque
-- Marco: a 40 px del borde izquierdo y 24 del superior, de 1840 px de ancho y 830 de alto. Cada vista del tablero entra a 1840 de ancho, centrada en vertical; una vista alta se recorta por arriba.
-- Sin el zoom lento que recortaba las orillas: la vista se ve completa, con una deriva de 1.5 % como máximo. Entrada lateral de 160 a 200 px.
+- Mismo marco que las demás escenas. Cada vista se escala al ancho del marco y se centra en vertical; la más alta se recorta por arriba. Sin zoom lento que recorte las orillas.
 - Franja de abajo:
-  - Etiqueta y título (56 px, en una línea): a 60 px del borde izquierdo y 872 del superior; la frase de apoyo va debajo del título.
-  - Selectores de las vistas (Dirección, Operación y las demás que tenga el proyecto): a 1080 px del borde izquierdo y 884 del superior, con escala 0.72. La etiqueta de la vista activa va a 1080 y 975, con letra de 26 px.
-  - Logo de BINATSA en la esquina: a 1640 px del borde izquierdo y 972 del superior, en un recuadro de 230 x 72 con el logo de 216 px de ancho.
+  - Etiqueta "Guía rápida" y título de 46 px en una fila: a 60 px del borde izquierdo y 996 del superior.
+  - Los selectores de las vistas (Dirección, Operación y las demás del proyecto), a la derecha con escala 0.62: a 1180 px del borde izquierdo y 1000 del superior.
+  - Logo de BINATSA en la esquina: a 1660 px del borde izquierdo y 992 del superior, en un recuadro de 210 x 66.
+- No llevan frase de apoyo ni etiqueta de la vista activa, para que quepa todo.
+
+### Cámara
+- Ancho visible mínimo: 400 unidades del tablero (que mide 960). Con el marco grande da unas 4 veces de zoom; con 240 se veía exagerado.
+- Ancho visible = el mayor de: ancho del círculo de resalte x 1.12; alto del círculo x 1.12 x (1040 / alto del recuadro de cámara); y 400.
+- Los planos generales solo se usan al abrir una escena (t = 0), a 960 unidades.
+- Los círculos y el zoom usan las posiciones medidas del propio tablero.
+
+### Elementos anchos: un solo paso, sin repetir
+- Si el elemento enfocado mide más de 340 unidades de ancho, se enfoca UNA sola vez con un barrido continuo de izquierda a derecha. El ancho visible durante el barrido es de 440 unidades.
+- No se parte en varios pasos: antes se repetían el círculo y el texto en cada tramo.
+- En la configuración de cada paso se guardan la vista inicial y la final. La cámara va de una a otra desde el final de la transición hasta 0.15 s antes del siguiente paso, con aceleración suave. El paso siguiente arranca desde la vista final.
+
+### Regla para no repetir gráficos
+- Cada elemento se resalta con círculo una sola vez por escena.
+- En el plano de apertura (t = 0) se quita el círculo si ese mismo elemento se resalta después.
+- Se conservan a propósito dos repeticiones: el segundo clic que quita un filtro, y el mismo gráfico mostrado después de que cambió la métrica o el filtro.
 
 ## Imágenes y datos
 - Capturas reales del tablero en alta resolución (al menos el doble del tamaño con que se ven, para poder acercar sin que se pixelen).
@@ -109,7 +124,7 @@ Mínimo 4 s. Referencia visual: `logos/cierre-video.png`.
 2. Prueba automática de encuadres: cada 0.2 s, nada cortado ni tapado por el recuadro de texto.
 3. Búsqueda automática de palabras prohibidas en el guion, más revisión visual de las capturas.
 4. Ver el video completo en el reproductor, no solo cuadros sueltos; si es vertical, verlo en un teléfono.
-5. Renderizar un cuadro a 3840 x 2160 y reducirlo a 1600 x 900. Comprobar que ningún texto se encima con la franja y que el círculo de resalte queda dentro del marco. Esta prueba detecta, por ejemplo, un zoom exagerado.
+5. Renderizar un cuadro a 3840 x 2160 y reducirlo a 1600 x 900. Comprobar tres cosas: que ningún texto se encima con la franja, que el círculo de resalte queda dentro del marco y que los cuadros a mitad de un barrido se ven fluidos. Esta prueba detecta, por ejemplo, un zoom exagerado, una franja cortada o una etiqueta de capítulo partida en dos líneas.
 6. Escuchar el audio completo.
 7. Privacidad: si el video saldrá de la empresa, revisar cifras reales, IDs de asesores y nombres de otros clientes que aparezcan en las capturas.
 8. Reportar al usuario en pocas líneas: duración, formato, hojas cubiertas, hojas sin cubrir y descripciones por confirmar.
