@@ -1,0 +1,66 @@
+---
+name: dashboards-cobranza-estructura
+description: Estructura estándar (Dirección y Operación), layout, interactividad y estilo visual de dashboards de Cobranza BINATSA en Tableau Cloud. Usar al diseñar o modificar vistas.
+---
+
+# Estructura y estilo · Dashboards de Cobranza BINATSA
+
+## Estructura estándar
+Siempre dos vistas, Dirección y Operación, con botones de navegación entre ellas ("Ir a Operación" / "Ir a Dirección"). Encabezado con logo BINATSA y logo del cliente, ambos visibles.
+
+### Dirección (¿cómo va la campaña?)
+- KPIs generales: monto recuperado, pagos, promesas, % cartera gestionada, % contacto titular.
+- Otros canales si existen: datos propios por canal en un gráfico comparativo (contactos, promesas, efectividad).
+- Intensidad de base por segmento de cartera (asignadas, gestionadas, sin gestión, intentos por cuenta).
+- Mapa de visitas por zona: de dónde salen más promesas y recuperación (zona/colonia/municipio/estado según el campo disponible).
+- Tendencia día a día de promesas y recuperación.
+
+### Operación (¿qué hay que corregir hoy?) — siempre estas 3 piezas
+1. Mapa de calor día × franja horaria con segmentador (parámetro "Métrica") para: Gestiones, Promesas, Monto recuperado, % de contacto.
+2. Tipificaciones ordenadas DESC (a dónde se va el mayor flujo).
+3. Asesores: cuentas asignadas, gestiones totales, % promesado, monto recuperado.
+
+Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada bloque con franja de encabezado emoji + pregunta + subtítulo):
+- Fila 1: "¿En qué horas contestan los titulares?" (mapa de calor + selector de Métrica) | "¿Quién produce y quién necesita apoyo?" (tabla por asesor).
+- Fila 2: "¿Qué está pasando en las llamadas?" (tipificaciones DESC apiladas por segmento) | "¿A qué horas se trabaja más?" (barras por hora apiladas por segmento).
+- Fila 3: "¿Qué segmento tiene más cuentas sin tocar?" (pastel) | "Visitas por resultado" (barras apiladas).
+- Pie: texto "Cómo leer" con la aclaración de fuentes.
+
+## Layout
+- Todo en contenedores en MOSAICO (no flotante).
+- Tamaño automático, lo más grande posible para escritorios grandes (ajustar a ancho; altura suficiente).
+- NINGÚN gráfico, tarjeta ni filtro lleva borde ni color de fondo: todo transparente (zonas, hojas, KPIs, filtros, parámetros, contenedores). Solo los encabezados de zona pueden usar la franja de color de marca.
+
+## Interactividad
+- Gráficos dinámicos entre sí: clic en una marca filtra los demás (acciones de filtro de dashboard; segmento, asesor, canal, hora, día, tipificación y zona como dimensiones de enlace).
+- Preferir tipos de gráfico que admitan segmentador/parámetro.
+- Filtros globales arriba: segmento, Desde, Hasta. Enlace "Guía de uso".
+- En edición web NO dejar marcas seleccionadas ni parámetros cambiados antes de publicar.
+
+## Estilo visual
+- Encabezados de zona: franja de color de marca (en su tono oscuro si hace falta, ver Contraste), título blanco con emoji coherente + subtítulo de una línea con la pregunta de negocio.
+- KPIs grandes con número en color (adaptar a la marca del cliente).
+- Todo porcentaje con símbolo % (1 decimal). Dinero con $ y miles; M/K en cifras grandes. Si el % se corta en celdas angostas (p. ej. mapa de calor dentro del tablero), avisar y proponer sin decimales o ensanchar; nunca dejar el número sin %.
+- Barras de un solo color: resaltar la más alta (acento) con su número arriba, resto neutro. Barras apiladas por segmento mantienen un color fijo por segmento; si chocan con la marca, proponer ajuste.
+- Sin ruido: nada de gráficos huérfanos, hojas visibles que el cliente no consulta (ocultas; acceso por "Ir a hoja"), ni calculados sin uso.
+
+## Paleta y tipografía
+Paleta de BINATSA (y modelo de cómo documentar la de un cliente): `logos/paleta-binatsa.md`. Para cargarla en Tableau: `logos/Preferences-BINATSA.tps`.
+
+Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colores dominantes):
+- Primario del cliente: encabezados de zona, selección y barra destacada (la más alta).
+- Secundario del cliente: acentos y líneas.
+- Neutro: barras no destacadas y texto secundario en gris con matiz hacia el primario (no gris puro). Texto principal casi negro, nunca #000 puro.
+- Semáforo fijo, independiente de la marca: verde #2e7d32 (mejora), rojo #c62828 (empeora), ámbar #b45f06 (alerta). Invertir cuando bajar es bueno. Nunca usar el color como única señal: acompañarlo siempre con ▲ / ▼ o con texto.
+- Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Nunca más de 6 colores categóricos.
+- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, azul marino `#0B1F3A`) y dejar el color claro como acento. Sin fondos ni bordes (todo transparente).
+
+Tipografía (una sola familia, la de Tableau o la del cliente si la tiene):
+- Número de tarjeta KPI: 28-32 pt en negrita, color primario o semáforo.
+- Título de zona: 14-16 pt en negrita, blanco sobre franja. Subtítulo: 10-11 pt.
+- Etiquetas de ejes y marcas: 9-10 pt (mínimo 8 en web). Delta de tarjeta: 10-11 pt.
+- Tooltip: título 12-14 pt, valores 12 pt, secciones 10-11 pt.
+- Valores marcados como "propuestos" hasta que el usuario los confirme en la primera revisión de cada cliente.
+
+## Patrón del mapa de calor con selector de métrica
+Parámetro de texto "Métrica del mapa de calor" (Gestiones, Contactos con titular, Promesas, Cuentas distintas, % contacto, % promesa, Monto recuperado). Un cálculo "Métrica seleccionada" (CASE sobre el parámetro) para el color y otro "Métrica (texto)" para la etiqueta que agrega % cuando la métrica es porcentual. Etiqueta mínima 8 pt en web.
