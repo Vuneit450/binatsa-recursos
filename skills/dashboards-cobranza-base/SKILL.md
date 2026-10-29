@@ -14,6 +14,7 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 - dashboards-cobranza-tooltips: descripciones emergentes.
 - dashboards-cobranza-cliente-limpieza: vista del cliente y limpieza de huérfanos.
 - dashboards-cobranza-publicacion: checklist, publicación y monitoreo.
+- dashboards-cobranza-video-guia: video guía para un usuario nuevo; último paso, después de publicar.
 
 ## Recursos de BINATSA
 - Repositorio de GitHub: Vuneit450/binatsa-recursos.
