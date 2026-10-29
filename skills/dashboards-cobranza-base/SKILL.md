@@ -38,7 +38,7 @@ Tanda 2 (antes de publicar):
 7. Canal de alertas de fallo de actualización: opciones "Slack (¿cuál canal?)", "Correo", "Otro", "Sin alertas". Nunca asumir uno.
 
 Tanda 3 (antes de compartir con el cliente):
-8. Qué vistas ve el cliente final y quiénes tienen acceso.
+8. Quiénes tienen acceso. Por defecto el cliente ve las dos vistas (Dirección y Operación), con el desglose por asesor.
 
 ## Reglas generales (Tableau Cloud)
 1. NUNCA mover ni modificar consultas/fuentes. Solo ocultar campos huérfanos que ningún reporte use ni vaya a usar.

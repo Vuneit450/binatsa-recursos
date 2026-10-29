@@ -6,10 +6,10 @@ description: Configurar la vista que ve el cliente final y limpiar hojas, oríge
 # Vista del cliente y limpieza · Dashboards de Cobranza BINATSA
 
 ## Vista del cliente
-- Definir con el usuario qué vistas ve el cliente final (por ejemplo una vista de gestiones o resultados) y cuáles son solo internas.
-- Las vistas internas y las hojas de trabajo van ocultas; el cliente solo ve lo que se le comparte.
+- Por defecto el cliente ve las dos vistas, Dirección y Operación. Confirmar con el usuario si algún cliente debe ver menos.
+- Las hojas de trabajo van ocultas; el cliente solo ve lo que se le comparte.
 - Dar permisos a nivel de vista/proyecto solo a esa vista (lo configura el usuario en Tableau Cloud; confirmar con él antes de compartir).
-- Cuidar que la vista del cliente no muestre datos de otras campañas ni información interna (asesores, notas internas) salvo que el usuario lo pida.
+- Cuidar que la vista del cliente no muestre datos de otras campañas ni notas internas. El desglose por asesor SIEMPRE se muestra.
 - Probar la vista como la verá el cliente (filtros por defecto, sin marcas seleccionadas).
 
 ## Limpieza de huérfanos (cuando el usuario la pida)

@@ -17,11 +17,12 @@ De arriba hacia abajo, todo alineado a la izquierda:
 4. Sin borde ni fondo. Misma altura y ancho en toda la fila; máximo 5 tarjetas por fila.
 
 ## Glosario de KPIs (definiciones estándar; confirmar con el cliente si difieren)
+Contacto, promesa y los demás resultados se identifican SIEMPRE por la tipificación que registra el historial de llamadas. Cada cliente nombra sus tipificaciones distinto: al iniciar, mapear cuáles cuentan como contacto con titular y cuáles como promesa, y confirmarlo con el usuario.
 - Cuentas asignadas: cuentas en la base del periodo/segmento.
 - Gestión / cuentas gestionadas: cuentas con al menos una gestión en el periodo. % gestión (o % cartera gestionada) = gestionadas ÷ asignadas. % sin gestión = 1 − % gestión.
 - Intentos (de llamada): número de gestiones/llamadas realizadas. Intentos por cuenta gestionada = intentos ÷ cuentas gestionadas.
-- Contacto con titular: gestiones cuyo interlocutor es el titular. % contacto = contactos con titular ÷ gestiones (confirmar si se mide sobre gestiones o sobre cuentas).
-- Promesa de pago: gestiones con resultado de promesa. % promesa = promesas ÷ contactos con titular (confirmar base). Monto prometido = suma del monto de las promesas.
+- Contacto con titular: gestiones cuya tipificación en el historial de llamadas indica que se habló con el titular. % contacto = contactos con titular ÷ gestiones totales del historial.
+- Promesa de pago: gestiones cuya tipificación en el historial de llamadas es de promesa. % promesa = promesas ÷ contactos con titular. Monto prometido = suma del monto de las promesas.
 - Pago / pagos recibidos: número de pagos aplicados. $ recuperado = suma de pagos aplicados en el periodo.
 - Periodo previo: rango inmediatamente anterior de la misma duración que el rango seleccionado.
 - 7 días previos: el mismo rango desplazado 7 días atrás.

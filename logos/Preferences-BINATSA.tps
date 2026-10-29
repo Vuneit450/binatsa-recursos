@@ -18,7 +18,7 @@
     </color-palette>
     <color-palette name="BINATSA Semaforo" type="ordered-diverging">
       <color>#c62828</color>
-      <color>#b45f06</color>
+      <color>#C77700</color>
       <color>#2e7d32</color>
     </color-palette>
   </preferences>

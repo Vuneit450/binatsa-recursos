@@ -23,6 +23,10 @@ skills/
 
 Cada carpeta de `skills/` tiene un `SKILL.md` independiente. El módulo `base` indica el orden: base, estructura, KPIs, tooltips, cliente y limpieza, publicación.
 
+## Usar desde otra cuenta de Claude
+
+El repositorio es público a propósito, para poder leerlo desde otras cuentas. Cada carpeta de `skills/` es un skill independiente que se puede copiar o subir a la otra cuenta. Como es público, nunca subir aquí credenciales ni datos de clientes: solo logos, paletas y procesos.
+
 ## Paleta en Tableau
 
 Copiar `logos/Preferences-BINATSA.tps` a `Mi repositorio de Tableau/Preferencias/Preferences.tps` y reiniciar Tableau Desktop. Detalles en `logos/paleta-binatsa.md`.

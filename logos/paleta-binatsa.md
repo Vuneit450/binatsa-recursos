@@ -40,7 +40,8 @@ Si el cliente tiene menos segmentos, tomar pasos salteados (por ejemplo 3 segmen
 |---|---|
 | Mejora | `#2e7d32` |
 | Empeora | `#c62828` |
-| Alerta | `#b45f06` |
+| Alerta (marcas, flechas y números grandes) | `#C77700` |
+| Alerta (texto pequeño) | `#9A5A00` |
 
 Siempre acompañar el color con el símbolo ▲ / ▼, para que se entienda sin distinguir colores.
 
