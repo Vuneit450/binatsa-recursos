@@ -42,6 +42,24 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 - Fila 3: "¿Qué segmento tiene más cuentas sin tocar?" (pastel) | "Visitas por resultado" (barras apiladas).
 - Pie: texto "Cómo leer" con la aclaración de fuentes.
 
+## Vistas estándar
+Obligatorias: Dirección y Operación (arriba). Recomendada en todo proyecto: Guía de uso. Opcionales, según el proyecto: Seguimiento y Daily. Todas llevan el mismo título principal, logo y botones de navegación (hacia todas las demás vistas).
+
+### Guía de uso (recomendada)
+Vista de solo texto, sin gráficos, con el mismo estilo de títulos de bloque. Se abre desde el enlace "Guía de uso" del encabezado; el botón "Glosario" (si existe) lleva a esta misma vista, no hay una vista aparte. Contiene, en este orden:
+1. Para qué sirve cada vista: una línea por vista con la pregunta que responde.
+2. Cómo usar el tablero: las 5 reglas (los filtros de arriba afectan todo; clic en una gráfica filtra el resto; otro clic quita el filtro; pasa el mouse y te explica; los selectores cambian la gráfica).
+3. Glosario: cada métrica con su definición, tomadas del glosario de dashboards-cobranza-kpis y de las reglas de negocio acordadas, sin términos técnicos.
+4. Segmentos de cartera del cliente: nombre y rango de cada uno.
+5. Actualización: frecuencia real de los datos y el día del último dato.
+6. A quién avisar si algo no cuadra.
+
+### Seguimiento (opcional): ¿quién cumple la meta?
+Tarjetas de metas (las define el cliente; por ejemplo llamadas al día o casos asignados), tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI y de periodo (azul oscuro = cumple la meta) y barras. Clic en un asesor filtra todo y deja ver solo su rendimiento; otro clic regresa a todos. Las metas salen del catálogo de dashboards-cobranza-datos.
+
+### Daily (opcional)
+Corte diario del cliente. Su contenido y su tamaño se definen con el usuario (en el tablero de referencia es una vista de tamaño fijo de 2100 x 1650 px).
+
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño (como en los tableros de referencia): Dirección en tamaño Automático. Operación en "Rango" definido solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px; sin máximo, se estira en pantallas muy grandes y crece en alto si la ventana es más alta. Las vistas adicionales (por ejemplo un Daily) usan las medidas que se definan con el usuario.
@@ -99,6 +117,29 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 - Nombres de hojas: sin estándar; cada proyecto usa los suyos. Los parámetros sí son estándar (ver Parámetros estándar).
 - Ningún gráfico lleva líneas de fondo: quitar la cuadrícula, las líneas de cero, las líneas de referencia sin uso y las divisiones de fila y columna. Como la cuadrícula ya no ayuda a leer los valores, mostrar la etiqueta del valor en las marcas donde haga falta (en las barras, el número arriba, como ya pide la regla de la barra destacada).
 - Ningún gráfico muestra el título del segundo eje (en gráficos de doble eje). Lo que mide el segundo eje se explica en el subtítulo de la zona y en el tooltip "Cómo se calcula".
+
+## Formato regional
+- Idioma: toda etiqueta y todo texto en español.
+- Configuración regional del libro: Español (México), como en el tablero de referencia.
+- Fechas en día/mes/año (por ejemplo 19/10/2026) y horas en formato de 24 h (propuesto). Zona horaria acordada con el cliente (ver dashboards-cobranza-datos).
+- Dinero con $ y separador de miles; si el proyecto maneja más de una moneda, indicar el código en la etiqueta.
+
+## Estados vacíos y datos parciales (propuesto)
+- Una tarjeta sin datos muestra "—", nunca 0, con el subtítulo "Sin datos para este filtro".
+- Un gráfico sin datos muestra un mensaje centrado: "Sin datos con estos filtros".
+- Si un dato solo existe para parte del periodo (por ejemplo el detalle por hora de un solo día), decirlo en pantalla; no se rellena ni se estima.
+
+## Cuándo usar cada gráfico (propuesto)
+- Barras: comparar categorías (canales, asesores, resultados), ordenadas de mayor a menor.
+- Línea o barras por día: tendencia día a día.
+- Mapa de calor: día contra hora, o día contra canal, con selector de métrica.
+- Embudo: etapas de un proceso (cartera, gestionadas, contacto, promesa, pago).
+- Tabla: detalle por asesor o por canal, con total general.
+- Pastel o dona: solo para 2 a 5 partes de un todo (por ejemplo cuentas sin gestión por segmento), con el % a la vista; nunca para comparar.
+- Mapa geográfico: solo cuando el dato tiene zona (por ejemplo visitas).
+
+## Dispositivos
+Los dashboards se diseñan para pantalla de escritorio (ancho mínimo de 1400 px). No se diseñan vistas para teléfono o tableta salvo que el usuario las pida.
 
 ## Paleta y tipografía
 Paleta de BINATSA (y modelo de cómo documentar la de un cliente): `logos/paleta-binatsa.md`. Para cargarla en Tableau: ver la sección "Para Tableau" de ese mismo documento (el método depende de la versión).

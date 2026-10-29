@@ -22,7 +22,7 @@ Mismas reglas que el módulo base: herramienta de opción múltiple si existe (s
 2. Mapa de las vistas: qué pregunta responde cada una (Dirección: ¿cómo vamos?; Operación: ¿qué corrijo hoy?; y las vistas extra que tenga el proyecto), con los botones de navegación.
 3. Lo común, UNA sola vez: dónde están los filtros y qué afectan; cómo se leen las tarjetas; qué pasa al pasar el mouse; qué pasa al hacer clic; para qué sirven los selectores.
 4. Recorrido por vista: una sección por cada vista u hoja, cada una con una tarjeta de título ("Hoja N" y el nombre). En cada sección solo lo propio de esa hoja, sin repetir lo común.
-5. ¿Dudas?: el botón de Glosario o la Guía de uso.
+5. ¿Dudas?: la vista Guía de uso, que incluye el glosario (el botón "Glosario", si existe, lleva a ella).
 6. Las 5 reglas, a modo de resumen.
 7. Cierre fijo de BINATSA (ver más abajo).
 Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a una vista.

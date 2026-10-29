@@ -12,6 +12,7 @@ logos/
   cierre-video.png            tarjeta de cierre fija de los videos guía (logo + eslogan)
 skills/
   dashboards-cobranza-base/            punto de partida: preguntas, reglas y flujo (usar primero)
+  dashboards-cobranza-datos/           tablas, reglas de negocio, validación y seguridad (antes de construir)
   dashboards-cobranza-estructura/      vistas Dirección y Operación, layout, estilo
   dashboards-cobranza-kpis/            tarjetas KPI y glosario de métricas
   dashboards-cobranza-tooltips/        descripciones emergentes

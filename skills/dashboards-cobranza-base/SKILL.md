@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-base
-description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de estructura, KPIs, tooltips, cliente/limpieza, publicación y video guía."
+description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de datos, estructura, KPIs, tooltips, cliente/limpieza, publicación y video guía."
 ---
 
 # Base · Dashboards de Cobranza BINATSA
@@ -10,6 +10,7 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 
 ## Módulos relacionados
 - dashboards-cobranza-estructura: Dirección, Operación, layout, estilo.
+- dashboards-cobranza-datos: tablas, reglas de negocio, validación y seguridad; va ANTES de construir.
 - dashboards-cobranza-kpis: tarjetas KPI y glosario.
 - dashboards-cobranza-tooltips: descripciones emergentes.
 - dashboards-cobranza-cliente-limpieza: vista del cliente y limpieza de huérfanos.
@@ -50,6 +51,7 @@ Tanda 3 (antes de compartir con el cliente):
 5. Alertas de fallo: canal elegido por el usuario para cada proyecto; lo configura el usuario en Tableau.
 
 ## Flujo de trabajo
+0. Antes de construir, revisar los datos y acordar las reglas de negocio (dashboards-cobranza-datos).
 1. Hacer las preguntas iniciales. Si el usuario sube un .twbx, trabajar sobre ESE archivo.
 2. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; el usuario publica.
 3. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.

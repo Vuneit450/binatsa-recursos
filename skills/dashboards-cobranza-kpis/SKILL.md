@@ -18,6 +18,7 @@ De arriba hacia abajo. Todo va centrado excepto el título, que va a la izquierd
 5. Medidas: 126 px de alto; el ancho se reparte en partes iguales (198 px con 7 tarjetas en 1400 px); hasta 7 por fila, pegadas entre sí. Misma altura y ancho en toda la fila.
 
 ## Glosario de KPIs (definiciones estándar; confirmar con el cliente si difieren)
+Este glosario es la fuente de las definiciones que se publican en la vista Guía de uso (dashboards-cobranza-estructura) y en los tooltips. Si cambia una definición, se cambia aquí primero.
 Contacto, promesa y los demás resultados se identifican SIEMPRE por la tipificación que registra el historial de llamadas. Cada cliente nombra sus tipificaciones distinto: al iniciar, mapear cuáles cuentan como contacto con titular y cuáles como promesa, y confirmarlo con el usuario.
 - Cuentas asignadas: cuentas en la base del periodo/segmento.
 - Gestión / cuentas gestionadas: cuentas con al menos una gestión en el periodo. % gestión (o % cartera gestionada) = gestionadas ÷ asignadas. % sin gestión = 1 − % gestión.
