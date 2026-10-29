@@ -12,11 +12,12 @@
 ## Sin publicar
 - Módulo de video: nueva sección "Composición del cuadro" (marco estándar de 1664 x 976 px, simulación de monitor chico en réplicas, franja de texto abajo, cámara y zoom, barrido único en elementos anchos, regla para no repetir gráficos, escena de arranque y prueba de cuadros a 3840 x 2160).
 - Alineado con el libro de referencia más reciente: tamaño fijo de 1910 x 1300 px en todas las vistas, ícono del cliente y logo de BINATSA, botones "Ir a <Vista> →" de 164 x 36 px con color por destino, tarjetas KPI de 271 x 190 px, tooltips de cinco secciones, parámetro Periodo y formato de título "Cobranza <Cliente> · <Vista>".
-- Los deltas sin periodo previo muestran "—", no "+0.0 %".
+- Los deltas sin periodo previo muestran "-", no "+0.0 %".
 - La prohibición de nombres técnicos, "Excel" y sistemas internos se extiende al texto visible del dashboard, no solo al video.
 - Botones de navegación pegados a la izquierda; número de tarjeta KPI de 28 pt; los colores de canales los define el proyecto; Periodo con "Año actual" por defecto.
 - Módulo de video revisado: filtros con Periodo, tooltip de cinco secciones, botones, colores iguales a los del tablero real y cómo mostrar un tablero de 1910 x 1300 px en 16:9.
 - Carpeta `ejemplos/` con 9 ilustraciones de datos inventados que reproducen el estilo de referencia.
+- El símbolo de "sin dato" es el mismo en todo el skill: "-" (guion corto), en tarjetas, deltas y tablas.
 - Etiquetas de valor: los valores 0 o nulos no muestran etiqueta en los gráficos, para no saturar, y en las tablas se muestran como "-".
 - Esquinas redondeadas en todos los títulos con fondo (gráficos, tablas y tarjetas KPI); el resto, transparente y sin borde.
 - La escala de color del mapa de calor la define el proyecto y el número de cada celda debe contrastar.
