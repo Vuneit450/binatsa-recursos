@@ -6,7 +6,18 @@ description: Estructura estándar (Dirección y Operación), layout, interactivi
 # Estructura y estilo · Dashboards de Cobranza BINATSA
 
 ## Estructura estándar
-Siempre dos vistas, Dirección y Operación, con botones de navegación entre ellas ("Ir a Operación" / "Ir a Dirección"). Encabezado con logo BINATSA y logo del cliente, ambos visibles.
+Siempre dos vistas, Dirección y Operación, con botones de navegación entre ellas. Encabezado con el título principal del dashboard, los botones de navegación y los logos de BINATSA y del cliente, todos visibles.
+
+### Título principal del dashboard
+Texto de 20 pt en negrita, color blanco, sobre una franja de color de marca (en su tono oscuro, ver Contraste), con un emoji al inicio y sin borde. Arriba a la izquierda, como todo título. Es el texto más grande del dashboard: los títulos de zona (14-16 pt) quedan por debajo.
+
+### Botones de navegación
+Objeto Botón de navegación de tipo texto, uno por vista de destino:
+- Ancho fijo de 165 px; alto de 40 px (propuesto: en los tableros de referencia varía de 32 a 65 px porque se dimensiona en porcentaje; fijarlo en píxeles evita que cambie con el alto del dashboard).
+- Fuente Tableau Bold de 11 pt, texto blanco.
+- Fondo en el tono oscuro del color primario del cliente (el mismo de las franjas), sin borde.
+- Texto del botón: emoji + nombre de la vista, por ejemplo "📊 Dirección" y "⚙️ Operación", sin flechas.
+- Todos los botones de la fila con el mismo tamaño y separados por un espacio igual; la fila va centrada, bajo el título principal.
 
 ### Dirección (¿cómo va la campaña?)
 - KPIs generales: monto recuperado, pagos, promesas, % cartera gestionada, % contacto titular.
@@ -31,7 +42,7 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: opción "Rango" (no Automático, que no permite fijar altura). Alto: 1300 px (mínimo y máximo). Ancho: automático, que se estira en pantallas muy grandes; mínimo 1200 px y máximo 3840 px.
-- La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos: encabezados de zona, títulos de gráficos y títulos de tarjetas KPI (franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis).
+- La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
 ## Interactividad
@@ -61,11 +72,13 @@ Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colore
 - Neutro: barras no destacadas y texto secundario en gris con matiz hacia el primario (no gris puro). Texto principal casi negro, nunca #000 puro.
 - Semáforo fijo, independiente de la marca: verde #2e7d32 (mejora), rojo #c62828 (empeora), ámbar #C77700 (alerta; en texto pequeño usar #9A5A00 para que se lea). Invertir cuando bajar es bueno. Nunca usar el color como única señal: acompañarlo siempre con ▲ / ▼ o con texto.
 - Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Todos los pasos deben llegar a 3:1 de contraste contra el fondo (el paso más claro no puede ser un tono pastel). Nunca más de 6 colores categóricos.
-- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, turquesa oscuro `#007F84`) y reservar el color claro del logo para acento decorativo. Toda barra, línea o número de color debe llegar a 3:1 contra el fondo; si el color de marca no llega (el turquesa del logo da 2.6:1), usar su tono oscuro. Sin fondos ni bordes en la información (todo transparente); solo los títulos pueden llevarlos.
+- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, turquesa oscuro `#007F84`) y reservar el color claro del logo para acento decorativo. Toda barra, línea o número de color debe llegar a 3:1 contra el fondo; si el color de marca no llega (el turquesa del logo da 2.6:1), usar su tono oscuro. Sin fondos ni bordes en la información (todo transparente); solo los títulos y los botones de navegación pueden llevarlos.
 
 Tipografía (una sola familia, la de Tableau o la del cliente si la tiene):
 - Número de tarjeta KPI: 28-32 pt en negrita, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
+- Título principal del dashboard: 20 pt en negrita, blanco sobre franja.
 - Título de zona: 14-16 pt en negrita, blanco sobre franja. Subtítulo: 10-11 pt.
+- Botón de navegación: Tableau Bold 11 pt, blanco sobre el color de marca.
 - Etiquetas de ejes y marcas: 9-10 pt (mínimo 8 en web). Delta de tarjeta: 10-11 pt.
 - Tooltip: título 12-14 pt, valores 12 pt, secciones 10-11 pt.
 - Valores marcados como "propuestos" hasta que el usuario los confirme en la primera revisión de cada cliente.

@@ -11,8 +11,9 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 - [ ] Todos los % con símbolo; dinero con $ y miles.
 - [ ] Tooltips completos en todas las hojas.
 - [ ] Tarjetas KPI con los dos deltas y color de ▲▼ correcto (con rango de 7 días o menos, solo "vs periodo previo"; probar con un rango corto y uno largo).
-- [ ] Botones de navegación funcionan; logos BINATSA y cliente visibles.
-- [ ] Información sin bordes ni fondos (todo transparente; solo los títulos pueden llevarlos); mosaico.
+- [ ] Título principal de 20 pt en negrita, blanco sobre franja de marca.
+- [ ] Botones de navegación funcionan y cumplen el formato (165 x 40 px, Tableau Bold 11 pt, texto blanco sobre color de marca, emoji + nombre); logos BINATSA y cliente visibles.
+- [ ] Información sin bordes ni fondos (todo transparente; solo los títulos y los botones de navegación pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos (de gráficos, de tablas y encabezados de zona), a la izquierda.
 - [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas.
 - [ ] Tamaño en "Rango": alto 1300 px (mínimo y máximo) y ancho automático para pantallas muy grandes.
