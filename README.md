@@ -17,6 +17,7 @@ skills/
   dashboards-cobranza-tooltips/        descripciones emergentes
   dashboards-cobranza-cliente-limpieza/  vista del cliente y limpieza de huérfanos
   dashboards-cobranza-publicacion/     checklist, publicación y monitoreo
+  dashboards-cobranza-video-guia/      video guía para un usuario nuevo (último paso)
 clientes/
   _plantilla/                 base para un cliente nuevo (logo + paleta)
 archivo/

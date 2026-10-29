@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-base
-description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de estructura, KPIs, tooltips, cliente/limpieza y publicación."
+description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de estructura, KPIs, tooltips, cliente/limpieza, publicación y video guía."
 ---
 
 # Base · Dashboards de Cobranza BINATSA
@@ -55,3 +55,4 @@ Tanda 3 (antes de compartir con el cliente):
 3. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
 4. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
 5. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.
+6. Al terminar y publicar, hacer el video guía (dashboards-cobranza-video-guia): es el último paso de la entrega.

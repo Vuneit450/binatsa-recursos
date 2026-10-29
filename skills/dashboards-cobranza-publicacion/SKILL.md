@@ -21,6 +21,7 @@ description: "Checklist previo a publicar, reglas de publicación en Tableau Clo
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).
 - [ ] Después de publicar: vistas, fuentes, hora de Modificado y actualización de extracción OK.
+- [ ] Dashboard publicado y probado: hacer el video guía (dashboards-cobranza-video-guia), último paso de la entrega.
 
 ## Prueba de interacción (obligatoria)
 La mayoría de los gráficos deben interactuar entre sí; cuáles quedan fuera depende del proyecto. No darlo por hecho: probarlo en el dashboard abierto en el navegador, en todas las vistas (como mínimo Dirección y Operación).
