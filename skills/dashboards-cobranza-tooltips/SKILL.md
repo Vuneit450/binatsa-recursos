@@ -5,16 +5,19 @@ description: Formato estándar de descripciones emergentes (tooltips) con iconos
 
 # Tooltips · Dashboards de Cobranza BINATSA
 
-Obligatorios en todo gráfico y tarjeta. Estructura estándar (si el usuario ya aprobó un tooltip en el proyecto, copiar su formato):
-1. Título en negrita con color de acento (verde #2e7d32 o color de marca).
-2. Datos: etiqueta normal + valor en negrita y más grande; valores dinámicos (hora, día, segmento, métrica).
-3. Línea divisoria fina.
-4. Tres secciones con "▸" en negrita y 1-3 líneas:
-   - "🔎 QUÉ MIDE" (qué valor cuenta)
-   - "🧮 CÓMO SE CALCULA" (fórmula en palabras, cómo se compone y se lee)
-   - "🎯 PARA QUÉ SIRVE ESTA VISTA"
-5. Colores por sección (QUÉ MIDE azul/oscuro, CÓMO SE CALCULA #9A5A00, PARA QUÉ SIRVE #2e7d32); cuerpo en gris oscuro; iconos coherentes con el contenido. El verde es el mismo hex del semáforo de dashboards-cobranza-estructura y el ámbar es su variante oscura para texto pequeño: si cambian allá, cambian aquí. Aquí son solo decoración del tooltip; no indican mejora ni alerta.
-6. Cuando hay filas por segmento de cartera, línea gris con la leyenda de rangos (ej. "A = 06-30 días · B = 31-60 · C = 61-90", según el cliente). Sin pie de campaña.
+Obligatorios en todo gráfico y tarjeta. Formato tomado de los tooltips de las hojas visibles de los tableros de referencia; copiarlo en todas las hojas, en este orden:
+1. Título en negrita en verde #2e7d32.
+2. Datos: una línea por dato, con emoji + etiqueta en negrita + valor dinámico en negrita (por ejemplo "⏰ Hora: …", "📅 Día: …", "📊 Gestiones: …", "📌 Métrica elegida: …").
+3. Una línea en blanco (no hay línea divisoria).
+4. Si la hoja tiene segmentos de cartera, desglose: encabezado en negrita "📊 Por segmento — <métrica>" y una línea por segmento con ■ en el color de ese segmento en la rampa de segmentos, el nombre del segmento y el valor en negrita.
+5. Tres secciones separadas por una línea en blanco, cada una con "▸", su emoji y 1-3 líneas de cuerpo en el color normal:
+   - "▸ 🔎 QUÉ MIDE" (qué valor cuenta), título en negrita #9A5A00.
+   - "▸ 🧮 CÓMO SE CALCULA" (fórmula en palabras, cómo se compone y se lee), título en negrita #9A5A00.
+   - "▸ 🎯 PARA QUÉ SIRVE" (para qué sirve esta vista), título en negrita #2e7d32.
+6. Al final de CÓMO SE CALCULA, en gris #757575, la leyenda de rangos de los segmentos (ej. "A = 06-30 días · B = 31-60 · C = 61-90", según el cliente). Sin pie de campaña.
+7. Tamaños: título y valores 12 pt, títulos de sección 10 pt.
+
+Los hex repiten los del semáforo de dashboards-cobranza-estructura (verde, y el ámbar en su variante oscura para texto pequeño): si cambian allá, cambian aquí. Aquí son solo decoración; no indican mejora ni alerta.
 
 ## En XML (.twb)
 - `<customized-tooltip><formatted-text><run …>` dentro del pane de cada worksheet.

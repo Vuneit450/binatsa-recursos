@@ -53,4 +53,4 @@ Tanda 3 (antes de compartir con el cliente):
 2. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; el usuario publica.
 3. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
 4. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
-5. Correr el checklist de publicación, incluida la prueba de que todos los gráficos interactúan entre sí; verificar y reportar en 1-2 frases más la tabla de interacción.
+5. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.

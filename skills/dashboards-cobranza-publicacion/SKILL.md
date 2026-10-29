@@ -16,19 +16,19 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 - [ ] Información sin bordes ni fondos (todo transparente; solo los títulos y los botones de navegación pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos (de gráficos, de tablas y encabezados de zona), a la izquierda.
 - [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas.
-- [ ] Tamaño en "Rango", solo con mínimos: alto mínimo 1300 px y ancho mínimo 1200 px, sin máximos.
+- [ ] Tamaño en "Rango", solo con mínimos: alto mínimo 1800 px y ancho mínimo 1400 px, sin máximos.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).
 - [ ] Después de publicar: vistas, fuentes, hora de Modificado y actualización de extracción OK.
 
 ## Prueba de interacción (obligatoria)
-Todos los gráficos deben interactuar entre sí. No darlo por hecho: probarlo en el dashboard abierto en el navegador, en las dos vistas (Dirección y Operación).
+La mayoría de los gráficos deben interactuar entre sí; cuáles quedan fuera depende del proyecto. No darlo por hecho: probarlo en el dashboard abierto en el navegador, en todas las vistas (como mínimo Dirección y Operación).
 1. Hacer una lista de las hojas visibles del dashboard (gráficos, tablas y tarjetas KPI).
-2. Por cada gráfico, hacer clic en una marca y comprobar que se actualizan TODAS las demás hojas, incluidas las tarjetas KPI. En las tarjetas comprobar que el valor y los deltas siguen la selección (con un día seleccionado, el delta de 7 días se oculta). Anotar cuáles no respondieron.
+2. Por cada gráfico, hacer clic en una marca y comprobar qué hojas se actualizan, incluidas las tarjetas KPI. En las tarjetas comprobar que el valor y los deltas siguen la selección (con un día seleccionado, el delta de 7 días se oculta). Anotar cuáles no respondieron.
 3. Limpiar la selección (clic fuera de las marcas) y comprobar que todo vuelve al estado inicial.
 4. Corregir lo que no responda (dimensión de enlace faltante, acción mal configurada) y repetir desde el paso 2.
-5. Reportar al usuario en una tabla corta: hoja, ¿filtra a las demás?, ¿responde a las demás?. No publicar con huecos sin que el usuario los apruebe.
+5. Reportar al usuario en una tabla corta: hoja, ¿filtra a las demás?, ¿responde a las demás?. Declarar cuáles no interactúan y por qué; deben ser la minoría. Si son muchas, revisar antes de publicar.
 6. Dejar el dashboard sin marcas seleccionadas antes de publicar.
 
 ## Publicación
