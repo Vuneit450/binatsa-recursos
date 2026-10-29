@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-cliente-limpieza
-description: Configurar la vista que ve el cliente final y limpiar hojas, orígenes, cálculos y campos huérfanos de un workbook de Cobranza BINATSA sin tocar las consultas.
+description: "Configurar la vista que ve el cliente final y limpiar hojas, orígenes, cálculos y campos huérfanos de un workbook de Cobranza BINATSA sin tocar las consultas. Usar al preparar un dashboard para compartirlo con el cliente, o cuando pidan limpiar, ordenar u ocultar hojas y campos sin uso."
 ---
 
 # Vista del cliente y limpieza · Dashboards de Cobranza BINATSA

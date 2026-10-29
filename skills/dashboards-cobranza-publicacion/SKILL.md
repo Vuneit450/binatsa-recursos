@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-publicacion
-description: Checklist previo a publicar, reglas de publicación en Tableau Cloud y monitoreo de la actualización del extracto para dashboards de Cobranza BINATSA.
+description: "Checklist previo a publicar, reglas de publicación en Tableau Cloud y monitoreo de la actualización del extracto para dashboards de Cobranza BINATSA. Usar antes y después de publicar un dashboard, al revisar si está listo para publicar o cuando falle la actualización del extracto."
 ---
 
 # Publicación y monitoreo · Dashboards de Cobranza BINATSA

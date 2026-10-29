@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-kpis
-description: Tarjetas KPI con deltas y glosario de definiciones estándar de métricas de Cobranza BINATSA. Usar al crear tarjetas, calcular métricas o documentar cómo se calculan.
+description: "Tarjetas KPI con deltas y glosario de definiciones estándar de métricas de Cobranza BINATSA. Usar al crear o modificar tarjetas KPI, calcular métricas (cobertura, % contacto, promesas, $ recuperado, pagos, deltas contra el periodo previo) o documentar cómo se calculan."
 ---
 
 # KPIs · Dashboards de Cobranza BINATSA

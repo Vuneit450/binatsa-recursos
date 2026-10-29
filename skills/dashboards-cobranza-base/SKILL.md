@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-base
-description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud: preguntas iniciales, recursos, reglas generales y flujo de trabajo. Usar primero; luego los módulos de estructura, KPIs, tooltips, cliente/limpieza y publicación."
+description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de estructura, KPIs, tooltips, cliente/limpieza y publicación."
 ---
 
 # Base · Dashboards de Cobranza BINATSA

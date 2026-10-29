@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-tooltips
-description: Formato estándar de descripciones emergentes (tooltips) con iconos para todas las hojas de dashboards de Cobranza BINATSA, incluido el XML de Tableau. Usar al crear o rehacer tooltips.
+description: "Formato estándar de descripciones emergentes (tooltips) con iconos para todas las hojas de dashboards de Cobranza BINATSA, incluido el XML de Tableau. Usar al crear, rehacer o revisar tooltips o descripciones emergentes."
 ---
 
 # Tooltips · Dashboards de Cobranza BINATSA

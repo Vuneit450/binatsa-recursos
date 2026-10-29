@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-estructura
-description: Estructura estándar (Dirección y Operación), layout, interactividad y estilo visual de dashboards de Cobranza BINATSA en Tableau Cloud. Usar al diseñar o modificar vistas.
+description: "Estructura estándar (vistas Dirección y Operación), layout, medidas, tipografía, colores, interactividad y estilo visual de dashboards de Cobranza BINATSA en Tableau Cloud. Usar al diseñar, armar, modificar o dar formato a un dashboard o tablero: títulos, botones de navegación, logo, tamaños, gráficos, alineación, parámetros y paleta."
 ---
 
 # Estructura y estilo · Dashboards de Cobranza BINATSA
