@@ -55,7 +55,7 @@ Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colore
 - Neutro: barras no destacadas y texto secundario en gris con matiz hacia el primario (no gris puro). Texto principal casi negro, nunca #000 puro.
 - Semáforo fijo, independiente de la marca: verde #2e7d32 (mejora), rojo #c62828 (empeora), ámbar #C77700 (alerta; en texto pequeño usar #9A5A00 para que se lea). Invertir cuando bajar es bueno. Nunca usar el color como única señal: acompañarlo siempre con ▲ / ▼ o con texto.
 - Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Nunca más de 6 colores categóricos.
-- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, azul marino `#0B1F3A`) y dejar el color claro como acento. Sin fondos ni bordes (todo transparente).
+- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, azul marino `#0B1F3A`) y dejar el color claro como acento. Sin fondos ni bordes (todo transparente), salvo el borde de las tarjetas KPI.
 
 Tipografía (una sola familia, la de Tableau o la del cliente si la tiene):
 - Número de tarjeta KPI: 28-32 pt en negrita, color primario o semáforo.
