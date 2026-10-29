@@ -6,14 +6,14 @@ description: Tarjetas KPI con deltas y glosario de definiciones estándar de mé
 # KPIs · Dashboards de Cobranza BINATSA
 
 ## Tarjetas KPI
-- Todas las vistas llevan tarjetas KPI con dos deltas: "vs periodo previo" (mismo rango anterior) y "vs 7 días previos", con ▲ verde / ▼ rojo (invertir color cuando bajar es bueno, ej. Sin gestión).
+- Todas las vistas llevan tarjetas KPI con dos deltas: "vs periodo previo" (mismo rango anterior) y "vs 7 días previos", con ▲ verde / ▼ rojo (invertir color cuando bajar es bueno, ej. Sin gestión). Excepción: cuando el rango seleccionado es de 7 días o menos, se oculta "vs 7 días previos" (coincide con el periodo previo o lo repite) y la tarjeta muestra solo "vs periodo previo". Con 8 días o más se muestran los dos.
 - Cada tarjeta debe ayudar a decidir. Descartar métricas descriptivas sin acción (día de mayor volumen, franja más cargada, pico de personas, peso fin de semana, días con operación). Preferir cobertura, % contacto titular, promesas, % promesa, $ recuperado, pagos, sin gestión, intentos por cuenta.
 
 ## Anatomía de la tarjeta (propuesta, confirmar en la primera revisión de cada cliente)
 De arriba hacia abajo, todo alineado a la izquierda:
 1. Nombre de la métrica: 10-11 pt, texto secundario.
 2. Número grande: 28-32 pt en negrita, color primario (o semáforo si la tarjeta tiene meta). Formato de módulo estructura: % con símbolo y 1 decimal, dinero con $ y miles.
-3. Dos deltas en una línea o en dos: "▲ 4.2% vs periodo previo" y "▼ 1.1 pp vs 7 días previos", 10-11 pt, verde o rojo según sea mejor o peor.
+3. Dos deltas en una línea o en dos: "▲ 4.2% vs periodo previo" y "▼ 1.1 pp vs 7 días previos", 10-11 pt, verde o rojo según sea mejor o peor. Con rango de 7 días o menos, solo el primero (ver Tarjetas KPI).
 4. Borde fino de 1 px en neutro `#B4BFCB`, esquinas redondeadas (radio propuesto: 12 px) y sin color de fondo. Aplicar el radio de esquina a la hoja de la tarjeta misma, no al contenedor que la envuelve (el contenedor no recorta a sus hijos). Requiere Tableau 2026.1 o posterior; revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
 5. Misma altura y ancho en toda la fila; máximo 5 tarjetas por fila.
 
@@ -26,6 +26,6 @@ Contacto, promesa y los demás resultados se identifican SIEMPRE por la tipifica
 - Promesa de pago: gestiones cuya tipificación en el historial de llamadas es de promesa. % promesa = promesas ÷ contactos con titular. Monto prometido = suma del monto de las promesas.
 - Pago / pagos recibidos: número de pagos aplicados. $ recuperado = suma de pagos aplicados en el periodo.
 - Periodo previo: rango inmediatamente anterior de la misma duración que el rango seleccionado.
-- 7 días previos: el mismo rango desplazado 7 días atrás.
+- 7 días previos: el mismo rango desplazado 7 días atrás. Solo se calcula y se muestra si el rango seleccionado dura más de 7 días; en Tableau, ocultar el delta con un cálculo que devuelva vacío cuando DATEDIFF('day', [Desde], [Hasta]) + 1 <= 7.
 - Delta: variación relativa en % contra la referencia; para métricas que ya son porcentaje, diferencia en puntos porcentuales (pp).
 - Documentar siempre la definición real usada en el tooltip "Cómo se calcula" y avisar al usuario si el cliente la define distinto.
