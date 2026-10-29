@@ -28,16 +28,17 @@ Mismas reglas que el módulo base: herramienta de opción múltiple si existe (s
 Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a una vista.
 
 ## Guion base de lo común
-- Filtros: decir dónde están y qué opciones hay, y siempre qué afectan ("afectan todo el tablero: tarjetas, mapa, gráficas y tablas"). Si "Desde / Hasta" solo cuentan en cierta opción, decirlo, y dar el rango válido.
+- Filtros: decir dónde están y qué opciones hay (Periodo; Desde y Hasta, que solo cuentan con "Personalizado", con su rango válido; y Canal o Segmento si el proyecto lo usa), y siempre qué afectan ("afectan todo el tablero: tarjetas, mapa, gráficas y tablas").
+- Botones de navegación: "Ir a <Vista> →" cambia de vista, y "📖 Glosario" abre la Guía de uso; mostrarlos al presentar el mapa de las vistas.
 - Tarjetas: número grande = el periodo elegido; ▲ verde mejora, ▼ rojo empeora; "pp" = puntos porcentuales; comparación contra el periodo previo y contra 7 días antes (con rangos de 7 días o menos, solo la primera).
-- Tooltip: mostrar UNO largo a pantalla completa, con datos reales de un caso, desplazándose por sus secciones (qué mide, cómo se calcula, para qué sirve). No presentarlo como "el más grande" ni "el más completo".
+- Tooltip: mostrar UNO largo a pantalla completa, con datos de un caso, desplazándose por sus cinco secciones (qué mide, cómo se calcula, términos, cómo leerlo y para qué sirve). No presentarlo como "el más grande" ni "el más completo".
 - Clic ("regla de oro"): un clic en una marca filtra el resto del tablero; otro clic lo quita.
 - Selectores (por ejemplo de KPI o de métrica): cambian la gráfica y, si es el caso, también las de abajo.
 - Las 5 reglas: 1) los filtros de arriba afectan todo; 2) clic en una gráfica filtra el resto; 3) otro clic quita el filtro; 4) pasa el mouse y te explica; 5) los selectores cambian la gráfica. Añadir la frecuencia de actualización solo si es cierta, con la frecuencia real del proyecto.
 - Para cada hoja: la pregunta de negocio que responde, qué hay en ella y qué hace un clic ahí. Si una descripción de un botón se dedujo por su nombre, marcarla "por confirmar" en el reporte.
 
 ## Estilo
-- Identidad del cliente para el cuerpo del video: sus colores, su logo y su estilo. El cierre es siempre de BINATSA. Los dos videos de referencia compartieron el mismo motor y cambiaron solo la identidad.
+- Identidad del cliente para el cuerpo del video: sus colores, su ícono y su estilo. Los colores de las gráficas son los del tablero real de ese proyecto, no otros. El cierre es siempre de BINATSA. Los dos videos de referencia compartieron el mismo motor y cambiaron solo la identidad.
 - Animación muy estimulante pero legible: textos grandes que entran palabra por palabra, emojis, marcos que resaltan lo explicado, cursor con onda al hacer clic, listas desplegables que se abren solas, un chip con el nombre de la escena y una barra de progreso, y un cambio de plano cada 2 a 3 s con acercamiento a lo que se explica.
 - Transiciones: solo fundidos y deslizamientos de cámara. Prohibido: flashes, temblores, vibraciones, cortes secos y efectos que sacudan la imagen. Lo agresivo vive dentro de las animaciones, no entre escenas.
 - Seguridad: nada parpadea más de 3 veces por segundo.
@@ -47,7 +48,8 @@ Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a 
 
 ## Imágenes y datos
 - Capturas reales del tablero en alta resolución (al menos el doble del tamaño con que se ven, para poder acercar sin que se pixelen).
-- Réplica vectorial solo si no hay acceso al tablero, y avisarlo: se ve menos real.
+- Réplica vectorial solo si no hay acceso al tablero, y avisarlo: se ve menos real. Debe usar los mismos colores y el mismo estilo del tablero real.
+- El tablero mide 1910 x 1300 px (proporción cercana a 1.5:1). En un video 16:9 no cabe entero a toda la altura: mostrar la vista completa al inicio de cada sección y luego acercar por zonas.
 - No inventar cifras: lo que no se lee en la captura no se rellena. Si un dato solo existe para un día, decirlo en pantalla.
 
 ## Audio

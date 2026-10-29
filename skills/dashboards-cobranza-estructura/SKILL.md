@@ -11,14 +11,14 @@ Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más
 ### Logos
 Dos logos, en la misma fila del título principal y siempre en la misma posición en todas las vistas:
 - Ícono del cliente, arriba a la izquierda: imagen cuadrada de unos 88 x 80 px.
-- Logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha y pegado a la esquina: unos 272 x 80 px, con alto proporcional sin deformar, sobre una tarjeta blanca porque sus letras azul marino no se leen sobre la franja oscura.
+- Logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha y pegado a la esquina: unos 272 x 80 px, con alto proporcional sin deformar, sobre una tarjeta blanca porque sus letras azul marino no se leen sobre la franja oscura. Referencia visual: `ejemplos/encabezado.png` (ilustración con datos inventados).
 
 ### Título principal del dashboard
 Texto de 20 pt en negrita, color blanco, sobre una franja del color oscuro de la marca del cliente (ver Contraste), sin borde, de unos 660 x 80 px, arriba a la izquierda junto al ícono del cliente. Formato del texto: "Cobranza <Cliente> · <Vista>" (por ejemplo "Cobranza <Cliente> · Dirección") y, debajo, un subtítulo de 10 pt con la pregunta que responde la vista (por ejemplo "¿Cómo va la campaña?"). Es el texto más grande del dashboard: los títulos de bloque (13 pt) quedan por debajo.
 
 ### Botones de navegación
 Objeto Botón de navegación de tipo texto, uno por cada vista de destino, en una fila debajo del encabezado:
-- Tamaño fijo de 164 x 36 px, uno junto a otro y sin espacio entre ellos; la fila va centrada, bajo el título principal.
+- Tamaño fijo de 164 x 36 px, uno junto a otro y sin espacio entre ellos; la fila va pegada a la izquierda, bajo el título principal.
 - Fuente Tableau Bold de 11 pt, texto blanco.
 - Texto: "Ir a <Vista> →", con flecha. Ejemplos: "Ir a Operación →", "Ir a Seguimiento →".
 - Color por destino: Dirección en el color primario del cliente, Operación en su color secundario, las demás vistas en el color oscuro de la marca (negro o azul marino). Cada color debe llegar a 4.5:1 con el texto blanco; si el color de marca no llega (muchos rosas y turquesas se quedan en 3 a 3.7:1), usar su tono oscuro.
@@ -29,6 +29,7 @@ Objeto Botón de navegación de tipo texto, uno por cada vista de destino, en un
 Obligatorias: Dirección y Operación (arriba). Recomendada en todo proyecto: Guía de uso. Opcional, según el proyecto: Seguimiento. Cualquier otra vista adicional se define con el usuario. Todas llevan el mismo título principal, ícono del cliente, logo de BINATSA y botones de navegación (hacia todas las demás vistas).
 
 ### Guía de uso (recomendada)
+Referencia visual: `ejemplos/guia-uso.png`.
 Vista de solo texto, sin gráficos, con el mismo estilo de títulos de bloque. Se abre desde el botón "📖 Glosario" de las demás vistas; no hay una vista de glosario aparte. Contiene, en este orden:
 1. Para qué sirve cada vista: una línea por vista con la pregunta que responde.
 2. Cómo usar el tablero: las 5 reglas (los filtros de arriba afectan todo; clic en una gráfica filtra el resto; otro clic quita el filtro; pasa el mouse y te explica; los selectores cambian la gráfica).
@@ -44,10 +45,10 @@ Tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI 
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: modo Fijo, 1910 x 1300 px, igual en todas las vistas (incluida la Guía de uso). Las vistas adicionales usan la misma medida salvo que se defina otra con el usuario.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
-- Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
+- Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda (títulos de gráficos, de tablas y encabezados de zona), y los botones de navegación, que van pegados a la izquierda bajo el título principal.
 
 ## Medidas estándar
-Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas.
+Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas. Referencia visual de las dos vistas obligatorias: `ejemplos/vista-direccion.png` y `ejemplos/vista-operacion.png`; de la franja de título de bloque: `ejemplos/franja-bloque.png`; de las tablas por asesor: `ejemplos/tabla-asesores.png`.
 
 | Elemento | Medida |
 |---|---|
@@ -57,7 +58,7 @@ Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas
 | Título principal | unos 660 x 80 px |
 | Controles de arriba (Periodo, Desde, Hasta y Canal o Segmento) | entre 196 y 236 px de ancho y 80 px de alto |
 | Logo de BINATSA | unos 272 x 80 px, arriba a la derecha |
-| Botones de navegación | 164 x 36 px, debajo del encabezado, uno junto a otro |
+| Botones de navegación | 164 x 36 px, debajo del encabezado, pegados a la izquierda, uno junto a otro |
 | Franja de título de bloque | ancho completo, 54 px de alto |
 | Tarjeta KPI | 271 x 190 px; el ancho se reparte en partes iguales (7 por fila en 1910 px); margen de 6 px y relleno de 6 px |
 | Selector de ancho completo (por ejemplo de KPI) | ancho completo, 40 px de alto |
@@ -81,7 +82,7 @@ Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas
 
 ## Parámetros estándar
 Mismos nombres en todos los proyectos, en español y sin pistas entre paréntesis (la explicación va en la Guía de uso):
-- Periodo (lista): Mes actual, Mes anterior, Trimestre actual, Trimestre anterior, Semestre actual, Semestre anterior, Año actual, Año anterior, Últimos 7 días, Últimos 30 días, Últimos 12 meses, Todo el historial y Personalizado. Valor por defecto: "Año actual", como en el libro de referencia.
+- Periodo (lista): Mes actual, Mes anterior, Trimestre actual, Trimestre anterior, Semestre actual, Semestre anterior, Año actual, Año anterior, Últimos 7 días, Últimos 30 días, Últimos 12 meses, Todo el historial y Personalizado. Valor por defecto: "Año actual".
 - Desde (fecha) y Hasta (fecha): solo cuentan si Periodo es "Personalizado"; Hasta no puede pasar de hoy. Indicar el rango válido en la Guía de uso.
 - Día seleccionado (fecha): vacío por defecto; lo llena la acción de parámetro al hacer clic en un día.
 - Segmento (lista, "Todos"): segmentos de cartera del cliente. Si el proyecto separa por canal o producto, usar además Canal (lista, "Todos").
@@ -134,6 +135,7 @@ Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colore
 - Neutro: barras no destacadas y texto secundario en gris con matiz hacia el primario (no gris puro). Texto principal casi negro, nunca #000 puro.
 - Semáforo fijo, independiente de la marca: verde #2e7d32 (mejora), rojo #c62828 (empeora), ámbar #C77700 (alerta; en texto pequeño usar #9A5A00 para que se lea). Invertir cuando bajar es bueno. Nunca usar el color como única señal: acompañarlo siempre con ▲ / ▼ o con texto.
 - Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Todos los pasos deben llegar a 3:1 de contraste contra el fondo (el paso más claro no puede ser un tono pastel). Nunca más de 6 colores categóricos.
+- Canales y otras categorías (por ejemplo producto): los colores los define el proyecto, con la paleta del cliente. Deben ser los mismos en todas las hojas, en los tooltips y en el video guía.
 - Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, turquesa oscuro `#007F84`) y reservar el color claro del logo para acento decorativo. Toda barra, línea o número de color debe llegar a 3:1 contra el fondo; si el color de marca no llega (el turquesa del logo da 2.6:1), usar su tono oscuro. Sin fondos ni bordes en la información (todo transparente); solo los títulos y los botones de navegación pueden llevarlos.
 
 Tipografía: familia Tableau en todos los proyectos (no usar la tipografía del cliente). Se juega con los pesos, no con otras familias:
@@ -143,7 +145,7 @@ Tipografía: familia Tableau en todos los proyectos (no usar la tipografía del 
 - Tableau Light: subtítulos.
 - Tableau Book: cuerpo de texto y tooltips.
 Tamaños:
-- Número de tarjeta KPI: 32 pt en Tableau Bold, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
+- Número de tarjeta KPI: 28 pt en Tableau Bold, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
 - Título principal del dashboard: 20 pt en negrita, blanco sobre franja.
 - Título de bloque (zona, gráfico, tabla y tarjeta KPI): 13 pt en Tableau Semibold, blanco sobre franja; subtítulo de 10 pt en Tableau Light, en un tono claro del primario.
 - Subtítulo bajo el título principal: 10 pt, en el color de texto secundario.
@@ -153,4 +155,5 @@ Tamaños:
 - Valores marcados como "propuestos" hasta que el usuario los confirme en la primera revisión de cada cliente.
 
 ## Patrón del mapa de calor con selector de métrica
+Referencia visual: `ejemplos/mapa-calor.png`.
 Parámetro de texto "Métrica del mapa de calor" (Gestiones, Contactos con titular, Promesas, Cuentas distintas, % contacto, % promesa, Monto recuperado). Un cálculo "Métrica seleccionada" (CASE sobre el parámetro) para el color y otro "Métrica (texto)" para la etiqueta que agrega % cuando la métrica es porcentual. Etiqueta mínima 8 pt en web.

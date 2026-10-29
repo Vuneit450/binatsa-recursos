@@ -5,7 +5,7 @@ description: "Formato estándar de descripciones emergentes (tooltips) con icono
 
 # Tooltips · Dashboards de Cobranza BINATSA
 
-Obligatorios en todo gráfico, tabla y tarjeta. Formato tomado de los tooltips de las hojas visibles del libro de referencia más reciente; copiarlo en todas las hojas, en este orden:
+Obligatorios en todo gráfico, tabla y tarjeta. Formato tomado de los tooltips de las hojas visibles del libro de referencia más reciente; copiarlo en todas las hojas, en este orden (referencia visual: `ejemplos/tooltip.png`):
 1. Título: 14 pt, negrita, verde `#2E7D32`.
 2. Línea de contexto (opcional): "ℹ️" y una frase corta de lo que representa la fila o la marca, 10 pt, gris `#757575`.
 3. Datos: una línea por dato, con emoji + etiqueta (11 pt) + valor dinámico en negrita (12 pt), en color de texto `#1B1F23` (por ejemplo "👤 Asesor: …", "💵 Monto recuperado: …").

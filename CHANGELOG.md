@@ -13,6 +13,9 @@
 - Alineado con el libro de referencia más reciente: tamaño fijo de 1910 x 1300 px en todas las vistas, ícono del cliente y logo de BINATSA, botones "Ir a <Vista> →" de 164 x 36 px con color por destino, tarjetas KPI de 271 x 190 px, tooltips de cinco secciones, parámetro Periodo y formato de título "Cobranza <Cliente> · <Vista>".
 - Los deltas sin periodo previo muestran "—", no "+0.0 %".
 - La prohibición de nombres técnicos, "Excel" y sistemas internos se extiende al texto visible del dashboard, no solo al video.
+- Botones de navegación pegados a la izquierda; número de tarjeta KPI de 28 pt; los colores de canales los define el proyecto; Periodo con "Año actual" por defecto.
+- Módulo de video revisado: filtros con Periodo, tooltip de cinco secciones, botones, colores iguales a los del tablero real y cómo mostrar un tablero de 1910 x 1300 px en 16:9.
+- Carpeta `ejemplos/` con 9 ilustraciones de datos inventados que reproducen el estilo de referencia.
 
 ## 29 de octubre de 2026
 - Skill dividido en 6 módulos independientes (base, estructura, KPIs, tooltips, cliente y limpieza, publicación).
