@@ -9,6 +9,11 @@
 - Se eliminó `archivo/` (el borrador original queda solo en el historial de Git).
 - Las metas y el límite de hojas no son parte del estándar: las metas se preguntan por proyecto y no hay límite de hojas.
 
+## Sin publicar
+- Alineado con el libro de referencia más reciente: tamaño fijo de 1910 x 1300 px en todas las vistas, ícono del cliente y logo de BINATSA, botones "Ir a <Vista> →" de 164 x 36 px con color por destino, tarjetas KPI de 271 x 190 px, tooltips de cinco secciones, parámetro Periodo y formato de título "Cobranza <Cliente> · <Vista>".
+- Los deltas sin periodo previo muestran "—", no "+0.0 %".
+- La prohibición de nombres técnicos, "Excel" y sistemas internos se extiende al texto visible del dashboard, no solo al video.
+
 ## 29 de octubre de 2026
 - Skill dividido en 6 módulos independientes (base, estructura, KPIs, tooltips, cliente y limpieza, publicación).
 - Paleta de BINATSA derivada del logo, con contraste verificado, y paletas para Tableau.

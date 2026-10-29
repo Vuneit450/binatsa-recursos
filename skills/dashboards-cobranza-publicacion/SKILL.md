@@ -9,14 +9,15 @@ description: "Checklist previo a publicar, reglas de publicación en Tableau Clo
 - [ ] Sin marcas seleccionadas y parámetros en su valor por defecto (en web quedan guardados en el borrador).
 - [ ] Controles por defecto correctos (segmento como filtro; Desde y Hasta como parámetros de fecha).
 - [ ] Todos los % con símbolo; dinero con $ y miles.
-- [ ] Tooltips completos en todas las hojas.
+- [ ] Tooltips completos en todas las hojas, con las cinco secciones.
+- [ ] Ningún texto visible menciona servidores, tablas, Excel ni sistemas internos.
 - [ ] Tarjetas KPI con los dos deltas y color de ▲▼ correcto (con rango de 7 días o menos, solo "vs periodo previo"; probar con un rango corto y uno largo).
-- [ ] Título principal de 20 pt en negrita, blanco sobre franja de marca; títulos de bloque de 13 pt con subtítulo de 10 pt; medidas de la sección "Medidas estándar" respetadas.
-- [ ] Botones de navegación funcionan y cumplen el formato (165 x 40 px, Tableau Bold 11 pt, texto blanco sobre color de marca, emoji + nombre); logo de BINATSA arriba a la derecha, en la misma posición en todas las vistas.
+- [ ] Título principal de 20 pt en negrita, blanco sobre franja, con el formato "Cobranza <Cliente> · <Vista>" y su subtítulo; títulos de bloque de 13 pt con subtítulo de 10 pt; medidas de la sección "Medidas estándar" respetadas.
+- [ ] Botones de navegación funcionan y cumplen el formato (164 x 36 px, "Ir a <Vista> →", color por destino con texto blanco a 4.5:1, "📖 Glosario" en gris); ícono del cliente a la izquierda y logo de BINATSA a la derecha, en la misma posición en todas las vistas.
 - [ ] Información sin bordes ni fondos (todo transparente; solo los títulos y los botones de navegación pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos (de gráficos, de tablas y encabezados de zona), a la izquierda.
 - [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas.
-- [ ] Tamaño: Dirección en Automático; Operación en "Rango" solo con mínimos (alto 1800 px y ancho 1400 px), sin máximos.
+- [ ] Tamaño: modo Fijo, 1910 x 1300 px en todas las vistas.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).
