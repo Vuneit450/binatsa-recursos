@@ -30,7 +30,7 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
-- Tamaño: opción "Rango" (no Automático, que no permite fijar altura). Alto: 1300 px (mínimo y máximo). Ancho: automático, que se estira en pantallas muy grandes; propuesto mínimo 1200 px y máximo 3840 px (confirmar en la primera revisión de cada cliente).
+- Tamaño: opción "Rango" (no Automático, que no permite fijar altura). Alto: 1300 px (mínimo y máximo). Ancho: automático, que se estira en pantallas muy grandes; mínimo 1200 px y máximo 3840 px.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos: encabezados de zona, títulos de gráficos y títulos de tarjetas KPI (franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis).
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
