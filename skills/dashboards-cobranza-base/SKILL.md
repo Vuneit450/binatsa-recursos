@@ -30,15 +30,16 @@ Tanda 1 (bloqueantes):
 1. Logo del cliente: opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
 3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo del kit". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
+4. Tarjetas KPI de Dirección y de Operación (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto.
 
 Tanda 2 (antes de publicar):
-4. Segmentación de cartera del cliente (buckets/rangos de mora, nombres y días). No asumir A/B/C.
-5. Workbook, proyecto y sitio de Tableau Cloud (publicar siempre sobre el workbook existente cuando ya hay uno).
-6. Horario, frecuencia y zona horaria de actualización del extracto.
-7. Canal de alertas de fallo de actualización: opciones "Slack (¿cuál canal?)", "Correo", "Otro", "Sin alertas". Nunca asumir uno.
+5. Segmentación de cartera del cliente (buckets/rangos de mora, nombres y días). No asumir A/B/C.
+6. Workbook, proyecto y sitio de Tableau Cloud (publicar siempre sobre el workbook existente cuando ya hay uno).
+7. Horario, frecuencia y zona horaria de actualización del extracto.
+8. Canal de alertas de fallo de actualización: opciones "Slack (¿cuál canal?)", "Correo", "Otro", "Sin alertas". Nunca asumir uno.
 
 Tanda 3 (antes de compartir con el cliente):
-8. Quiénes tienen acceso. Por defecto el cliente ve las dos vistas (Dirección y Operación), con el desglose por asesor.
+9. Quiénes tienen acceso. Por defecto el cliente ve las dos vistas (Dirección y Operación), con el desglose por asesor.
 
 ## Reglas generales (Tableau Cloud)
 1. NUNCA mover ni modificar consultas/fuentes. Solo ocultar campos huérfanos que ningún reporte use ni vaya a usar.

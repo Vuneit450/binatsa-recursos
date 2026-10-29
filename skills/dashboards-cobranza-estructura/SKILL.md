@@ -20,6 +20,8 @@ Siempre dos vistas, Dirección y Operación, con botones de navegación entre el
 2. Tipificaciones ordenadas DESC (a dónde se va el mayor flujo).
 3. Asesores (SIEMPRE presente y visible para el cliente): cuentas asignadas, gestiones totales, % promesado, monto recuperado.
 
+Tarjetas KPI de Operación: Operación también lleva tarjetas, las que correspondan al proyecto. Se eligen con el usuario al iniciar; criterio: que ayuden a decidir qué corregir hoy (por ejemplo gestiones, % contacto titular, promesas, % promesa, sin gestión, intentos por cuenta). Misma anatomía y reglas que las de Dirección.
+
 Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada bloque con franja de encabezado emoji + pregunta + subtítulo):
 - Fila 1: "¿En qué horas contestan los titulares?" (mapa de calor + selector de Métrica) | "¿Quién produce y quién necesita apoyo?" (tabla por asesor).
 - Fila 2: "¿Qué está pasando en las llamadas?" (tipificaciones DESC apiladas por segmento) | "¿A qué horas se trabaja más?" (barras por hora apiladas por segmento).
@@ -30,7 +32,7 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: opción "Rango" (no Automático, que no permite fijar altura). Alto: 1300 px (mínimo y máximo). Ancho: automático, que se estira en pantallas muy grandes; propuesto mínimo 1200 px y máximo 3840 px (confirmar en la primera revisión de cada cliente).
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos: encabezados de zona, títulos de gráficos y títulos de tarjetas KPI (franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis).
-- Todo va centrado (gráficos dentro de su zona, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos de los gráficos, que van alineados a la izquierda.
+- Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
 ## Interactividad
 - TODOS los gráficos interactúan entre sí, sin excepciones salvo que el usuario la apruebe y quede declarada en el reporte: clic en una marca filtra los demás (acciones de filtro de dashboard; segmento, asesor, canal, hora, día, tipificación y zona como dimensiones de enlace). Los gráficos son origen y destino; las tarjetas KPI también responden a toda selección, pero por acciones de parámetro (ver Implementación).
