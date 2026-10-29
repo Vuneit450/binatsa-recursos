@@ -54,14 +54,14 @@ Principio: la captura del tablero es la protagonista. El marco es lo más grande
 ### Marco estándar (idéntico en todas las escenas)
 - Posición: a 128 px del borde izquierdo y 8 del superior.
 - Tamaño: 1664 px de ancho por 976 de alto. Sale de ancho = 1.6 x 1040 y alto = 1.6 x 610, donde 610 es el alto de la cámara. Es el máximo que deja espacio para la franja inferior.
-- Se usa igual en la escena de arranque y en las vistas altas; una vista alta se recorre con la cámara, no se agranda el marco.
+- Se usa igual en la escena de arranque. El marco no se agranda ni se achica según la vista.
 
 ### Simulación de monitor chico (solo en réplicas dibujadas con código)
-El contenido del tablero simula la ventana de un monitor chico de escritorio, de 1152 px de ancho en proporción 16:9, sin achicar el marco. El factor es 1550 / 1152, cerca de 1.35. Se hace así:
+Se aplica cuando la pantalla se ve muy larga (muy ancha y baja, cerca de 2.3:1). Entonces el contenido del tablero simula la ventana de un monitor chico de escritorio, de 1152 px de ancho en proporción 16:9, sin achicar el marco. El factor es 1550 / 1152, cerca de 1.35. Se hace así:
 - Las posiciones horizontales se dejan en porcentaje, igual que en el tablero real.
 - Las posiciones verticales, los altos de las cajas, las fuentes y los márgenes se multiplican por el factor.
 - El ancho de cada caja no se multiplica.
-Resultado: el lienzo pasa de 2.3:1 a 1.7:1, el texto sale más grande y legible y no se ve estirado. Una vista que ya es alta y estrecha no se transforma; solo se le iguala el marco.
+Resultado: el lienzo pasa de 2.3:1 a 1.7:1, el texto sale más grande y legible y no se ve estirado. Si la vista ya tiene una proporción cercana a 1.7:1 o más alta, no se transforma.
 Con capturas reales no se transforma la imagen, porque se deformaría: se coloca tal cual dentro del marco y la cámara hace el resto. Si cambia la proporción o el factor, se recalculan los círculos y el zoom.
 
 ### Franja de texto (escenas guiadas)
@@ -71,7 +71,7 @@ Con capturas reales no se transforma la imagen, porque se deformaría: se coloca
 - La barra de progreso va al fondo.
 
 ### Escena de arranque
-- Mismo marco que las demás escenas. Cada vista se escala al ancho del marco y se centra en vertical; la más alta se recorta por arriba. Sin zoom lento que recorte las orillas.
+- Mismo marco que las demás escenas. Cada vista se escala al ancho del marco y se centra en vertical. Sin zoom lento que recorte las orillas.
 - Franja de abajo:
   - Etiqueta "Guía rápida" y título de 46 px en una fila: a 60 px del borde izquierdo y 996 del superior.
   - Los selectores de las vistas (Dirección, Operación y las demás del proyecto), a la derecha con escala 0.62: a 1180 px del borde izquierdo y 1000 del superior.
