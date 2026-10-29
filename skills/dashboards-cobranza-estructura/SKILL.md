@@ -12,7 +12,7 @@ Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más
 Solo el logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha, en la misma fila del título principal y pegado a la esquina superior derecha. Unos 250 px de ancho (el PNG de referencia mide 250 x 46 px; con el margen del objeto ocupa unos 268 px), alto proporcional sin deformar, y en la misma posición en todas las vistas. El logo del cliente no va en el dashboard salvo que se pida: se usa para sacar su paleta.
 
 ### Título principal del dashboard
-Texto de 20 pt en negrita, color blanco, sobre una franja de color de marca (en su tono oscuro, ver Contraste), con un emoji al inicio y sin borde. Arriba a la izquierda, como todo título. Es el texto más grande del dashboard: los títulos de zona (14-16 pt) quedan por debajo.
+Texto de 20 pt en negrita, color blanco, sobre una franja de color de marca (en su tono oscuro, ver Contraste), con un emoji al inicio y sin borde. Arriba a la izquierda, como todo título. Es el texto más grande del dashboard: los títulos de bloque (13 pt) quedan por debajo.
 
 ### Botones de navegación
 Objeto Botón de navegación de tipo texto, uno por vista de destino:
@@ -47,6 +47,24 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 - Tamaño (como en los tableros de referencia): Dirección en tamaño Automático. Operación en "Rango" definido solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px; sin máximo, se estira en pantallas muy grandes y crece en alto si la ventana es más alta. Las vistas adicionales (por ejemplo un Daily) usan las medidas que se definan con el usuario.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
+
+## Medidas estándar
+Tomadas del tablero de Operación de referencia (1400 x 1800 px). Con otro ancho, las alturas, los márgenes y las fuentes no cambian; solo se reparte el ancho.
+
+| Elemento | Medida |
+|---|---|
+| Margen exterior del dashboard | 8 px |
+| Fila del encabezado (título principal, controles y logo) | 79 px de alto |
+| Título principal | unos 570 px de ancho (40 % de 1400) |
+| Logo de BINATSA | unos 270 x 79 px (imagen de 250 px de ancho) |
+| Enlace "Guía de uso" | unos 130 px de ancho |
+| Controles (parámetros y filtros del encabezado) | 150 px de ancho fijo |
+| Botones de navegación | 165 x 40 px |
+| Franja de título de bloque (zona) | ancho completo, 42 px de alto |
+| Tarjeta KPI | 126 px de alto; el ancho se reparte en partes iguales (198 px con 7 tarjetas en 1400 px); hasta 7 por fila; pegadas entre sí, sin margen |
+| Gráficos y tablas | margen 6 px y relleno 6 px; los principales entre 350 y 400 px de alto, los de apoyo entre 175 y 200 px |
+| Pie "Cómo leer" | ancho completo, 32 px de alto |
+
 
 ## Interactividad
 - La mayoría de los gráficos se comunican entre sí: clic en una marca filtra los demás. Cuáles quedan fuera depende del proyecto (por ejemplo, un gráfico con otra fuente de datos o sin campos en común) y se declaran en el reporte con el motivo. Las tarjetas KPI son destino, no origen.
@@ -100,12 +118,12 @@ Tipografía: familia Tableau en todos los proyectos (no usar la tipografía del 
 - Tableau Light: subtítulos.
 - Tableau Book: cuerpo de texto y tooltips.
 Tamaños:
-- Número de tarjeta KPI: 28-32 pt en negrita, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
+- Número de tarjeta KPI: 32 pt en Tableau Bold, en un tono del primario que llegue a 3:1 contra el fondo (en BINATSA, turquesa oscuro `#007F84`) o en color de semáforo.
 - Título principal del dashboard: 20 pt en negrita, blanco sobre franja.
-- Título de zona: 14-16 pt en negrita, blanco sobre franja. Subtítulo: 10-11 pt.
-- Título de tarjeta KPI: 13 pt en negrita; subtítulo opcional de 10 pt.
+- Título de bloque (zona, gráfico, tabla y tarjeta KPI): 13 pt en Tableau Semibold, blanco sobre franja; subtítulo de 10 pt en Tableau Light, en un tono claro del primario.
+- Subtítulo bajo el título principal: 10 pt, en el color de texto secundario.
 - Botón de navegación: Tableau Bold 11 pt, blanco sobre el color de marca.
-- Etiquetas de ejes y marcas: 9-10 pt (mínimo 8 en web). Delta de tarjeta: 10-11 pt.
+- Etiquetas de ejes y marcas: 9 pt (mínimo 8 en web). Delta de tarjeta: 10 pt. Contenido de tablas: 10 pt; encabezados de tabla: 10 pt en Semibold. Pie "Cómo leer": 9 pt en el color de texto secundario. Enlace "Guía de uso": 12 pt en el color de acento.
 - Tooltip: título 12 pt, valores 12 pt, secciones 10 pt.
 - Valores marcados como "propuestos" hasta que el usuario los confirme en la primera revisión de cada cliente.
 
