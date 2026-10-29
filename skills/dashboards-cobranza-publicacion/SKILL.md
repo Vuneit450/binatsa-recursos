@@ -16,7 +16,7 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 - [ ] Información sin bordes ni fondos (todo transparente; solo los títulos y los botones de navegación pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos (de gráficos, de tablas y encabezados de zona), a la izquierda.
 - [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas.
-- [ ] Tamaño en "Rango", solo con mínimos: alto mínimo 1800 px y ancho mínimo 1400 px, sin máximos.
+- [ ] Tamaño: Dirección en Automático; Operación en "Rango" solo con mínimos (alto 1800 px y ancho 1400 px), sin máximos.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).

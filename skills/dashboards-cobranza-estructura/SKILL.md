@@ -41,7 +41,7 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
-- Tamaño: opción "Rango" definida solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px (medidas de los tableros de referencia). Sin máximo, el dashboard se estira en pantallas muy grandes y crece en alto si la ventana es más alta. No usar Automático: no permite fijar un mínimo. Las vistas adicionales más pequeñas pueden usar otras medidas, definidas con el usuario.
+- Tamaño (como en los tableros de referencia): Dirección en tamaño Automático. Operación en "Rango" definido solo con mínimos y sin máximos: alto mínimo 1800 px y ancho mínimo 1400 px; sin máximo, se estira en pantallas muy grandes y crece en alto si la ventana es más alta. Las vistas adicionales (por ejemplo un Daily) usan las medidas que se definan con el usuario.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda: títulos de gráficos, títulos de tablas y encabezados de zona.
 
@@ -69,6 +69,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 - Todo porcentaje con símbolo % (1 decimal). Dinero con $ y miles; M/K en cifras grandes. Si el % se corta en celdas angostas (p. ej. mapa de calor dentro del tablero), avisar y proponer sin decimales o ensanchar; nunca dejar el número sin %.
 - Barras de un solo color: resaltar la más alta (acento) con su número arriba, resto neutro. Barras apiladas por segmento usan el paso que le toca a cada segmento en la rampa de segmentos (ver Paleta): la rampa es la jerarquía de mora y es la misma en todas las hojas.
 - Sin ruido: nada de gráficos huérfanos, hojas visibles que el cliente no consulta (ocultas; acceso por "Ir a hoja"), ni calculados sin uso.
+- Nombres de hojas: sin estándar; cada proyecto usa los suyos. Los parámetros sí son estándar (ver Parámetros estándar).
 - Ningún gráfico lleva líneas de fondo: quitar la cuadrícula, las líneas de cero, las líneas de referencia sin uso y las divisiones de fila y columna. Como la cuadrícula ya no ayuda a leer los valores, mostrar la etiqueta del valor en las marcas donde haga falta (en las barras, el número arriba, como ya pide la regla de la barra destacada).
 - Ningún gráfico muestra el título del segundo eje (en gráficos de doble eje). Lo que mide el segundo eje se explica en el subtítulo de la zona y en el tooltip "Cómo se calcula".
 
