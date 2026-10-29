@@ -15,6 +15,7 @@ Dos logos, en la misma fila del título principal y siempre en la misma posició
 
 ### Título principal del dashboard
 Texto de 20 pt en negrita, color blanco, sobre una franja del color oscuro de la marca del cliente (ver Contraste), sin borde, de unos 660 x 80 px, arriba a la izquierda junto al ícono del cliente. Formato del texto: "Cobranza <Cliente> · <Vista>" (por ejemplo "Cobranza <Cliente> · Dirección") y, debajo, un subtítulo de 10 pt con la pregunta que responde la vista (por ejemplo "¿Cómo va la campaña?"). Es el texto más grande del dashboard: los títulos de bloque (13 pt) quedan por debajo.
+El encabezado (título principal, ícono, controles y logo) tiene una sola franja de fondo completo, a todo el ancho, con esquina recta. Los filtros y parámetros del encabezado NO llevan fondo ni borde propios: el fondo que se ve detrás de ellos es el de la franja. En Tableau, una forma de lograrlo es poner todo el encabezado en un contenedor horizontal con el fondo de la franja y dejar sin fondo ni borde cada objeto de adentro (validar en el primer dashboard de cada cliente).
 
 ### Botones de navegación
 Objeto Botón de navegación de tipo texto, uno por cada vista de destino, en una fila debajo del encabezado:
@@ -45,7 +46,7 @@ Tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI 
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: modo Fijo, 1910 x 1300 px, igual en todas las vistas (incluida la Guía de uso). Las vistas adicionales usan la misma medida salvo que se defina otra con el usuario.
 - La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos, de tablas y de tarjetas KPI: franja de color de marca) y los botones de navegación (fondo de color de marca).
-- Esquinas redondeadas: los títulos de gráficos, tablas y tarjetas KPI, que son lo único con fondo dentro de cada bloque, llevan esquinas redondeadas (radio propuesto: 12 px). El resto es transparente y sin borde, así que su radio no se ve. En Tableau 2026.1 o posterior, el radio se aplica en el panel de diseño a cada hoja; la franja del título queda con las esquinas de arriba redondeadas (validar en el primer dashboard de cada cliente). Revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
+- Esquinas redondeadas: los títulos de gráficos, tablas y tarjetas KPI, que son lo único con fondo dentro de cada bloque, llevan esquinas redondeadas (radio propuesto: 12 px). El encabezado (título principal) y los botones llevan esquina recta. El resto es transparente y sin borde, así que su radio no se ve. En Tableau 2026.1 o posterior, el radio se aplica en el panel de diseño a cada hoja; la franja del título queda con las esquinas de arriba redondeadas (validar en el primer dashboard de cada cliente). Revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda (títulos de gráficos, de tablas y encabezados de zona), y los botones de navegación, que van pegados a la izquierda bajo el título principal.
 
 ## Medidas estándar
@@ -83,7 +84,7 @@ Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas
 
 ## Parámetros estándar
 Mismos nombres en todos los proyectos, en español y sin pistas entre paréntesis (la explicación va en la Guía de uso):
-- Periodo (lista): Mes actual, Mes anterior, Trimestre actual, Trimestre anterior, Semestre actual, Semestre anterior, Año actual, Año anterior, Últimos 7 días, Últimos 30 días, Últimos 12 meses, Todo el historial y Personalizado. Valor por defecto: "Año actual".
+- Periodo (lista): Mes actual, Mes anterior, Trimestre actual, Trimestre anterior, Semestre actual, Semestre anterior, Año actual, Año anterior, Últimos 7 días, Últimos 30 días, Últimos 12 meses, Todo el historial y Personalizado. Valor por defecto: "Año actual" (el proyecto puede cambiarlo si el usuario lo pide).
 - Desde (fecha) y Hasta (fecha): solo cuentan si Periodo es "Personalizado"; Hasta no puede pasar de hoy. Indicar el rango válido en la Guía de uso.
 - Día seleccionado (fecha): vacío por defecto; lo llena la acción de parámetro al hacer clic en un día.
 - Segmento (lista, "Todos"): segmentos de cartera del cliente. Si el proyecto separa por canal o producto, usar además Canal (lista, "Todos").
@@ -110,7 +111,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 
 ## Estados vacíos y datos parciales (propuesto)
 - Símbolo de "sin dato": siempre "-" (guion corto), igual en tarjetas, deltas y tablas.
-- Una tarjeta sin datos muestra "-", nunca 0, con el subtítulo "Sin datos para este filtro".
+- Una tarjeta sin datos muestra "-", nunca 0, con el subtítulo "Sin datos para este filtro". Una tarjeta cuyo valor es 0 de verdad muestra 0: el "-" es solo para cuando no hay datos.
 - Un delta sin periodo con el cual comparar (por ejemplo con "Todo el historial") muestra "-", nunca "+0.0 %".
 - Un gráfico sin datos muestra un mensaje centrado: "Sin datos con estos filtros".
 - En un gráfico con datos, una marca con valor 0 o nulo no muestra etiqueta; en una tabla, la celda muestra "-" (ver "Etiquetas de valor en gráficos"). Si todo el gráfico está en 0 o nulo, se muestra el mensaje de "sin datos".

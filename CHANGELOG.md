@@ -18,6 +18,8 @@
 - Módulo de video revisado: filtros con Periodo, tooltip de cinco secciones, botones, colores iguales a los del tablero real y cómo mostrar un tablero de 1910 x 1300 px en 16:9.
 - Carpeta `ejemplos/` con 9 ilustraciones de datos inventados que reproducen el estilo de referencia.
 - El símbolo de "sin dato" es el mismo en todo el skill: "-" (guion corto), en tarjetas, deltas y tablas.
+- Encabezado con una franja de fondo completo y esquina recta; los filtros y parámetros no llevan fondo ni borde propios. Un 0 real en una tarjeta se muestra como 0.
+- Video: capturas HD hechas con código; cada segmentador se demuestra con el antes y el después.
 - Etiquetas de valor: los valores 0 o nulos no muestran etiqueta en los gráficos, para no saturar, y en las tablas se muestran como "-".
 - Esquinas redondeadas en todos los títulos con fondo (gráficos, tablas y tarjetas KPI); el resto, transparente y sin borde.
 - La escala de color del mapa de calor la define el proyecto y el número de cada celda debe contrastar.

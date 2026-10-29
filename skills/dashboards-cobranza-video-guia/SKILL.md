@@ -13,14 +13,14 @@ Responde siempre en español, corto y directo.
 ## Preguntas iniciales
 Mismas reglas que el módulo base: herramienta de opción múltiple si existe (si no, texto con opciones numeradas), máximo 4 preguntas por tanda, una opción recomendada. Si el usuario ya respondió algo en el chat, no repetirlo. La identidad del cliente (logo y colores) sale de las respuestas del módulo base.
 1. Formato: "Horizontal 16:9 (recomendado)", "Vertical 9:16 para redes", "Los dos".
-2. Imágenes: "Te paso las capturas", "Las tomo del tablero abierto en el navegador", "No hay acceso: réplica vectorial (se avisa)". Recomendada: capturas reales.
+2. Imágenes: "Las tomo con código del tablero abierto en el navegador (HD)" (recomendada), "Te paso las capturas" o "No hay acceso: réplica dibujada con código (se avisa)".
 3. Qué cubre: "Todas las vistas y hojas" (recomendada) o una lista.
 4. Entrega: "Archivo MP4" o "Reproductor web con sonido". Y si el video lo verán solo en la empresa o también fuera (cambia la revisión de privacidad).
 
 ## Estructura estándar
 1. Gancho: una frase y una promesa corta (por ejemplo "¿Sabes usar el tablero?" y "Te lo explico paso a paso"). 5 a 6 s.
 2. Mapa de las vistas: qué pregunta responde cada una (Dirección: ¿cómo vamos?; Operación: ¿qué corrijo hoy?; y las vistas extra que tenga el proyecto), con los botones de navegación.
-3. Lo común, UNA sola vez: dónde están los filtros y qué afectan; cómo se leen las tarjetas; qué pasa al pasar el mouse; qué pasa al hacer clic; para qué sirven los selectores.
+3. Lo común, UNA sola vez: dónde están los filtros y qué afectan, DEMOSTRANDO cómo cambia el tablero al cambiar de segmentador; cómo se leen las tarjetas; qué pasa al pasar el mouse; qué pasa al hacer clic; para qué sirven los selectores.
 4. Recorrido por vista: una sección por cada vista u hoja, cada una con una tarjeta de título ("Hoja N" y el nombre). En cada sección solo lo propio de esa hoja, sin repetir lo común.
 5. ¿Dudas?: la vista Guía de uso, que incluye el glosario (el botón "Glosario", si existe, lleva a ella).
 6. Las 5 reglas, a modo de resumen.
@@ -29,6 +29,7 @@ Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a 
 
 ## Guion base de lo común
 - Filtros: decir dónde están y qué opciones hay (Periodo; Desde y Hasta, que solo cuentan con "Personalizado", con su rango válido; y Canal o Segmento si el proyecto lo usa), y siempre qué afectan ("afectan todo el tablero: tarjetas, mapa, gráficas y tablas").
+- Demostración de cada segmentador: no basta con decir qué afecta; se cambia en pantalla y se muestra cómo cambiaría el tablero, con el estado de antes y el de después, y resaltando lo que cambió (por ejemplo Periodo en "Mes actual" y luego en "Año anterior", o Canal en "Todos" y luego en uno solo). Los dos estados son capturas reales del tablero con ese segmentador puesto; no se inventan cifras.
 - Botones de navegación: "Ir a <Vista> →" cambia de vista, y "📖 Glosario" abre la Guía de uso; mostrarlos al presentar el mapa de las vistas.
 - Tarjetas: número grande = el periodo elegido; ▲ verde mejora, ▼ rojo empeora; "pp" = puntos porcentuales; comparación contra el periodo previo y contra 7 días antes (con rangos de 7 días o menos, solo la primera).
 - Tooltip: mostrar UNO largo a pantalla completa, con datos de un caso, desplazándose por sus cinco secciones (qué mide, cómo se calcula, términos, cómo leerlo y para qué sirve). No presentarlo como "el más grande" ni "el más completo".
@@ -95,9 +96,10 @@ Con capturas reales no se transforma la imagen, porque se deformaría: se coloca
 - Se conservan a propósito dos repeticiones: el segundo clic que quita un filtro, y el mismo gráfico mostrado después de que cambió la métrica o el filtro.
 
 ## Imágenes y datos
-- Capturas reales del tablero en alta resolución (al menos el doble del tamaño con que se ven, para poder acercar sin que se pixelen).
-- Réplica vectorial solo si no hay acceso al tablero, y avisarlo: se ve menos real. Debe usar los mismos colores y el mismo estilo del tablero real.
+- Capturas reales del tablero, hechas con código para que sean HD: un navegador automatizado abre el tablero (la persona inicia sesión; las credenciales nunca se escriben) y captura con un factor de escala de 2 o más, para poder acercar sin que se pixelen. Cada vista se captura completa, y las zonas que se acercan, a mayor resolución.
+- Réplica dibujada con código solo si no hay acceso al tablero, y avisarlo: se ve menos real. Debe usar los mismos colores y el mismo estilo del tablero real.
 - El tablero mide 1910 x 1300 px (proporción cercana a 1.5:1). En un video 16:9 no cabe entero a toda la altura: el plano general de apertura lo muestra completo y después la cámara lo recorre por zonas (ver "Composición del cuadro").
+- Para cada segmentador que se demuestra, capturar el tablero en el estado de antes y en el de después del cambio.
 - No inventar cifras: lo que no se lee en la captura no se rellena. Si un dato solo existe para un día, decirlo en pantalla.
 
 ## Audio
