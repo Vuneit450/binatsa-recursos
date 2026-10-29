@@ -42,14 +42,47 @@ Al terminar, entregar la lista de capítulos con su minuto, para poder saltar a 
 - Animación muy estimulante pero legible: textos grandes que entran palabra por palabra, emojis, marcos que resaltan lo explicado, cursor con onda al hacer clic, listas desplegables que se abren solas, un chip con el nombre de la escena y una barra de progreso, y un cambio de plano cada 2 a 3 s con acercamiento a lo que se explica.
 - Transiciones: solo fundidos y deslizamientos de cámara. Prohibido: flashes, temblores, vibraciones, cortes secos y efectos que sacudan la imagen. Lo agresivo vive dentro de las animaciones, no entre escenas.
 - Seguridad: nada parpadea más de 3 veces por segundo.
-- Texto: dentro de la ventana del tablero, en un recuadro oscuro, del lado contrario a lo resaltado para no taparlo; siempre completo y cerca de lo que explica. Tamaño mínimo de 44 px en un video de 1080 px de alto (propuesto) y contraste de al menos 4.5:1. En vertical, dejar libre alrededor del 10 % arriba y del 18 % abajo, que es donde las apps de redes ponen sus controles (propuesto).
-- Cámara: encuadra siempre lo que se explica, con esta prioridad: lista desplegable o tooltip, luego elemento resaltado, luego cursor.
+- Texto: en una franja angosta debajo de la captura, nunca encima del tablero (medidas en "Composición del cuadro"); siempre completo y cerca de lo que explica, con un contraste de al menos 4.5:1. En vertical, dejar libre alrededor del 10 % arriba y del 18 % abajo, que es donde las apps de redes ponen sus controles (propuesto).
+- Cámara: encuadra siempre lo que se explica, con esta prioridad: lista desplegable o tooltip, luego elemento resaltado, luego cursor. Medidas y reglas del zoom en "Composición del cuadro".
 - Tipografías: de licencia abierta (por ejemplo Anton y Space Grotesk; confirmar su licencia) o las del cliente.
+
+## Composición del cuadro (16:9, 1920 x 1080)
+Medidas de un lienzo de 1920 x 1080 que se dibuja en 3840 x 2160 y se reduce a la mitad. Para vertical (9:16) se recalculan con el mismo principio. El tablero se mide en un lienzo propio de 960 unidades de ancho; si el motor usa otra base, escalar en proporción.
+
+Principio: la captura del tablero es la protagonista. Ocupa casi todo el cuadro para que se lea desde lejos, y el texto va en una franja angosta abajo.
+
+### Escenas guiadas
+- Marco de la captura: a 40 px del borde izquierdo y 24 del superior, de 1840 px de ancho (96 % del cuadro), sin columna de texto al lado.
+- Alto del marco: el ancho por la proporción del recuadro de cámara (507 / 1040, es decir 0.49), unos 897 px. No pasar de unos 900 px, para que quepa la franja de texto.
+- Todas las vistas usan el mismo alto de marco. Una vista alta (por ejemplo con decenas de filas) se recorre con la cámara; no se agranda el marco.
+- Escala de la captura: ancho del marco ÷ ancho visible de la cámara.
+- Franja de texto, en una sola fila abajo: a 60 px del borde izquierdo y 948 del superior, de 1800 px de ancho. En este orden: etiqueta de capítulo (26 px), título (54 px, en una línea, sin cortes) y frase de apoyo.
+- Burbuja de estado (por ejemplo "Un asesor"): a la derecha de la franja, a 1560 px del borde izquierdo y 952 del superior, con letra de 34 px.
+- La barra de progreso va al fondo.
+
+### Cámara (zoom por paso)
+- Ancho visible mínimo: 400 unidades del tablero. Con el marco grande da unas 4.6 veces de zoom; con 240 se veía exagerado.
+- Ancho visible = el mayor de: ancho del círculo de resalte x 1.12; alto del círculo x 1.12 x (1040 / alto del recuadro de cámara); y 400.
+- Si el elemento enfocado mide más de 340 unidades de ancho, no se abre el plano: se recorre de izquierda a derecha en 2 a 4 tramos.
+  - Cada tramo muestra 440 unidades de ancho.
+  - El siguiente avanza lo que sobra de ancho, con un traslape de cerca del 10 %.
+  - La duración del paso se reparte en partes iguales entre los tramos.
+  - El círculo de resalte, la burbuja y el cursor se muestran igual, solo en el primer tramo.
+- Los planos generales de apertura (t = 0) son panorama completo y la única vista a 960 unidades.
+- Los círculos y el zoom usan las posiciones medidas del propio tablero. Si algo se mueve en el tablero, hay que recalcularlos.
+
+### Escena de arranque
+- Marco: a 40 px del borde izquierdo y 24 del superior, de 1840 px de ancho y 830 de alto. Cada vista del tablero entra a 1840 de ancho, centrada en vertical; una vista alta se recorta por arriba.
+- Sin el zoom lento que recortaba las orillas: la vista se ve completa, con una deriva de 1.5 % como máximo. Entrada lateral de 160 a 200 px.
+- Franja de abajo:
+  - Etiqueta y título (56 px, en una línea): a 60 px del borde izquierdo y 872 del superior; la frase de apoyo va debajo del título.
+  - Selectores de las vistas (Dirección, Operación y las demás que tenga el proyecto): a 1080 px del borde izquierdo y 884 del superior, con escala 0.72. La etiqueta de la vista activa va a 1080 y 975, con letra de 26 px.
+  - Logo de BINATSA en la esquina: a 1640 px del borde izquierdo y 972 del superior, en un recuadro de 230 x 72 con el logo de 216 px de ancho.
 
 ## Imágenes y datos
 - Capturas reales del tablero en alta resolución (al menos el doble del tamaño con que se ven, para poder acercar sin que se pixelen).
 - Réplica vectorial solo si no hay acceso al tablero, y avisarlo: se ve menos real. Debe usar los mismos colores y el mismo estilo del tablero real.
-- El tablero mide 1910 x 1300 px (proporción cercana a 1.5:1). En un video 16:9 no cabe entero a toda la altura: mostrar la vista completa al inicio de cada sección y luego acercar por zonas.
+- El tablero mide 1910 x 1300 px (proporción cercana a 1.5:1). En un video 16:9 no cabe entero a toda la altura: el plano general de apertura lo muestra completo y después la cámara lo recorre por zonas (ver "Composición del cuadro").
 - No inventar cifras: lo que no se lee en la captura no se rellena. Si un dato solo existe para un día, decirlo en pantalla.
 
 ## Audio
@@ -76,9 +109,10 @@ Mínimo 4 s. Referencia visual: `logos/cierre-video.png`.
 2. Prueba automática de encuadres: cada 0.2 s, nada cortado ni tapado por el recuadro de texto.
 3. Búsqueda automática de palabras prohibidas en el guion, más revisión visual de las capturas.
 4. Ver el video completo en el reproductor, no solo cuadros sueltos; si es vertical, verlo en un teléfono.
-5. Escuchar el audio completo.
-6. Privacidad: si el video saldrá de la empresa, revisar cifras reales, IDs de asesores y nombres de otros clientes que aparezcan en las capturas.
-7. Reportar al usuario en pocas líneas: duración, formato, hojas cubiertas, hojas sin cubrir y descripciones por confirmar.
+5. Renderizar un cuadro a 3840 x 2160 y reducirlo a 1600 x 900. Comprobar que ningún texto se encima con la franja y que el círculo de resalte queda dentro del marco. Esta prueba detecta, por ejemplo, un zoom exagerado.
+6. Escuchar el audio completo.
+7. Privacidad: si el video saldrá de la empresa, revisar cifras reales, IDs de asesores y nombres de otros clientes que aparezcan en las capturas.
+8. Reportar al usuario en pocas líneas: duración, formato, hojas cubiertas, hojas sin cubrir y descripciones por confirmar.
 
 ## Entregables
 - Nombre: `video-guia-<cliente>-v<N>.mp4`, con un registro de qué cambió en cada versión.
