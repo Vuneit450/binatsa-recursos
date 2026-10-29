@@ -19,7 +19,7 @@
 - Carpeta `ejemplos/` con 9 ilustraciones de datos inventados que reproducen el estilo de referencia.
 - El símbolo de "sin dato" es el mismo en todo el skill: "-" (guion corto), en tarjetas, deltas y tablas.
 - Encabezado con una franja de fondo completo y esquina recta; los filtros y parámetros no llevan fondo ni borde propios. Un 0 real en una tarjeta se muestra como 0.
-- Video: capturas HD hechas con código; cada segmentador se demuestra con el antes y el después.
+- Video: capturas HD hechas con código; cada segmentador se demuestra con el antes y el después de un solo cambio, como recorrido de cómo manejar el tablero.
 - Etiquetas de valor: los valores 0 o nulos no muestran etiqueta en los gráficos, para no saturar, y en las tablas se muestran como "-".
 - Esquinas redondeadas en todos los títulos con fondo (gráficos, tablas y tarjetas KPI); el resto, transparente y sin borde.
 - La escala de color del mapa de calor la define el proyecto y el número de cada celda debe contrastar.
