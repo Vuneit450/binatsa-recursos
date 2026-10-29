@@ -7,13 +7,13 @@
       <color>#0B1F3A</color>
       <color>#007F84</color>
       <color>#5A7391</color>
-      <color>#B4BFCB</color>
+      <color>#8093A8</color>
     </color-palette>
     <color-palette name="BINATSA Segmentos" type="ordered-sequential">
-      <color>#B8EBED</color>
-      <color>#5CD0D4</color>
-      <color>#00B3B8</color>
-      <color>#007F84</color>
+      <color>#09A2AB</color>
+      <color>#078289</color>
+      <color>#056368</color>
+      <color>#04474A</color>
       <color>#0B1F3A</color>
     </color-palette>
     <color-palette name="BINATSA Semaforo" type="ordered-diverging">

@@ -16,7 +16,8 @@ skills/
   dashboards-cobranza-tooltips/        descripciones emergentes
   dashboards-cobranza-cliente-limpieza/  vista del cliente y limpieza de huérfanos
   dashboards-cobranza-publicacion/     checklist, publicación y monitoreo
-  dashboards-cobranza-BINATSA.md       documento original con los 6 módulos juntos (respaldo)
+archivo/
+  dashboards-cobranza-BINATSA-original.md   borrador original, OBSOLETO (solo historial; no usar)
 ```
 
 ## Cómo usar los skills

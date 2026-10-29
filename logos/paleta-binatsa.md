@@ -7,8 +7,8 @@ Sale de los dos colores del logo (`logos/binatsa.svg`). Lo demás son derivados.
 | Nombre | Hex | Uso |
 |---|---|---|
 | Azul marino | `#0B1F3A` | Franjas de encabezado de zona (título blanco), texto de marca, barra o segmento más oscuro |
-| Turquesa | `#00B3B8` | Acento: barra destacada (la más alta), líneas, selección, bordes de foco |
-| Turquesa oscuro | `#007F84` | Turquesa cuando va con texto blanco encima o como texto sobre fondo claro |
+| Turquesa | `#00B3B8` | Color del logo y acento decorativo. No usarlo en barras, líneas ni texto: da 2.6:1 con blanco |
+| Turquesa oscuro | `#007F84` | Barra destacada (la más alta), líneas, selección, número de las tarjetas KPI y texto sobre fondo claro. También sirve como fondo con texto blanco encima (4.8:1) |
 
 ## Neutros (con matiz hacia el azul marino, no gris puro)
 
@@ -16,20 +16,20 @@ Sale de los dos colores del logo (`logos/binatsa.svg`). Lo demás son derivados.
 |---|---|---|
 | Texto principal | `#14202E` | Casi negro, nunca `#000000` |
 | Texto secundario | `#55657A` | Subtítulos, etiquetas de ejes |
-| Barras no destacadas | `#B4BFCB` | Todas las barras menos la destacada |
+| Barras no destacadas | `#8093A8` | Todas las barras menos la destacada (3.2:1 con blanco) |
 
 Fondos: todo transparente (regla del módulo de estructura).
 
 ## Rampa de segmentos de cartera (menos mora = más claro)
 
-Un solo color por segmento, igual en TODAS las hojas. Máximo 6 pasos; esta rampa tiene 5.
+Un solo color por segmento, igual en TODAS las hojas. Máximo 6 pasos; esta rampa tiene 5. Todos los pasos llegan a 3:1 con blanco (mínimo para gráficos sobre fondo transparente); por eso el paso 1 no es un turquesa pastel.
 
 | Paso | Hex | Para |
 |---|---|---|
-| 1 (más claro) | `#B8EBED` | Segmento con menos mora |
-| 2 | `#5CD0D4` | |
-| 3 | `#00B3B8` | |
-| 4 | `#007F84` | |
+| 1 (más claro) | `#09A2AB` | Segmento con menos mora |
+| 2 | `#078289` | |
+| 3 | `#056368` | |
+| 4 | `#04474A` | |
 | 5 (más oscuro) | `#0B1F3A` | Segmento con más mora |
 
 Si el cliente tiene menos segmentos, tomar pasos salteados (por ejemplo 3 segmentos: 1, 3 y 5).

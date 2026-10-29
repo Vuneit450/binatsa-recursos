@@ -1,3 +1,5 @@
+> **OBSOLETO. No usar como skill.** Es el borrador original con los 6 módulos juntos. Las reglas vigentes están en `skills/*/SKILL.md` y varias de las de aquí ya cambiaron (por ejemplo: tamaño en Rango con altura mínima 1300 px, tarjetas KPI con título redondeado, desglose de asesores siempre visible, Desde y Hasta como parámetros). Se conserva solo como historial.
+
 # Skills de dashboards de Cobranza BINATSA (borrador dividido)
 
 Documento con la skill dividida en 6 módulos. Cada módulo es un SKILL.md independiente (cabecera `---` incluida) para guardarlo por separado cuando decidas.

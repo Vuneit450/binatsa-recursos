@@ -5,7 +5,7 @@ description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en T
 
 # Base · Dashboards de Cobranza BINATSA
 
-Responde siempre en español, corto y directo. Usuario: Jonathan, BINATSA.
+Responde siempre en español, corto y directo. Quien usa este skill es del equipo de BINATSA; no asumir quién es.
 Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos de cada proyecto se preguntan al iniciar.
 
 ## Módulos relacionados
@@ -24,7 +24,7 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 - Los archivos no se guardan en la skill; solo la ruta.
 
 ## Preguntas obligatorias al iniciar un proyecto nuevo
-Hacerlas con la herramienta de preguntas de opción múltiple (no en texto suelto), en una sola tanda de máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1, 2 y 3). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
+Hacerlas con la herramienta de preguntas de opción múltiple si existe (en Claude Code, AskUserQuestion); si no, en texto con opciones numeradas. Cada tanda tiene máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1, 2 y 3). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
 
 Tanda 1 (bloqueantes):
 1. Logo del cliente: opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.

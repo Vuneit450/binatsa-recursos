@@ -7,7 +7,7 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 
 ## Checklist antes de publicar
 - [ ] Sin marcas seleccionadas y parámetros en su valor por defecto (en web quedan guardados en el borrador).
-- [ ] Filtros y fechas por defecto correctos (segmento, Desde, Hasta).
+- [ ] Controles por defecto correctos (segmento como filtro; Desde y Hasta como parámetros de fecha).
 - [ ] Todos los % con símbolo; dinero con $ y miles.
 - [ ] Tooltips completos en todas las hojas.
 - [ ] Tarjetas KPI con los dos deltas y color de ▲▼ correcto (con rango de 7 días o menos, solo "vs periodo previo"; probar con un rango corto y uno largo).
