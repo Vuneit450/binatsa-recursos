@@ -17,6 +17,7 @@
 - Botones de navegación pegados a la izquierda; número de tarjeta KPI de 28 pt; los colores de canales los define el proyecto; Periodo con "Año actual" por defecto.
 - Módulo de video revisado: filtros con Periodo, tooltip de cinco secciones, botones, colores iguales a los del tablero real y cómo mostrar un tablero de 1910 x 1300 px en 16:9.
 - Carpeta `ejemplos/` con 9 ilustraciones de datos inventados que reproducen el estilo de referencia.
+- Etiquetas de valor: los valores 0 o nulos no muestran etiqueta en los gráficos, para no saturar.
 - Esquinas redondeadas en todos los títulos con fondo (gráficos, tablas y tarjetas KPI); el resto, transparente y sin borde.
 - La escala de color del mapa de calor la define el proyecto y el número de cada celda debe contrastar.
 

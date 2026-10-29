@@ -16,7 +16,7 @@ description: "Checklist previo a publicar, reglas de publicación en Tableau Clo
 - [ ] Botones de navegación funcionan y cumplen el formato (164 x 36 px, "Ir a <Vista> →", color por destino con texto blanco a 4.5:1, "📖 Glosario" en gris); ícono del cliente a la izquierda y logo de BINATSA a la derecha, en la misma posición en todas las vistas.
 - [ ] Información sin bordes ni fondos (todo transparente; solo los títulos y los botones de navegación pueden llevarlos); mosaico.
 - [ ] Todo centrado, menos los títulos (de gráficos, de tablas y encabezados de zona), a la izquierda.
-- [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas.
+- [ ] Ningún gráfico con líneas de fondo ni con el título del segundo eje; los valores se leen por etiquetas, sin etiqueta en los valores 0 o nulos.
 - [ ] Tamaño: modo Fijo, 1910 x 1300 px en todas las vistas.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.

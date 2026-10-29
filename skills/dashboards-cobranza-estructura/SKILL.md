@@ -95,6 +95,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 - KPIs grandes con número en color (adaptar a la marca del cliente).
 - Todo porcentaje con símbolo % (1 decimal). Dinero con $ y miles; M/K en cifras grandes. Si el % se corta en celdas angostas (p. ej. mapa de calor dentro del tablero), avisar y proponer sin decimales o ensanchar; nunca dejar el número sin %.
 - Barras de un solo color: resaltar la más alta (acento) con su número arriba, resto neutro. Barras apiladas por segmento usan el paso que le toca a cada segmento en la rampa de segmentos (ver Paleta): la rampa es la jerarquía de mora y es la misma en todas las hojas.
+- Etiquetas de valor en gráficos: si el valor de una marca es 0 o nulo, no se muestra su etiqueta, para no saturar la gráfica con datos innecesarios. Aplica a barras, mapa de calor y demás gráficos; la marca o la celda, si existe, se queda sin número. (Las tarjetas KPI sin datos siguen mostrando "—", ver "Estados vacíos y datos parciales".)
 - Sin ruido: nada de gráficos huérfanos, hojas visibles que el cliente no consulta (ocultas; acceso por "Ir a hoja"), ni calculados sin uso.
 - Nombres de hojas: sin estándar; cada proyecto usa los suyos. Los parámetros sí son estándar (ver Parámetros estándar).
 - Ningún gráfico lleva líneas de fondo: quitar la cuadrícula, las líneas de cero, las líneas de referencia sin uso y las divisiones de fila y columna. Como la cuadrícula ya no ayuda a leer los valores, mostrar la etiqueta del valor en las marcas donde haga falta (en las barras, el número arriba, como ya pide la regla de la barra destacada).
@@ -110,6 +111,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 - Una tarjeta sin datos muestra "—", nunca 0, con el subtítulo "Sin datos para este filtro".
 - Un delta sin periodo con el cual comparar (por ejemplo con "Todo el historial") muestra "—", nunca "+0.0 %".
 - Un gráfico sin datos muestra un mensaje centrado: "Sin datos con estos filtros".
+- En un gráfico con datos, una marca con valor 0 o nulo no muestra etiqueta (ver "Etiquetas de valor en gráficos").
 - Si un dato solo existe para parte del periodo (por ejemplo el detalle por hora de un solo día), decirlo en pantalla; no se rellena ni se estima.
 
 ## Texto visible
