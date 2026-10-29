@@ -14,7 +14,8 @@ De arriba hacia abajo, todo alineado a la izquierda:
 1. Nombre de la métrica: 10-11 pt, texto secundario.
 2. Número grande: 28-32 pt en negrita, color primario (o semáforo si la tarjeta tiene meta). Formato de módulo estructura: % con símbolo y 1 decimal, dinero con $ y miles.
 3. Dos deltas en una línea o en dos: "▲ 4.2% vs periodo previo" y "▼ 1.1 pp vs 7 días previos", 10-11 pt, verde o rojo según sea mejor o peor.
-4. Sin borde ni fondo. Misma altura y ancho en toda la fila; máximo 5 tarjetas por fila.
+4. Borde fino de 1 px en neutro `#B4BFCB`, esquinas redondeadas (radio propuesto: 12 px) y sin color de fondo. Aplicar el radio de esquina a la hoja de la tarjeta misma, no al contenedor que la envuelve (el contenedor no recorta a sus hijos). Requiere Tableau 2026.1 o posterior; revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
+5. Misma altura y ancho en toda la fila; máximo 5 tarjetas por fila.
 
 ## Glosario de KPIs (definiciones estándar; confirmar con el cliente si difieren)
 Contacto, promesa y los demás resultados se identifican SIEMPRE por la tipificación que registra el historial de llamadas. Cada cliente nombra sus tipificaciones distinto: al iniciar, mapear cuáles cuentan como contacto con titular y cuáles como promesa, y confirmarlo con el usuario.
