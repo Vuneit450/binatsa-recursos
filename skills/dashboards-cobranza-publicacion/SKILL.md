@@ -12,7 +12,8 @@ description: Checklist previo a publicar, reglas de publicación en Tableau Clou
 - [ ] Tooltips completos en todas las hojas.
 - [ ] Tarjetas KPI con los dos deltas y color de ▲▼ correcto (con rango de 7 días o menos, solo "vs periodo previo"; probar con un rango corto y uno largo).
 - [ ] Botones de navegación funcionan; logos BINATSA y cliente visibles.
-- [ ] Todo transparente, sin bordes ni fondos (excepto tarjetas KPI: borde fino y esquinas redondeadas); mosaico.
+- [ ] Información sin bordes ni fondos (todo transparente; solo los títulos pueden llevarlos); mosaico.
+- [ ] Todo centrado, menos los títulos de los gráficos (a la izquierda).
 - [ ] Tamaño en "Rango", altura mínima 1300 px.
 - [ ] Prueba de interacción hecha (ver sección siguiente) y reportada.
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.

@@ -10,11 +10,11 @@ description: Tarjetas KPI con deltas y glosario de definiciones estándar de mé
 - Cada tarjeta debe ayudar a decidir. Descartar métricas descriptivas sin acción (día de mayor volumen, franja más cargada, pico de personas, peso fin de semana, días con operación). Preferir cobertura, % contacto titular, promesas, % promesa, $ recuperado, pagos, sin gestión, intentos por cuenta.
 
 ## Anatomía de la tarjeta (propuesta, confirmar en la primera revisión de cada cliente)
-De arriba hacia abajo, todo alineado a la izquierda:
-1. Nombre de la métrica: 10-11 pt, texto secundario.
-2. Número grande: 28-32 pt en negrita, color primario (o semáforo si la tarjeta tiene meta). Formato de módulo estructura: % con símbolo y 1 decimal, dinero con $ y miles.
-3. Dos deltas en una línea o en dos: "▲ 4.2% vs periodo previo" y "▼ 1.1 pp vs 7 días previos", 10-11 pt, verde o rojo según sea mejor o peor. Con rango de 7 días o menos, solo el primero (ver Tarjetas KPI).
-4. Borde fino de 1 px en neutro `#B4BFCB`, esquinas redondeadas (radio propuesto: 12 px) y sin color de fondo. Aplicar el radio de esquina a la hoja de la tarjeta misma, no al contenedor que la envuelve (el contenedor no recorta a sus hijos). Requiere Tableau 2026.1 o posterior; revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
+De arriba hacia abajo. Todo va centrado excepto el título, que va a la izquierda:
+1. Título de la tarjeta (nombre de la métrica): 10-11 pt, a la izquierda, sobre una franja de color de marca (en su tono oscuro si hace falta contraste, texto blanco) con esquinas redondeadas.
+2. Número grande, centrado: 28-32 pt en negrita, color primario (o semáforo si la tarjeta tiene meta). Formato de módulo estructura: % con símbolo y 1 decimal, dinero con $ y miles.
+3. Dos deltas, centrados, en una línea o en dos: "▲ 4.2% vs periodo previo" y "▼ 1.1 pp vs 7 días previos", 10-11 pt, verde o rojo según sea mejor o peor. Con rango de 7 días o menos, solo el primero (ver Tarjetas KPI).
+4. Solo el título lleva fondo (la franja) y esquinas redondeadas (radio propuesto: 12 px). El número y los deltas van SIN borde ni fondo, transparentes. En Tableau, la tarjeta son dos objetos apilados: el del título (caja de texto u hoja propia) con el radio de esquina, y la hoja del valor transparente. Aplicar el radio al objeto del título, no al contenedor que los envuelve (el contenedor no recorta a sus hijos). Requiere Tableau 2026.1 o posterior; revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
 5. Misma altura y ancho en toda la fila; máximo 5 tarjetas por fila.
 
 ## Glosario de KPIs (definiciones estándar; confirmar con el cliente si difieren)

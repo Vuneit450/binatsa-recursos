@@ -29,8 +29,8 @@ Layout de referencia de Operación (dos columnas bajo las tarjetas KPI; cada blo
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: opción "Rango" (no Automático, que no permite fijar altura). Altura mínima 1300 px, que es la altura de inicio; el ancho se ajusta a la pantalla, lo más grande posible para escritorios grandes.
-- NINGÚN gráfico ni filtro lleva borde ni color de fondo: todo transparente (zonas, hojas, filtros, parámetros, contenedores). Solo los encabezados de zona pueden usar la franja de color de marca.
-- Única excepción: las tarjetas KPI llevan borde fino y esquinas redondeadas (sin color de fondo). Detalle en dashboards-cobranza-kpis.
+- La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos: encabezados de zona, títulos de gráficos y títulos de tarjetas KPI (franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis).
+- Todo va centrado (gráficos dentro de su zona, números y deltas de las tarjetas, filtros, parámetros, botones de navegación, texto "Cómo leer") EXCEPTO los títulos de los gráficos, que van alineados a la izquierda.
 
 ## Interactividad
 - TODOS los gráficos interactúan entre sí, sin excepciones salvo que el usuario la apruebe y quede declarada en el reporte: clic en una marca filtra los demás (acciones de filtro de dashboard; segmento, asesor, canal, hora, día, tipificación y zona como dimensiones de enlace). Los gráficos son origen y destino; las tarjetas KPI son destino de todas las acciones.
@@ -55,7 +55,7 @@ Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colore
 - Neutro: barras no destacadas y texto secundario en gris con matiz hacia el primario (no gris puro). Texto principal casi negro, nunca #000 puro.
 - Semáforo fijo, independiente de la marca: verde #2e7d32 (mejora), rojo #c62828 (empeora), ámbar #C77700 (alerta; en texto pequeño usar #9A5A00 para que se lea). Invertir cuando bajar es bueno. Nunca usar el color como única señal: acompañarlo siempre con ▲ / ▼ o con texto.
 - Segmentos de cartera: una rampa del primario del cliente de claro a oscuro (menos mora = más claro); mismo color por segmento en TODAS las hojas. Nunca más de 6 colores categóricos.
-- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, azul marino `#0B1F3A`) y dejar el color claro como acento. Sin fondos ni bordes (todo transparente), salvo el borde de las tarjetas KPI.
+- Contraste: texto blanco sobre franja de color solo si el contraste es de al menos 4.5:1. Si el primario del cliente no llega (el turquesa de BINATSA da 2.6:1), usar su tono oscuro para la franja (en BINATSA, azul marino `#0B1F3A`) y dejar el color claro como acento. Sin fondos ni bordes en la información (todo transparente); solo los títulos pueden llevarlos.
 
 Tipografía (una sola familia, la de Tableau o la del cliente si la tiene):
 - Número de tarjeta KPI: 28-32 pt en negrita, color primario o semáforo.
