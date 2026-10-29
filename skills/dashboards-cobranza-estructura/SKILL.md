@@ -44,7 +44,8 @@ Tabla por asesor con todos sus indicadores, mapa de calor con selectores de KPI 
 ## Layout
 - Todo en contenedores en MOSAICO (no flotante).
 - Tamaño: modo Fijo, 1910 x 1300 px, igual en todas las vistas (incluida la Guía de uso). Las vistas adicionales usan la misma medida salvo que se defina otra con el usuario.
-- La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos y de tarjetas KPI: franja de color de marca; en las tarjetas, con esquinas redondeadas, ver dashboards-cobranza-kpis) y los botones de navegación (fondo de color de marca).
+- La información no lleva borde ni color de fondo: todo transparente (gráficos, números de tarjetas KPI, filtros, parámetros, hojas y contenedores). Los ÚNICOS elementos que pueden llevar fondo o borde son los títulos (título principal, encabezados de zona, títulos de gráficos, de tablas y de tarjetas KPI: franja de color de marca) y los botones de navegación (fondo de color de marca).
+- Esquinas redondeadas: los títulos de gráficos, tablas y tarjetas KPI, que son lo único con fondo dentro de cada bloque, llevan esquinas redondeadas (radio propuesto: 12 px). El resto es transparente y sin borde, así que su radio no se ve. En Tableau 2026.1 o posterior, el radio se aplica en el panel de diseño a cada hoja; la franja del título queda con las esquinas de arriba redondeadas (validar en el primer dashboard de cada cliente). Revisar las exportaciones a PDF o imagen, que pueden mostrar las esquinas distinto.
 - Todo va centrado (gráficos y tablas dentro de su zona, el contenido de las tablas, números y deltas de las tarjetas, filtros, parámetros, texto "Cómo leer") EXCEPTO los títulos, que van alineados a la izquierda (títulos de gráficos, de tablas y encabezados de zona), y los botones de navegación, que van pegados a la izquierda bajo el título principal.
 
 ## Medidas estándar
@@ -156,4 +157,5 @@ Tamaños:
 
 ## Patrón del mapa de calor con selector de métrica
 Referencia visual: `ejemplos/mapa-calor.png`.
+Escala de color: la define el proyecto, con la paleta del cliente, de claro a oscuro. El texto de cada celda cambia de color según el fondo (oscuro sobre fondo claro, blanco sobre fondo oscuro) para que el número se lea siempre con al menos 4.5:1.
 Parámetro de texto "Métrica del mapa de calor" (Gestiones, Contactos con titular, Promesas, Cuentas distintas, % contacto, % promesa, Monto recuperado). Un cálculo "Métrica seleccionada" (CASE sobre el parámetro) para el color y otro "Métrica (texto)" para la etiqueta que agrega % cuando la métrica es porcentual. Etiqueta mínima 8 pt en web.
