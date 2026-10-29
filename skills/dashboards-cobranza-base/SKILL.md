@@ -1,6 +1,6 @@
 ---
 name: dashboards-cobranza-base
-description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de estructura, KPIs, tooltips, cliente/limpieza y publicación."
+description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de datos, estructura, KPIs, tooltips, cliente/limpieza, publicación y video guía."
 ---
 
 # Base · Dashboards de Cobranza BINATSA
@@ -10,10 +10,12 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 
 ## Módulos relacionados
 - dashboards-cobranza-estructura: Dirección, Operación, layout, estilo.
+- dashboards-cobranza-datos: tablas, reglas de negocio, validación y seguridad; va ANTES de construir.
 - dashboards-cobranza-kpis: tarjetas KPI y glosario.
 - dashboards-cobranza-tooltips: descripciones emergentes.
 - dashboards-cobranza-cliente-limpieza: vista del cliente y limpieza de huérfanos.
 - dashboards-cobranza-publicacion: checklist, publicación y monitoreo.
+- dashboards-cobranza-video-guia: video guía para un usuario nuevo; último paso, después de publicar.
 
 ## Recursos de BINATSA
 - Repositorio de GitHub: Vuneit450/binatsa-recursos.
@@ -30,7 +32,7 @@ Tanda 1 (bloqueantes):
 1. Logo del cliente (se usa para sacar su paleta; en el dashboard solo va el logo de BINATSA): opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
 3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo del kit". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
-4. Tarjetas KPI de Dirección y de Operación (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto.
+4. Tarjetas KPI de Dirección y de Operación, y metas (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto. Preguntar siempre si el cliente tiene metas (por asesor, por día o por segmento) y cuáles: opciones "No hay metas" o "Sí, las paso". Las metas no son estándar.
 
 Tanda 2 (antes de publicar):
 5. Segmentación de cartera del cliente (buckets/rangos de mora, nombres y días). No asumir A/B/C.
@@ -49,8 +51,10 @@ Tanda 3 (antes de compartir con el cliente):
 5. Alertas de fallo: canal elegido por el usuario para cada proyecto; lo configura el usuario en Tableau.
 
 ## Flujo de trabajo
+0. Antes de construir, revisar los datos y acordar las reglas de negocio (dashboards-cobranza-datos).
 1. Hacer las preguntas iniciales. Si el usuario sube un .twbx, trabajar sobre ESE archivo.
 2. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; el usuario publica.
 3. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
 4. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
 5. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.
+6. Al terminar y publicar, hacer el video guía (dashboards-cobranza-video-guia): es el último paso de la entrega.

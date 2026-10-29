@@ -12,15 +12,15 @@ logos/
   cierre-video.png            tarjeta de cierre fija de los videos guía (logo + eslogan)
 skills/
   dashboards-cobranza-base/            punto de partida: preguntas, reglas y flujo (usar primero)
+  dashboards-cobranza-datos/           tablas, reglas de negocio, validación y seguridad (antes de construir)
   dashboards-cobranza-estructura/      vistas Dirección y Operación, layout, estilo
   dashboards-cobranza-kpis/            tarjetas KPI y glosario de métricas
   dashboards-cobranza-tooltips/        descripciones emergentes
   dashboards-cobranza-cliente-limpieza/  vista del cliente y limpieza de huérfanos
   dashboards-cobranza-publicacion/     checklist, publicación y monitoreo
+  dashboards-cobranza-video-guia/      video guía para un usuario nuevo (último paso)
 clientes/
   _plantilla/                 base para un cliente nuevo (logo + paleta)
-archivo/
-  dashboards-cobranza-BINATSA-original.md   borrador original, OBSOLETO (solo historial; no usar)
 ```
 
 ## Cómo usar los skills

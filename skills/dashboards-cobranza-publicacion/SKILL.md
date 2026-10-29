@@ -21,6 +21,7 @@ description: "Checklist previo a publicar, reglas de publicación en Tableau Clo
 - [ ] Cifras cuadradas contra la fuente en al menos un caso de control.
 - [ ] Publicar sobre el workbook existente; credenciales incrustadas (las pone el usuario desde Desktop).
 - [ ] Después de publicar: vistas, fuentes, hora de Modificado y actualización de extracción OK.
+- [ ] Dashboard publicado y probado: hacer el video guía (dashboards-cobranza-video-guia), último paso de la entrega.
 
 ## Prueba de interacción (obligatoria)
 La mayoría de los gráficos deben interactuar entre sí; cuáles quedan fuera depende del proyecto. No darlo por hecho: probarlo en el dashboard abierto en el navegador, en todas las vistas (como mínimo Dirección y Operación).
@@ -34,6 +35,13 @@ La mayoría de los gráficos deben interactuar entre sí; cuáles quedan fuera d
 ## Publicación
 - Publicar SOBRE el workbook existente (mismo nombre y proyecto) para conservar programación y credenciales; con otro nombre se pierde la programación.
 - La contraseña incrustada solo se fija publicando desde Desktop con "Incrustar contraseña" (en web no hay campo). Las credenciales las captura siempre el usuario.
+
+## Mantenimiento después de la entrega
+1. Todo cambio pedido por el cliente se hace en una copia versionada del libro, nunca directo sobre el publicado.
+2. Probar con el checklist antes de publicar, y publicar sobre el workbook existente.
+3. Registrar el cambio: fecha, qué cambió y quién lo pidió.
+4. Si cambia la definición de una métrica o una regla de negocio, actualizar a la vez el glosario, la Guía de uso y los tooltips, y repetir el caso de control (dashboards-cobranza-datos).
+5. Si el cambio afecta lo que muestra el video guía, rehacer las escenas afectadas y entregar una versión nueva (dashboards-cobranza-video-guia).
 
 ## Monitoreo de actualización
 - Revisar en la pestaña Actualizaciones de la extracción del workbook: estado, hora de la última corrida y programación activa.
