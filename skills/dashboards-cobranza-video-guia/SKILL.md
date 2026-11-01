@@ -136,6 +136,9 @@ Mínimo 4 s. Referencia visual: `logos/cierre-video.png`.
 - Lista de capítulos con su minuto (una por vista).
 - Opcional: versión corta de 60 s y guía escrita con las mismas 5 reglas.
 - Código fuente del video (guion, motor y audio) guardado en un lugar seguro y privado: sin él, cambiar un texto obliga a rehacerlo todo.
+- Dónde se guardan: en la carpeta del cliente, dentro de `video/`: `motor/` (el código), `versiones/` (los MP4, uno por versión), `guion.md` (escenas, duración y texto en pantalla) y `capitulos.md`. La sesión los guarda ahí en cada versión, SOLO si está conectada a esa carpeta y con permiso de escribir en ella.
+- Si la sesión no tiene acceso a la carpeta (por ejemplo corre en la nube), no se guarda nada solo: entregar los archivos como adjuntos y avisar al usuario, en la misma respuesta, que no quedaron guardados y que debe copiarlos él, sobre todo el motor.
+- Nunca guardar el motor ni el video en el repositorio público de BINATSA: traen datos y nombres del cliente.
 
 ## Producción (referencia)
 Todo se dibuja como función del tiempo. Pasos: ajustar el guion, sacar los instantes de cortes y clics para sincronizar el sonido, regenerar el audio, correr la prueba de encuadres, renderizar los cuadros en paralelo y unir cuadros y audio con ffmpeg (H.264, CRF 23, AAC de 160 kbps).

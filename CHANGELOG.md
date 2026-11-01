@@ -12,6 +12,7 @@
 ## Sin publicar
 - Módulo base: preguntas reordenadas en tres tandas (se agregan las vistas y el nombre del cliente, y las metas pasan a su propia pregunta), flujo de trabajo con una secuencia explícita de construcción y nueva sección "Trabajo con una carpeta local".
 - Módulo de datos: "Primer acercamiento a los datos".
+- Video: dónde se guardan el motor, las versiones y el guion (carpeta `video/` del cliente), y qué hacer si la sesión no tiene acceso a la carpeta.
 - Módulo base: regla de permisos mínimos y datos sensibles (usuario dedicado, acceso mínimo, nunca borrar, datos agregados, política y vida del token).
 - Módulo base: herramientas de Tableau para trabajar sin pasar por la web (servidor MCP, tableauserverclient, API de Hyper y navegador), por validar.
 - Publicación por la sesión con un token que el usuario configura; el ciclo termina al cumplir el checklist, con un tope de 5 vueltas y confirmación antes de tocar producción.
