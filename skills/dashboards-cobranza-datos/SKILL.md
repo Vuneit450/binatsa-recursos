@@ -70,3 +70,4 @@ Cada regla acordada se documenta en el glosario (dashboards-cobranza-kpis) y en 
 - Si un mismo dashboard lo ven personas con alcance distinto (por ejemplo varias campañas o clientes), restringir los datos por usuario con seguridad a nivel de fila, o usar libros separados. No basta con ocultar filtros.
 - El cliente final no debe ver datos de otras campañas ni de otros clientes (ver dashboards-cobranza-cliente-limpieza).
 - Las credenciales de la fuente las pone siempre el usuario; nunca se escriben.
+- Para el acceso de la sesión (token, servidor MCP o API), aplicar "Permisos mínimos y datos sensibles" del módulo base: usuario dedicado, acceso mínimo, nunca borrar y datos agregados.

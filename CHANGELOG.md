@@ -12,6 +12,7 @@
 ## Sin publicar
 - Módulo base: preguntas reordenadas en tres tandas (se agregan las vistas y el nombre del cliente, y las metas pasan a su propia pregunta), flujo de trabajo con una secuencia explícita de construcción y nueva sección "Trabajo con una carpeta local".
 - Módulo de datos: "Primer acercamiento a los datos".
+- Módulo base: regla de permisos mínimos y datos sensibles (usuario dedicado, acceso mínimo, nunca borrar, datos agregados, política y vida del token).
 - Módulo base: herramientas de Tableau para trabajar sin pasar por la web (servidor MCP, tableauserverclient, API de Hyper y navegador), por validar.
 - Publicación por la sesión con un token que el usuario configura; el ciclo termina al cumplir el checklist, con un tope de 5 vueltas y confirmación antes de tocar producción.
 - Módulo de video: nueva sección "Composición del cuadro" (marco estándar de 1664 x 976 px, simulación de monitor chico en réplicas, franja de texto abajo, cámara y zoom, barrido único en elementos anchos, regla para no repetir gráficos, escena de arranque y prueba de cuadros a 3840 x 2160).

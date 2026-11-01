@@ -51,6 +51,18 @@ Tanda 3 (antes de publicar y de compartir con el cliente):
 3. Publicar SOBRE el workbook existente (mismo nombre y proyecto) para conservar programación y credenciales; con otro nombre se pierde la programación.
 4. Edición web: autoguardado como "Borrador"; Publicar sobrescribe. Arrastrar anchos de columna no funciona. Hojas ocultas se abren desde el icono "Ir a hoja" de la zona del dashboard.
 5. Alertas de fallo: canal elegido por el usuario para cada proyecto; lo configura el usuario en Tableau.
+6. Permisos mínimos y datos sensibles: ver la sección "Permisos mínimos y datos sensibles" más abajo. Se aplica siempre que la sesión use un token, el servidor MCP o la API de Tableau.
+
+## Permisos mínimos y datos sensibles
+Un token de acceso personal actúa como el usuario que lo creó: alcanza todo lo que ese usuario puede ver y hacer. Por eso:
+1. Usuario dedicado: el token se crea desde una cuenta propia para este trabajo (por ejemplo "claude-bi"), nunca desde la cuenta personal ni la de un administrador del sitio.
+2. Acceso mínimo: esa cuenta ve solo los proyectos que hacen falta (el de pruebas y el del cliente en curso), con un rol que permita publicar pero no administrar el sitio. Si se puede separar, sin permiso de borrado.
+3. Nunca borrar: la sesión no borra libros, fuentes de datos, extractos ni tareas de actualización, aunque la herramienta lo permita, salvo que el usuario lo pida expresamente en ese momento. En el servidor MCP, deshabilitar las herramientas de borrado antes de conectarlo.
+4. Datos agregados: para explorar y validar, consultar sumas y conteos por día, segmento o canal. No traer registros con nombres, teléfonos ni identificadores de clientes finales. Si un caso de control exige ver registros, pedir confirmación, limitar a unas pocas filas y no guardarlas en archivos, capturas ni en el repositorio.
+5. Política: antes de consultar datos reales, confirmar con el usuario qué permiten la empresa y el cliente sobre pasar datos por una herramienta externa.
+6. Vida del token: no escribirlo en archivos ni en el chat; revisar su expiración y revocarlo al terminar el proyecto.
+7. Registro: anotar en `brief.md` qué cuenta y qué alcance se usaron, sin el token.
+8. Si el usuario pide dar un acceso más amplio, advertir los riesgos de esta sección antes de continuar.
 
 ## Herramientas de Tableau para trabajar sin pasar por la web (por validar con el sitio del usuario)
 - Servidor MCP de Tableau (el oficial): lee fuentes de datos ya publicadas, sus metadatos y permite consultar datos. Sirve para explorar y para el caso de control. No diseña dashboards. Antes de conectarlo, revisar su lista real de herramientas y deshabilitar las de borrado; usar un token con los permisos mínimos que haga falta.
