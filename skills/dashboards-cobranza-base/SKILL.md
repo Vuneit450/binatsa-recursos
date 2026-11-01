@@ -52,6 +52,13 @@ Tanda 3 (antes de publicar y de compartir con el cliente):
 4. Edición web: autoguardado como "Borrador"; Publicar sobrescribe. Arrastrar anchos de columna no funciona. Hojas ocultas se abren desde el icono "Ir a hoja" de la zona del dashboard.
 5. Alertas de fallo: canal elegido por el usuario para cada proyecto; lo configura el usuario en Tableau.
 
+## Herramientas de Tableau para trabajar sin pasar por la web (por validar con el sitio del usuario)
+- Servidor MCP de Tableau (el oficial): lee fuentes de datos ya publicadas, sus metadatos y permite consultar datos. Sirve para explorar y para el caso de control. No diseña dashboards. Antes de conectarlo, revisar su lista real de herramientas y deshabilitar las de borrado; usar un token con los permisos mínimos que haga falta.
+- Biblioteca `tableauserverclient` (Python) o la API REST: publicar libros con la opción de sobrescribir activada y autenticación con el token del usuario.
+- API de Hyper: leer los extractos `.hyper` en local.
+- Navegador: solo para la revisión visual, porque ninguna de las anteriores devuelve el dashboard tal como lo ve el usuario.
+- Antes de depender de cualquiera, probarla una vez con un libro de prueba en un proyecto de pruebas.
+
 ## Trabajo con una carpeta local
 Cuando la sesión está conectada a una carpeta de la computadora del usuario (por ejemplo en el escritorio), se trabaja así:
 - Estructura sugerida, una carpeta por cliente: `libro/` (el libro actual y sus versiones: v1, v2…), `datos/` (el extracto o la muestra y el diccionario de datos), `marca/` (logo y colores del cliente), `capturas/` (para el video) y `brief.md` (las respuestas a las preguntas iniciales y las reglas de negocio acordadas, para no volver a preguntarlas).
