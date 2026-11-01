@@ -10,6 +10,14 @@ Responde siempre en español, corto y directo. Este módulo va ANTES de construi
 ## Principio
 Pedir los datos a detalle (un registro por evento) con el número de contrato como llave común, en formato texto. Los porcentajes y las razones NO se piden: se calculan a partir del detalle. Las reglas que hoy viven dentro de consultas o fórmulas de un archivo se acuerdan por escrito, para que la fuente nueva dé las mismas cifras.
 
+## Primer acercamiento a los datos
+Para que la sesión conozca los datos antes de construir, en la carpeta del cliente (ver "Trabajo con una carpeta local" en dashboards-cobranza-base):
+1. El libro actual en `.twbx`: de su `.twb` se leen los campos, los cálculos y los parámetros, y de sus extractos `.hyper` se pueden leer los datos de forma local (por ejemplo con la API de Hyper de Tableau para Python).
+2. Un diccionario de datos: por cada tabla, sus campos con tipo y significado, más las reglas de negocio acordadas (sección siguiente).
+3. Si no hay extracto, una muestra pequeña anonimizada en CSV por tabla (por ejemplo una semana), con la misma estructura que las tablas mínimas.
+4. Con eso se calcula por código el caso de control (ver "Validación de cifras") y se compara con lo que muestra el dashboard publicado.
+Los datos reales se quedan en la carpeta local y nunca se suben al repositorio.
+
 ## Tablas mínimas
 | # | Tabla | Nivel de detalle | Campos mínimos |
 |---|---|---|---|

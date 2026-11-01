@@ -26,22 +26,24 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 - Los archivos no se guardan en la skill; solo la ruta.
 
 ## Preguntas obligatorias al iniciar un proyecto nuevo
-Hacerlas con la herramienta de preguntas de opción múltiple si existe (en Claude Code, AskUserQuestion); si no, en texto con opciones numeradas. Cada tanda tiene máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1, 2 y 3). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
+Hacerlas con la herramienta de preguntas de opción múltiple si existe (en Claude Code, AskUserQuestion); si no, en texto con opciones numeradas. Cada tanda tiene máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1 a 4). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
 
-Tanda 1 (bloqueantes):
-1. Logo del cliente (se usa para sacar su paleta, y su ícono va arriba a la izquierda del dashboard junto al logo de BINATSA): opciones "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
+Tanda 1 (bloqueantes, antes de construir):
+1. Cliente y logo: nombre del cliente (va en el título "Cobranza <Cliente> · <Vista>") y logo. Su ícono va arriba a la izquierda del dashboard, junto al logo de BINATSA, y se usa también para sacar su paleta. Opciones del logo: "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
-3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo del kit". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
-4. Tarjetas KPI de Dirección y de Operación, y metas (no bloqueante): opciones "Las propuestas del skill", "Las que defina el cliente", "Propongo yo según los campos disponibles". Recomendada: las propuestas del skill, ajustadas al proyecto. Preguntar siempre si el cliente tiene metas (por asesor, por día o por segmento) y cuáles: opciones "No hay metas" o "Sí, las paso". Las metas no son estándar.
+3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
+4. Vistas: Dirección y Operación son obligatorias y la Guía de uso es recomendada. Opciones: "Dirección, Operación y Guía de uso" (recomendada), "Agregar Seguimiento por asesor", "Otra vista (describirla)".
 
-Tanda 2 (antes de publicar):
-5. Segmentación de cartera del cliente (buckets/rangos de mora, nombres y días). No asumir A/B/C.
-6. Workbook, proyecto y sitio de Tableau Cloud (publicar siempre sobre el workbook existente cuando ya hay uno).
-7. Horario, frecuencia y zona horaria de actualización del extracto.
-8. Canal de alertas de fallo de actualización: opciones "Slack (¿cuál canal?)", "Correo", "Otro", "Sin alertas". Nunca asumir uno.
+Tanda 2 (durante la construcción, no bloquea el arranque):
+5. Segmentación de cartera del cliente (rangos de mora, nombres y días; no asumir A/B/C) y si el proyecto separa además por canal o producto.
+6. Tarjetas KPI de Dirección y de Operación: "Las propuestas del skill" (recomendada, ajustadas al proyecto), "Las que defina el cliente", "Propongo yo según los campos disponibles".
+7. Metas: las metas no son estándar. Preguntar siempre si el cliente tiene metas (por asesor, por día o por segmento) y cuáles: "No hay metas" o "Sí, las paso".
 
-Tanda 3 (antes de compartir con el cliente):
-9. Quiénes tienen acceso. Por defecto el cliente ve las dos vistas (Dirección y Operación), con el desglose por asesor.
+Tanda 3 (antes de publicar y de compartir con el cliente):
+8. Workbook, proyecto y sitio de Tableau Cloud (publicar siempre sobre el workbook existente cuando ya hay uno).
+9. Horario, frecuencia y zona horaria de actualización del extracto.
+10. Canal de alertas de fallo de actualización: "Slack (¿cuál canal?)", "Correo", "Otro", "Sin alertas". Nunca asumir uno.
+11. Quiénes tienen acceso. Por defecto el cliente ve las dos vistas (Dirección y Operación), con el desglose por asesor.
 
 ## Reglas generales (Tableau Cloud)
 1. NUNCA mover ni modificar consultas/fuentes. Solo ocultar campos huérfanos que ningún reporte use ni vaya a usar.
@@ -50,11 +52,20 @@ Tanda 3 (antes de compartir con el cliente):
 4. Edición web: autoguardado como "Borrador"; Publicar sobrescribe. Arrastrar anchos de columna no funciona. Hojas ocultas se abren desde el icono "Ir a hoja" de la zona del dashboard.
 5. Alertas de fallo: canal elegido por el usuario para cada proyecto; lo configura el usuario en Tableau.
 
+## Trabajo con una carpeta local
+Cuando la sesión está conectada a una carpeta de la computadora del usuario (por ejemplo en el escritorio), se trabaja así:
+- Estructura sugerida, una carpeta por cliente: `libro/` (el libro actual y sus versiones: v1, v2…), `datos/` (el extracto o la muestra y el diccionario de datos), `marca/` (logo y colores del cliente), `capturas/` (para el video) y `brief.md` (las respuestas a las preguntas iniciales y las reglas de negocio acordadas, para no volver a preguntarlas).
+- Los datos reales se quedan en esa carpeta: nunca se suben al repositorio de BINATSA, que es público.
+- Ciclo hasta cumplir todo: 1) editar una copia versionada del libro en la carpeta; 2) publicarla; 3) revisar el resultado publicado en el navegador con la sesión del usuario; 4) corregir lo que no cumpla el checklist; 5) repetir desde el paso 1.
+- Quién publica: el usuario, desde Tableau; o la sesión, por la línea de comandos o la API de Tableau, solo si el usuario configuró antes un token de acceso personal como variable de entorno. El token o la contraseña nunca se escriben en archivos ni en el chat. Para incrustar credenciales en el extracto, publicar desde Tableau Desktop (ver publicación).
+
 ## Flujo de trabajo
-0. Antes de construir, revisar los datos y acordar las reglas de negocio (dashboards-cobranza-datos).
-1. Hacer las preguntas iniciales. Si el usuario sube un .twbx, trabajar sobre ESE archivo.
-2. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; el usuario publica.
-3. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
-4. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
-5. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.
-6. Al terminar y publicar, hacer el video guía (dashboards-cobranza-video-guia): es el último paso de la entrega.
+1. Hacer la tanda 1 de preguntas. Si el usuario sube un .twbx, trabajar sobre ESE archivo (en copia versionada).
+2. Revisar los datos y acordar las reglas de negocio (dashboards-cobranza-datos), con el primer acercamiento a los datos que describe ese módulo.
+3. Construir, en este orden: estructura (vistas, encabezado, medidas y parámetros), KPIs (tarjetas y glosario), tooltips y Guía de uso. Hacer la tanda 2 de preguntas mientras se construye.
+4. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; publica el usuario o la sesión según la sección anterior.
+5. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
+6. Tanda 3 de preguntas, y limpieza de la vista del cliente (dashboards-cobranza-cliente-limpieza).
+7. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
+8. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.
+9. Al terminar y publicar, hacer el video guía (dashboards-cobranza-video-guia): es el último paso de la entrega.
