@@ -57,7 +57,9 @@ Cuando la sesión está conectada a una carpeta de la computadora del usuario (p
 - Estructura sugerida, una carpeta por cliente: `libro/` (el libro actual y sus versiones: v1, v2…), `datos/` (el extracto o la muestra y el diccionario de datos), `marca/` (logo y colores del cliente), `capturas/` (para el video) y `brief.md` (las respuestas a las preguntas iniciales y las reglas de negocio acordadas, para no volver a preguntarlas).
 - Los datos reales se quedan en esa carpeta: nunca se suben al repositorio de BINATSA, que es público.
 - Ciclo hasta cumplir todo: 1) editar una copia versionada del libro en la carpeta; 2) publicarla; 3) revisar el resultado publicado en el navegador con la sesión del usuario; 4) corregir lo que no cumpla el checklist; 5) repetir desde el paso 1.
-- Quién publica: el usuario, desde Tableau; o la sesión, por la línea de comandos o la API de Tableau, solo si el usuario configuró antes un token de acceso personal como variable de entorno. El token o la contraseña nunca se escriben en archivos ni en el chat. Para incrustar credenciales en el extracto, publicar desde Tableau Desktop (ver publicación).
+- Quién publica: la sesión, por la línea de comandos o la API de Tableau, con un token de acceso personal que el usuario configuró antes como variable de entorno (con permiso de publicar en el proyecto). El token o la contraseña nunca se escriben en archivos ni en el chat. Si no hay token, publica el usuario desde Tableau. Para incrustar credenciales en el extracto, publicar desde Tableau Desktop (ver publicación).
+- Objetivo y tope: el ciclo termina cuando todas las casillas del checklist de publicación están cumplidas y la prueba de interacción pasa. Se limita a 5 vueltas (propuesto); si no se cumple, se reporta qué falta y se detiene, sin seguir publicando.
+- Antes de la primera publicación sobre un libro de producción, confirmar con el usuario. Cada publicación deja registrada la versión que se subió, para poder volver a la anterior.
 
 ## Flujo de trabajo
 1. Hacer la tanda 1 de preguntas. Si el usuario sube un .twbx, trabajar sobre ESE archivo (en copia versionada).
