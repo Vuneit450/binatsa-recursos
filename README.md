@@ -20,7 +20,11 @@ skills/
   dashboards-cobranza-publicacion/     checklist, publicación y monitoreo
   dashboards-cobranza-video-guia/      video guía para un usuario nuevo (último paso)
 clientes/
-  _plantilla/                 base para un cliente nuevo (logo + paleta)
+  _plantilla/                 base para un cliente nuevo (logo, paleta, brief y diccionario de datos)
+herramientas/
+  publicar_libro.py           publica un libro en Tableau Cloud con un token (no probado)
+  README.md                   preparación: token, variables de entorno y pruebas
+  aplicar-reglas-en-tableau.md  cómo aplicar en Tableau lo que el XML no puede
 ```
 
 ## Cómo usar los skills

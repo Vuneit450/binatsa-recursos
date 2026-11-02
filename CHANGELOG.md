@@ -10,6 +10,8 @@
 - Las metas y el límite de hojas no son parte del estándar: las metas se preguntan por proyecto y no hay límite de hojas.
 
 ## Sin publicar
+- Carpeta `herramientas/`: script de publicación con token (`publicar_libro.py`, no probado contra un sitio real), preparación paso a paso y cómo aplicar en Tableau lo que el XML no puede.
+- Plantillas `brief.md` y `diccionario-datos.md` en `clientes/_plantilla/`.
 - Módulo base: preguntas reordenadas en tres tandas (se agregan las vistas y el nombre del cliente, y las metas pasan a su propia pregunta), flujo de trabajo con una secuencia explícita de construcción y nueva sección "Trabajo con una carpeta local".
 - Módulo de datos: "Primer acercamiento a los datos".
 - Video: dónde se guardan el motor, las versiones y el guion (carpeta `video/` del cliente), y qué hacer si la sesión no tiene acceso a la carpeta.
