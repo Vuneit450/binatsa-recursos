@@ -10,6 +10,7 @@
 - Las metas y el límite de hojas no son parte del estándar: las metas se preguntan por proyecto y no hay límite de hojas.
 
 ## Sin publicar
+- Libro de prueba con datos inventados (`ejemplos/libro-prueba/prueba_publicacion.twbx`) y su generador `herramientas/crear_libro_prueba.py`, para la primera prueba de publicación. Aún no abierto en Tableau.
 - Carpeta `herramientas/`: script de publicación con token (`publicar_libro.py`, no probado contra un sitio real), preparación paso a paso y cómo aplicar en Tableau lo que el XML no puede.
 - Plantillas `brief.md` y `diccionario-datos.md` en `clientes/_plantilla/`.
 - Módulo base: preguntas reordenadas en tres tandas (se agregan las vistas y el nombre del cliente, y las metas pasan a su propia pregunta), flujo de trabajo con una secuencia explícita de construcción y nueva sección "Trabajo con una carpeta local".

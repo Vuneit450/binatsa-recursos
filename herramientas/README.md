@@ -1,6 +1,6 @@
 # Herramientas para trabajar con Tableau desde una carpeta local
 
-Contiene `publicar_libro.py`, que publica un libro en Tableau Cloud con un token de acceso personal. **No se ha probado contra un sitio real**: la primera vez, usar un libro de prueba en un proyecto de pruebas.
+Contiene `publicar_libro.py` (publica) y `crear_libro_prueba.py` (genera un libro de prueba con datos inventados). `publicar_libro.py` que publica un libro en Tableau Cloud con un token de acceso personal. **No se ha probado contra un sitio real**: la primera vez, usar un libro de prueba en un proyecto de pruebas.
 
 ## Preparación (una sola vez)
 
@@ -46,6 +46,8 @@ pip install tableauserverclient
 Opcional, para leer extractos `.hyper` en local: `pip install tableauhyperapi`.
 
 ### 4. Probar paso a paso
+Para la primera prueba usa el libro con datos inventados `ejemplos/libro-prueba/prueba_publicacion.twbx` (instrucciones en `ejemplos/libro-prueba/README.md`).
+
 ```bash
 python herramientas/publicar_libro.py --listar-proyectos
 python herramientas/publicar_libro.py libro/mi_libro_v1.twbx --proyecto "Pruebas" --nombre "Mi libro"
