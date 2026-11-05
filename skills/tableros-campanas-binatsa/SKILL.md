@@ -18,18 +18,18 @@ Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos 
 - `referencias/video-guia.md`: video guía para un usuario nuevo; último paso, después de publicar.
 
 ## Recursos de BINATSA
-- Repositorio de GitHub: Vuneit450/binatsa-recursos.
+- Repositorio de GitHub (público): Vuneit450/binatsa-tableros-skill. Solo lleva lo que sirve para cualquier campaña.
   - marca-binatsa/binatsa.svg: logo vectorial (turquesa #00B3B8, azul marino #0B1F3A). Usarlo siempre; si Tableau no acepta SVG en el objeto Imagen, generar un PNG desde el SVG.
   - marca-binatsa/paleta-binatsa.md y marca-binatsa/Preferences-BINATSA.tps: paleta de BINATSA (derivada del logo) y su versión para cargar en Tableau.
-  - clientes/<cliente>/: logo y recursos de marca de cada cliente (ver clientes/README.md y clientes/_plantilla/). Si no hay carpeta del cliente, pedir el logo y los colores y, con permiso del usuario, crearla a partir de la plantilla. El repositorio es público: subir solo el logo y los colores de marca, nunca datos internos.
+  - plantillas/: brief.md, diccionario-datos.md y paleta-cliente.md, vacías. Se copian a la carpeta privada del proyecto.
   - Si el repositorio no está conectado a la sesión, leerlo desde el navegador o pedir el archivo.
-- Los archivos no se guardan en la skill; solo la ruta.
+- Todo lo del cliente (logo, paleta, brief, reglas, libros, datos, capturas y video) vive en la carpeta privada del proyecto, `BINATSA-Tableros/<cliente>/<campaña>/`, y nunca se sube al repositorio.
 
 ## Preguntas obligatorias al iniciar un proyecto nuevo
 Hacerlas con la herramienta de preguntas de opción múltiple si existe (en Claude Code, AskUserQuestion); si no, en texto con opciones numeradas. Cada tanda tiene máximo 4 preguntas, ofreciendo opciones concretas y una recomendada. No empezar a construir hasta tener las bloqueantes (1 a 4). Si el usuario ya las respondió en el chat, no repetirlas. Si la sesión es desatendida, elegir lo razonable, declararlo arriba y marcarlo "por confirmar".
 
 Tanda 1 (bloqueantes, antes de construir):
-1. Cliente y logo: nombre del cliente (va en el título "Cobranza <Cliente> · <Vista>") y logo. Su ícono va arriba a la izquierda del dashboard, junto al logo de BINATSA, y se usa también para sacar su paleta. Opciones del logo: "Lo subo ahora", "Está en el repositorio (clientes/<cliente>/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en el repositorio.
+1. Cliente y logo: nombre del cliente (va en el título "Cobranza <Cliente> · <Vista>") y logo. Su ícono va arriba a la izquierda del dashboard, junto al logo de BINATSA, y se usa también para sacar su paleta. Opciones del logo: "Lo subo ahora", "Ya está en la carpeta del cliente (marca/)", "No hay logo: usar solo texto con sus colores". Siempre confirmarlo, aunque ya exista en la carpeta.
 2. Colores de marca del cliente: "Los paso (hex)", "Sácalos del logo", "Usa la paleta BINATSA por ahora". La paleta de encabezados, acentos y KPIs sale de aquí.
 3. Fuente de datos: "Tabla/consulta existente", "Archivo (CSV/Excel)", "Aún no hay: usar datos de ejemplo". Confirmar campos disponibles: canales (llamadas, SMS, Mail, Blaster, WhatsApp, Visitas, Predictivo, Inbound), tipificaciones, asesor, zona, monto, promesas, pagos.
 4. Vistas: Dirección y Operación son obligatorias y la Guía de uso es recomendada. Opciones: "Dirección, Operación y Guía de uso" (recomendada), "Agregar Seguimiento por asesor", "Otra vista (describirla)".
