@@ -1,14 +1,9 @@
----
-name: dashboards-cobranza-video-guia
-description: "Último paso al entregar un dashboard de Cobranza BINATSA: el video guía que enseña a un usuario nuevo cómo usar el tablero, qué hay en cada vista, dónde se filtra y qué afecta cada filtro. Usar cuando el usuario pida el video, el manual en video, la guía animada o el motion del tablero, o cuando un dashboard ya esté publicado y probado."
----
-
 # Video guía · Dashboards de Cobranza BINATSA
 
 Responde siempre en español, corto y directo.
 
 ## Qué es y cuándo se hace
-Último paso del flujo: se hace cuando el dashboard ya está publicado y probado (ver dashboards-cobranza-publicacion). Es un video que enseña a una persona NUEVA cómo usar el tablero: qué es, qué hay en cada vista, dónde se filtra, qué afecta cada filtro y qué pasa al hacer clic o pasar el mouse. El tiempo de producción no importa; importa que quede bien explicado.
+Último paso del flujo: se hace cuando el dashboard ya está publicado y probado (ver `referencias/publicacion.md`). Es un video que enseña a una persona NUEVA cómo usar el tablero: qué es, qué hay en cada vista, dónde se filtra, qué afecta cada filtro y qué pasa al hacer clic o pasar el mouse. El tiempo de producción no importa; importa que quede bien explicado.
 
 ## Preguntas iniciales
 Mismas reglas que el módulo base: herramienta de opción múltiple si existe (si no, texto con opciones numeradas), máximo 4 preguntas por tanda, una opción recomendada. Si el usuario ya respondió algo en el chat, no repetirlo. La identidad del cliente (logo y colores) sale de las respuestas del módulo base.
@@ -110,14 +105,14 @@ Con capturas reales no se transforma la imagen, porque se deformaría: se coloca
 
 ## Reglas de contenido
 - Hablar a un usuario nuevo: frases cortas, una idea por plano, y siempre decir qué afecta cada filtro o clic.
-- Prohibido en el texto visible: nombres de servidores o bases de datos (por ejemplo Redshift), la palabra "servidor", "Excel", "más grande" o "más completo", sistemas internos (por ejemplo WFM) y cualquier frase de datos que el usuario haya pedido omitir. Decir "los datos se actualizan solos". Es la misma regla del texto visible del dashboard (ver dashboards-cobranza-estructura).
+- Prohibido en el texto visible: nombres de servidores o bases de datos (por ejemplo Redshift), la palabra "servidor", "Excel", "más grande" o "más completo", sistemas internos (por ejemplo WFM) y cualquier frase de datos que el usuario haya pedido omitir. Decir "los datos se actualizan solos". Es la misma regla del texto visible del dashboard (ver `referencias/diseno.md`).
 - No presentar dos veces lo mismo; si ya se mostró un tooltip, no repetirlo.
 - Las capturas pueden traer palabras prohibidas en los botones o los títulos del tablero: recortarlas, difuminarlas o taparlas.
 
 ## Cierre fijo (siempre es lo último)
-Mínimo 4 s. Referencia visual: `logos/cierre-video.png`.
+Mínimo 4 s. Referencia visual: `marca-binatsa/cierre-video.png`.
 - Fondo en degradado azul petróleo oscuro, de `#0E3C4F` (arriba a la izquierda) a `#0B222F`.
-- Tarjeta blanca centrada, de esquinas muy redondeadas y de unos dos tercios del ancho, con el logo de BINATSA (`logos/binatsa.svg`, colores `#00B3B8` y `#0B1F3A`), dibujado con código para que se vea nítido.
+- Tarjeta blanca centrada, de esquinas muy redondeadas y de unos dos tercios del ancho, con el logo de BINATSA (`marca-binatsa/binatsa.svg`, colores `#00B3B8` y `#0B1F3A`), dibujado con código para que se vea nítido.
 - Debajo, "Soluciones para tu emprendimiento." en gris claro `#C0C7CC` y, más grande (unas 1.8 veces), "Datos que mueven decisiones" en negrita `#1AA6C8`.
 - En vertical, el mismo cierre recompuesto en el lienzo 9:16, sin cambiar textos ni colores.
 

@@ -11,7 +11,7 @@ Contiene `publicar_libro.py` (publica) y `crear_libro_prueba.py` (genera un libr
 4. Tableau muestra el **secreto una sola vez**. Copiarlo en ese momento a un lugar seguro. Si se pierde, hay que borrar el token y crear otro.
 5. Anotar la fecha de caducidad que muestre Tableau y revocar el token al terminar el proyecto.
 
-El token actúa como el usuario que lo creó: alcanza todo lo que esa cuenta puede ver y hacer, y no pide el segundo factor de autenticación. Por eso conviene crearlo desde una cuenta dedicada con acceso mínimo (ver "Permisos mínimos y datos sensibles" en `skills/dashboards-cobranza-base/SKILL.md`).
+El token actúa como el usuario que lo creó: alcanza todo lo que esa cuenta puede ver y hacer, y no pide el segundo factor de autenticación. Por eso conviene crearlo desde una cuenta dedicada con acceso mínimo (ver "Permisos mínimos y datos sensibles" en `SKILL.md`).
 
 ### 2. Guardarlo como variables de entorno (nunca en un archivo ni en el chat)
 Las cuatro variables, con estos nombres:
@@ -49,9 +49,9 @@ Opcional, para leer extractos `.hyper` en local: `pip install tableauhyperapi`.
 Para la primera prueba usa el libro con datos inventados `ejemplos/libro-prueba/prueba_publicacion.twbx` (instrucciones en `ejemplos/libro-prueba/README.md`).
 
 ```bash
-python herramientas/publicar_libro.py --listar-proyectos
-python herramientas/publicar_libro.py libro/mi_libro_v1.twbx --proyecto "Pruebas" --nombre "Mi libro"
-python herramientas/publicar_libro.py libro/mi_libro_v1.twbx --proyecto "Pruebas" --nombre "Mi libro" --publicar
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py --listar-proyectos
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py libro/mi_libro_v1.twbx --proyecto "Pruebas" --nombre "Mi libro"
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py libro/mi_libro_v1.twbx --proyecto "Pruebas" --nombre "Mi libro" --publicar
 ```
 - El primero muestra los proyectos que ve el token: confirma que conecta y qué alcance tiene.
 - El segundo solo simula y dice si crearía o sobrescribiría.

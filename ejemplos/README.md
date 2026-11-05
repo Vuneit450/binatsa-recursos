@@ -2,7 +2,7 @@
 
 Ilustraciones de referencia para los skills. Reproducen el estilo del tablero de referencia (franjas negras, tarjetas, botones, mapa de calor, tooltip) con **datos inventados**: no hay cifras, nombres de asesores, nombres de clientes ni identificadores reales.
 
-**No son capturas de Tableau.** Están dibujadas con código: la tipografía y los detalles de render difieren un poco de los de Tableau. Sirven para ver la estructura, las proporciones y el estilo; las medidas exactas están en `skills/dashboards-cobranza-estructura/SKILL.md`.
+**No son capturas de Tableau.** Están dibujadas con código: la tipografía y los detalles de render difieren un poco de los de Tableau. Sirven para ver la estructura, las proporciones y el estilo; las medidas exactas están en `skills/tableros-campanas-binatsa/referencias/diseno.md`.
 
 ## Archivos
 | Archivo | Qué muestra | Módulo que lo usa |

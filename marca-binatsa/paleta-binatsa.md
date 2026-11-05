@@ -1,6 +1,6 @@
 # Paleta BINATSA
 
-Sale de los dos colores del logo (`logos/binatsa.svg`). Lo demás son derivados.
+Sale de los dos colores del logo (`marca-binatsa/binatsa.svg`). Lo demás son derivados.
 
 ## Colores de marca
 

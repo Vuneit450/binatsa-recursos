@@ -1,6 +1,6 @@
 # Libro de prueba para publicar en Tableau Cloud
 
-`prueba_publicacion.twbx` sirve solo para comprobar que el token y el script `herramientas/publicar_libro.py` funcionan. **Todos los datos son inventados** (20 filas: segmento, asesor, saldo, recuperado), así que puede estar en este repo público.
+`prueba_publicacion.twbx` sirve solo para comprobar que el token y el script `skills/tableros-campanas-binatsa/herramientas/publicar_libro.py` funcionan. **Todos los datos son inventados** (20 filas: segmento, asesor, saldo, recuperado), así que puede estar en este repo público.
 
 Contenido:
 - Una hoja, "Saldo por segmento": barras horizontales con la rampa de segmentos de la paleta BINATSA.
@@ -9,20 +9,20 @@ Contenido:
 
 Se regenera con:
 ```bash
-python herramientas/crear_libro_prueba.py
+python skills/tableros-campanas-binatsa/herramientas/crear_libro_prueba.py
 ```
 
 ## Publicarlo (desde tu computadora, con las variables del token ya guardadas)
 
 Desde la carpeta del repo:
 ```bash
-python herramientas/publicar_libro.py --listar-proyectos
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py --listar-proyectos
 ```
 ```bash
-python herramientas/publicar_libro.py ejemplos/libro-prueba/prueba_publicacion.twbx --proyecto "Pruebas" --nombre "BINATSA prueba de publicacion"
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py ejemplos/libro-prueba/prueba_publicacion.twbx --proyecto "Pruebas" --nombre "BINATSA prueba de publicacion"
 ```
 ```bash
-python herramientas/publicar_libro.py ejemplos/libro-prueba/prueba_publicacion.twbx --proyecto "Pruebas" --nombre "BINATSA prueba de publicacion" --publicar
+python skills/tableros-campanas-binatsa/herramientas/publicar_libro.py ejemplos/libro-prueba/prueba_publicacion.twbx --proyecto "Pruebas" --nombre "BINATSA prueba de publicacion" --publicar
 ```
 1. El primero confirma que el token conecta y muestra los proyectos.
 2. El segundo solo simula.

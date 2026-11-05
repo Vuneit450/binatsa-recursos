@@ -1,8 +1,3 @@
----
-name: dashboards-cobranza-datos
-description: "Datos de un dashboard de Cobranza BINATSA: tablas mínimas, campos, reglas de negocio por acordar, frecuencia de carga, validación de cifras, rendimiento y seguridad por usuario. Usar antes de construir un dashboard, al conectar o cambiar una fuente de datos, al pedir información al equipo de ETL o cuando las cifras no cuadren contra la fuente."
----
-
 # Datos · Dashboards de Cobranza BINATSA
 
 Responde siempre en español, corto y directo. Este módulo va ANTES de construir: sin datos completos y reglas acordadas por escrito, las cifras no cuadran.
@@ -11,7 +6,7 @@ Responde siempre en español, corto y directo. Este módulo va ANTES de construi
 Pedir los datos a detalle (un registro por evento) con el número de contrato como llave común, en formato texto. Los porcentajes y las razones NO se piden: se calculan a partir del detalle. Las reglas que hoy viven dentro de consultas o fórmulas de un archivo se acuerdan por escrito, para que la fuente nueva dé las mismas cifras.
 
 ## Primer acercamiento a los datos
-Para que la sesión conozca los datos antes de construir, en la carpeta del cliente (ver "Trabajo con una carpeta local" en dashboards-cobranza-base):
+Para que la sesión conozca los datos antes de construir, en la carpeta del cliente (ver "Trabajo con una carpeta local" en `SKILL.md`):
 1. El libro actual en `.twbx`: de su `.twb` se leen los campos, los cálculos y los parámetros, y de sus extractos `.hyper` se pueden leer los datos de forma local (por ejemplo con la API de Hyper de Tableau para Python).
 2. Un diccionario de datos: por cada tabla, sus campos con tipo y significado, más las reglas de negocio acordadas (sección siguiente).
 3. Si no hay extracto, una muestra pequeña anonimizada en CSV por tabla (por ejemplo una semana), con la misma estructura que las tablas mínimas.
@@ -33,7 +28,7 @@ Los datos reales se quedan en la carpeta local y nunca se suben al repositorio.
 No todas aplican a todos los proyectos: confirmar con el usuario cuáles cubre el cliente, pero pedir las que existan desde la primera carga.
 
 ## Indicadores que salen de esos datos
-Por día y por segmento de cartera, según canal: cuentas asignadas, trabajadas y conectadas; intentos; contactos con titular (RPC); promesas tomadas y cumplidas; llamadas recibidas, abandonadas y contestadas dentro del tiempo objetivo; envíos y respuestas por canal (SMS, Email, Blaster, WhatsApp, cartas, recados); visitas; pagos y monto recuperado; personal y calidad. Definiciones: dashboards-cobranza-kpis.
+Por día y por segmento de cartera, según canal: cuentas asignadas, trabajadas y conectadas; intentos; contactos con titular (RPC); promesas tomadas y cumplidas; llamadas recibidas, abandonadas y contestadas dentro del tiempo objetivo; envíos y respuestas por canal (SMS, Email, Blaster, WhatsApp, cartas, recados); visitas; pagos y monto recuperado; personal y calidad. Definiciones: `referencias/giros/cobranza.md`.
 
 ## Reglas de negocio por acordar (por escrito, antes de construir)
 1. Rangos de cada segmento: límites oficiales y si hay segmentos adicionales. Si distintas fuentes los escriben distinto, elegir uno.
@@ -45,7 +40,7 @@ Por día y por segmento de cartera, según canal: cuentas asignadas, trabajadas 
 7. Atribución de llamadas entrantes a un envío previo (SMS, email, etc.): regla y días de ventana.
 8. Días laborables: qué días cuentan como hábiles y cómo se tratan los festivos.
 9. Monto recuperado: por fecha de pago o por fecha de posteo.
-Cada regla acordada se documenta en el glosario (dashboards-cobranza-kpis) y en el tooltip "Cómo se calcula".
+Cada regla acordada se documenta en el glosario (`referencias/giros/cobranza.md`) y en el tooltip "Cómo se calcula".
 
 ## Carga y formato
 - Carga diaria, completa y sin intervención manual, con una hora de corte acordada antes del envío al cliente.
@@ -62,12 +57,12 @@ Cada regla acordada se documenta en el glosario (dashboards-cobranza-kpis) y en 
 
 ## Extracto y rendimiento (propuesto)
 - Preferir extracto con actualización programada sobre conexión en vivo para los dashboards de cliente.
-- Las hojas de trabajo van ocultas (ver dashboards-cobranza-cliente-limpieza). No hay un límite de hojas por dashboard ni por libro.
+- Las hojas de trabajo van ocultas (ver `referencias/cliente-limpieza.md`). No hay un límite de hojas por dashboard ni por libro.
 - Los cálculos de conteo único sobre llaves construidas por concatenación, repetidos en cada tarjeta, son lo más pesado: preferible marcar el cálculo a nivel de fila una vez y contar sobre esa marca.
 - Cuando algo sea lento, medir antes de cambiar: grabar el rendimiento de Tableau y atacar lo que más tarda.
 
 ## Seguridad por usuario (por confirmar con el usuario)
 - Si un mismo dashboard lo ven personas con alcance distinto (por ejemplo varias campañas o clientes), restringir los datos por usuario con seguridad a nivel de fila, o usar libros separados. No basta con ocultar filtros.
-- El cliente final no debe ver datos de otras campañas ni de otros clientes (ver dashboards-cobranza-cliente-limpieza).
+- El cliente final no debe ver datos de otras campañas ni de otros clientes (ver `referencias/cliente-limpieza.md`).
 - Las credenciales de la fuente las pone siempre el usuario; nunca se escriben.
 - Para el acceso de la sesión (token, servidor MCP o API), aplicar "Permisos mínimos y datos sensibles" del módulo base: usuario dedicado, acceso mínimo, nunca borrar y datos agregados.

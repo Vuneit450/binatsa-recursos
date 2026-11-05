@@ -1,5 +1,5 @@
 ---
-name: dashboards-cobranza-base
+name: tableros-campanas-binatsa
 description: "Punto de partida para cualquier dashboard de Cobranza BINATSA en Tableau Cloud. Usar siempre primero cuando el usuario pida armar, crear, modificar, revisar o publicar un dashboard o tablero de cobranza en Tableau, o trabajar con un cliente de BINATSA: hace las preguntas iniciales, reúne los recursos y fija las reglas generales y el flujo. Después pasar a los módulos de datos, estructura, KPIs, tooltips, cliente/limpieza, publicación y video guía."
 ---
 
@@ -9,18 +9,18 @@ Responde siempre en español, corto y directo. Quien usa este skill es del equip
 Plantilla para cualquier cliente. Nada es específico de un proyecto; los datos de cada proyecto se preguntan al iniciar.
 
 ## Módulos relacionados
-- dashboards-cobranza-estructura: Dirección, Operación, layout, estilo.
-- dashboards-cobranza-datos: tablas, reglas de negocio, validación y seguridad; va ANTES de construir.
-- dashboards-cobranza-kpis: tarjetas KPI y glosario.
-- dashboards-cobranza-tooltips: descripciones emergentes.
-- dashboards-cobranza-cliente-limpieza: vista del cliente y limpieza de huérfanos.
-- dashboards-cobranza-publicacion: checklist, publicación y monitoreo.
-- dashboards-cobranza-video-guia: video guía para un usuario nuevo; último paso, después de publicar.
+- `referencias/diseno.md`: Dirección, Operación, layout, estilo.
+- `referencias/datos.md`: tablas, reglas de negocio, validación y seguridad; va ANTES de construir.
+- `referencias/giros/cobranza.md`: tarjetas KPI y glosario.
+- `referencias/tooltips.md`: descripciones emergentes.
+- `referencias/cliente-limpieza.md`: vista del cliente y limpieza de huérfanos.
+- `referencias/publicacion.md`: checklist, publicación y monitoreo.
+- `referencias/video-guia.md`: video guía para un usuario nuevo; último paso, después de publicar.
 
 ## Recursos de BINATSA
 - Repositorio de GitHub: Vuneit450/binatsa-recursos.
-  - logos/binatsa.svg: logo vectorial (turquesa #00B3B8, azul marino #0B1F3A). Usarlo siempre; si Tableau no acepta SVG en el objeto Imagen, generar un PNG desde el SVG.
-  - logos/paleta-binatsa.md y logos/Preferences-BINATSA.tps: paleta de BINATSA (derivada del logo) y su versión para cargar en Tableau.
+  - marca-binatsa/binatsa.svg: logo vectorial (turquesa #00B3B8, azul marino #0B1F3A). Usarlo siempre; si Tableau no acepta SVG en el objeto Imagen, generar un PNG desde el SVG.
+  - marca-binatsa/paleta-binatsa.md y marca-binatsa/Preferences-BINATSA.tps: paleta de BINATSA (derivada del logo) y su versión para cargar en Tableau.
   - clientes/<cliente>/: logo y recursos de marca de cada cliente (ver clientes/README.md y clientes/_plantilla/). Si no hay carpeta del cliente, pedir el logo y los colores y, con permiso del usuario, crearla a partir de la plantilla. El repositorio es público: subir solo el logo y los colores de marca, nunca datos internos.
   - Si el repositorio no está conectado a la sesión, leerlo desde el navegador o pedir el archivo.
 - Los archivos no se guardan en la skill; solo la ruta.
@@ -82,11 +82,11 @@ Cuando la sesión está conectada a una carpeta de la computadora del usuario (p
 
 ## Flujo de trabajo
 1. Hacer la tanda 1 de preguntas. Si el usuario sube un .twbx, trabajar sobre ESE archivo (en copia versionada).
-2. Revisar los datos y acordar las reglas de negocio (dashboards-cobranza-datos), con el primer acercamiento a los datos que describe ese módulo.
+2. Revisar los datos y acordar las reglas de negocio (`referencias/datos.md`), con el primer acercamiento a los datos que describe ese módulo.
 3. Construir, en este orden: estructura (vistas, encabezado, medidas y parámetros), KPIs (tarjetas y glosario), tooltips y Guía de uso. Hacer la tanda 2 de preguntas mientras se construye.
 4. Cambios de XML (tooltips, campos ocultos): trabajar en copia versionada del .twbx (.twb + Data/Extracts/*.hyper + Image/), con nombre versionado; publica el usuario o la sesión según la sección anterior.
 5. Cambios simples: edición web sin marcas seleccionadas y publicar sobre el mismo workbook.
-6. Tanda 3 de preguntas, y limpieza de la vista del cliente (dashboards-cobranza-cliente-limpieza).
+6. Tanda 3 de preguntas, y limpieza de la vista del cliente (`referencias/cliente-limpieza.md`).
 7. Para revisar dashboards publicados: usar el navegador (Claude in Chrome o el integrado con sesión del usuario); si pide contraseña, que el usuario inicie sesión.
 8. Correr el checklist de publicación, incluida la prueba de interacción (la mayoría de los gráficos se comunican entre sí); verificar y reportar en 1-2 frases más la tabla de interacción.
-9. Al terminar y publicar, hacer el video guía (dashboards-cobranza-video-guia): es el último paso de la entrega.
+9. Al terminar y publicar, hacer el video guía (`referencias/video-guia.md`): es el último paso de la entrega.

@@ -1,8 +1,3 @@
----
-name: dashboards-cobranza-estructura
-description: "Estructura estándar (vistas Dirección y Operación), layout, medidas, tipografía, colores, interactividad y estilo visual de dashboards de Cobranza BINATSA en Tableau Cloud. Usar al diseñar, armar, modificar o dar formato a un dashboard o tablero: títulos, botones de navegación, logo, tamaños, gráficos, alineación, parámetros y paleta."
----
-
 # Estructura y estilo · Dashboards de Cobranza BINATSA
 
 ## Estructura estándar
@@ -11,7 +6,7 @@ Como mínimo dos vistas, Dirección y Operación; el proyecto puede agregar más
 ### Logos
 Dos logos, en la misma fila del título principal y siempre en la misma posición en todas las vistas:
 - Ícono del cliente, arriba a la izquierda: imagen cuadrada de unos 88 x 80 px.
-- Logo de BINATSA (`logos/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha y pegado a la esquina: unos 272 x 80 px, con alto proporcional sin deformar, sobre una tarjeta blanca porque sus letras azul marino no se leen sobre la franja oscura. Referencia visual: `ejemplos/encabezado.png` (ilustración con datos inventados).
+- Logo de BINATSA (`marca-binatsa/binatsa.svg`; en PNG si Tableau no acepta SVG), arriba a la derecha y pegado a la esquina: unos 272 x 80 px, con alto proporcional sin deformar, sobre una tarjeta blanca porque sus letras azul marino no se leen sobre la franja oscura. Referencia visual: `ejemplos/encabezado.png` (ilustración con datos inventados).
 
 ### Título principal del dashboard
 Texto de 20 pt en negrita, color blanco, sobre una franja del color oscuro de la marca del cliente (ver Contraste), sin borde, de unos 660 x 80 px, arriba a la izquierda junto al ícono del cliente. Formato del texto: "Cobranza <Cliente> · <Vista>" (por ejemplo "Cobranza <Cliente> · Dirección") y, debajo, un subtítulo de 10 pt con la pregunta que responde la vista (por ejemplo "¿Cómo va la campaña?"). Es el texto más grande del dashboard: los títulos de bloque (13 pt) quedan por debajo.
@@ -34,7 +29,7 @@ Referencia visual: `ejemplos/guia-uso.png`.
 Vista de solo texto, sin gráficos, con el mismo estilo de títulos de bloque. Se abre desde el botón "📖 Glosario" de las demás vistas; no hay una vista de glosario aparte. Contiene, en este orden:
 1. Para qué sirve cada vista: una línea por vista con la pregunta que responde.
 2. Cómo usar el tablero: las 5 reglas (los filtros de arriba afectan todo; clic en una gráfica filtra el resto; otro clic quita el filtro; pasa el mouse y te explica; los selectores cambian la gráfica).
-3. Glosario: cada métrica con su definición, tomadas del glosario de dashboards-cobranza-kpis y de las reglas de negocio acordadas, sin términos técnicos.
+3. Glosario: cada métrica con su definición, tomadas del glosario de `referencias/giros/cobranza.md` y de las reglas de negocio acordadas, sin términos técnicos.
 4. Segmentos de cartera del cliente: nombre y rango de cada uno.
 5. Actualización: frecuencia real de los datos y el día del último dato.
 6. A quién avisar si algo no cuadra.
@@ -76,8 +71,8 @@ Tomadas del tablero de referencia de 1910 x 1300 px, igual para todas las vistas
   - Se excluye como destino la hoja que viene de otra fuente de datos (por ejemplo, una encuesta que no comparte campos con las llamadas).
   - Clic en un segmento: además del filtro, una acción de parámetro llena el parámetro "Segmento", para que lo que depende del segmento elegido (tarjetas, métricas) se adapte.
   - Al pasar el mouse sobre un segmento se resalta ese segmento en todas las hojas (acción de resaltar al pasar el mouse, a nivel del dashboard).
-- Implementación en las tarjetas KPI: los periodos se calculan con banderas por fila a partir de los parámetros de fecha (ver dashboards-cobranza-kpis) y cada KPI se calcula una vez por periodo con IF bandera THEN medida END. Así las tarjetas son destino normal de las acciones de filtro de segmento, asesor, canal, hora, tipificación y zona: esos filtros no tocan las fechas y el periodo previo sigue disponible, de modo que los deltas siguen la selección. La fecha es la excepción: si un clic filtrara por día, desaparecerían las filas de los demás periodos. Por eso el día NO va en una acción de filtro: un clic en un día dispara una acción de parámetro que llena "Día seleccionado" (fecha) y todo el dashboard usa [Desde efectivo] y [Hasta efectivo]. La parte del día seleccionado es un patrón propuesto: validarlo en el primer dashboard de cada cliente.
-- La verificación obligatoria está en dashboards-cobranza-publicacion (Prueba de interacción).
+- Implementación en las tarjetas KPI: los periodos se calculan con banderas por fila a partir de los parámetros de fecha (ver `referencias/giros/cobranza.md`) y cada KPI se calcula una vez por periodo con IF bandera THEN medida END. Así las tarjetas son destino normal de las acciones de filtro de segmento, asesor, canal, hora, tipificación y zona: esos filtros no tocan las fechas y el periodo previo sigue disponible, de modo que los deltas siguen la selección. La fecha es la excepción: si un clic filtrara por día, desaparecerían las filas de los demás periodos. Por eso el día NO va en una acción de filtro: un clic en un día dispara una acción de parámetro que llena "Día seleccionado" (fecha) y todo el dashboard usa [Desde efectivo] y [Hasta efectivo]. La parte del día seleccionado es un patrón propuesto: validarlo en el primer dashboard de cada cliente.
+- La verificación obligatoria está en `referencias/publicacion.md` (Prueba de interacción).
 - Preferir tipos de gráfico que admitan segmentador/parámetro.
 - Controles globales arriba: Periodo, Desde, Hasta y, si el proyecto lo necesita, Canal o Segmento. Todos son PARÁMETROS, no filtros: Tableau no permite leer el valor de un filtro dentro de un cálculo, y los deltas y el periodo previo lo necesitan. Desde y Hasta solo cuentan cuando Periodo es "Personalizado". Un campo calculado "En rango" (fecha entre [Desde efectivo] y [Hasta efectivo]) va en los filtros de cada hoja, con valor Verdadero.
 - En edición web NO dejar marcas seleccionadas ni parámetros cambiados antes de publicar.
@@ -106,7 +101,7 @@ Cualquier otro parámetro lo define el proyecto, con nombre en español y sin pi
 ## Formato regional
 - Idioma: toda etiqueta y todo texto en español.
 - Configuración regional del libro: Español (México), como en el tablero de referencia.
-- Fechas en día/mes/año (por ejemplo 19/10/2026) y horas en formato de 24 h. Zona horaria acordada con el cliente (ver dashboards-cobranza-datos).
+- Fechas en día/mes/año (por ejemplo 19/10/2026) y horas en formato de 24 h. Zona horaria acordada con el cliente (ver `referencias/datos.md`).
 - Dinero con $ y separador de miles; si el proyecto maneja más de una moneda, indicar el código en la etiqueta.
 
 ## Estados vacíos y datos parciales (propuesto)
@@ -133,7 +128,7 @@ Ningún texto visible del dashboard (títulos, subtítulos, pies, tooltips y Gu�
 Los dashboards se diseñan solo para computadora (1910 x 1300 px). No se diseñan vistas para teléfono ni para tableta.
 
 ## Paleta y tipografía
-Paleta de BINATSA (y modelo de cómo documentar la de un cliente): `logos/paleta-binatsa.md`. Para cargarla en Tableau: ver la sección "Para Tableau" de ese mismo documento (el método depende de la versión).
+Paleta de BINATSA (y modelo de cómo documentar la de un cliente): `marca-binatsa/paleta-binatsa.md`. Para cargarla en Tableau: ver la sección "Para Tableau" de ese mismo documento (el método depende de la versión).
 
 Paleta (derivarla de los colores del cliente; si solo hay logo, extraer 2 colores dominantes):
 - Primario del cliente: encabezados de zona, selección y barra destacada (la más alta).
@@ -157,7 +152,7 @@ Tamaños:
 - Subtítulo bajo el título principal: 10 pt, en el color de texto secundario.
 - Botón de navegación: Tableau Bold 11 pt, blanco sobre el color de marca.
 - Etiquetas de ejes y marcas: 9 pt (mínimo 8 en web). Delta de tarjeta: 10 pt. Contenido de tablas: 10 pt; encabezados de tabla: 10 pt en Semibold. Pie "Cómo leer": 9 pt en el color de texto secundario.
-- Tooltip: título 14 pt, etiquetas 11 pt, valores 12 pt, secciones y cuerpo 10 pt, notas 9 y 8 pt (ver dashboards-cobranza-tooltips).
+- Tooltip: título 14 pt, etiquetas 11 pt, valores 12 pt, secciones y cuerpo 10 pt, notas 9 y 8 pt (ver `referencias/tooltips.md`).
 - Valores marcados como "propuestos" hasta que el usuario los confirme en la primera revisión de cada cliente.
 
 ## Patrón del mapa de calor con selector de métrica

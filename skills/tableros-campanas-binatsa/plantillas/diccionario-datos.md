@@ -1,6 +1,6 @@
 # Diccionario de datos
 
-Una sección por tabla, con las 9 tablas mínimas de `skills/dashboards-cobranza-datos/SKILL.md`. Se llena con el equipo de datos. **No incluir datos reales, solo la estructura y el significado de cada campo.**
+Una sección por tabla, con las 9 tablas mínimas de `referencias/datos.md`. Se llena con el equipo de datos. **No incluir datos reales, solo la estructura y el significado de cada campo.**
 
 ## Plantilla de tabla
 **Tabla:** _(nombre en la fuente)_ · **Nivel de detalle:** _(un registro por…)_ · **Responsable de la fuente:** _(nombre)_

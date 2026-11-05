@@ -4,8 +4,8 @@
 Solo usa la biblioteca estándar de Python. No necesita Tableau Desktop.
 
 Uso:
-  python herramientas/crear_libro_prueba.py                 (lo deja en ejemplos/libro-prueba/)
-  python herramientas/crear_libro_prueba.py --salida otra/carpeta
+  python skills/tableros-campanas-binatsa/herramientas/crear_libro_prueba.py                 (lo deja en ejemplos/libro-prueba/)
+  python skills/tableros-campanas-binatsa/herramientas/crear_libro_prueba.py --salida otra/carpeta
 
 El libro trae:
   - Data/datos/cobranza_prueba.csv  (20 filas inventadas: segmento, asesor, saldo, recuperado)
@@ -163,7 +163,7 @@ def twb():
 
 def main():
     ap = argparse.ArgumentParser(description="Crea un .twbx de prueba con datos inventados.")
-    raiz = pathlib.Path(__file__).resolve().parent.parent
+    raiz = pathlib.Path(__file__).resolve().parents[3]  # raíz del repo
     ap.add_argument("--salida", default=str(raiz / "ejemplos" / "libro-prueba"))
     carpeta = pathlib.Path(ap.parse_args().salida)
     carpeta.mkdir(parents=True, exist_ok=True)
